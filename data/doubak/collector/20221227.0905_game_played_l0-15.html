@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+    <title>
+MewX玩过的游戏(273)
+</title>
+    
+
+
+<script>
+    function set_cookie(t,e,o,n){var i,a,r=new Date;r.setTime(r.getTime()+24*(e||30)*60*60*1e3),i="; expires="+r.toGMTString();for(a in t)document.cookie=a+"="+t[a]+i+"; domain="+(o||"douban.com")+"; path="+(n||"/")}function get_cookie(t){var e,o,n=t+"=",i=document.cookie.split(";");for(e=0;e<i.length;e++){for(o=i[e];" "==o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(n))return o.substring(n.length,o.length).replace(/\"/g,"")}return null}window.Douban=window.Douban||{};var Do=function(){Do.actions.push([].slice.call(arguments))};Do.ready=function(){Do.actions.push([].slice.call(arguments))},Do.add=Do.define=function(t,e){Do.mods[t]=e},Do.global=function(){Do.global.mods=Array.prototype.concat(Do.global.mods,[].slice.call(arguments))},Do.global.mods=[],Do.mods={},Do.actions=[],Douban.init_show_login=function(t){Do("dialog",function(){var t="/j/misc/login_form";dui.Dialog({title:"登录",url:t,width:/device-mobile/i.test(document.documentElement.className)?.9*document.documentElement.offsetWidth:350,cache:!0,callback:function(t,e){e.node.addClass("dialog-login"),e.node.find("h2").css("display","none"),e.node.find(".hd h3").replaceWith(e.node.find(".bd h3")),e.node.find("form").css({border:"none",width:"auto",padding:"0"}),e.update()}}).open()})},Do(function(){function t(t,e){var o=["ref="+encodeURIComponent(location.pathname)];for(var n in e)e.hasOwnProperty(n)&&o.push(n+"="+e[n]);window._SPLITTEST&&o.push("splittest="+window._SPLITTEST),localStorage.setItem("report",(localStorage.getItem("report")||"")+"_moreurl_separator_"+o.join("&"))}!function(){"localStorage"in window||(window.localStorage=function(){var t=document;if(!t.documentElement.addBehavior)throw"don't support localstorage or userdata.";var e="_localstorage_ie",o=t.createElement("input");o.type="hidden";var n=function(n){return function(){t.body.appendChild(o),o.addBehavior("#default#userData");var i=new Date;i.setDate(i.getDate()+365),o.expires=i.toUTCString(),o.load(e);var a=n.apply(o,arguments);return t.body.removeChild(o),a}};return{getItem:n(function(t){return this.getAttribute(t)}),setItem:n(function(t,o){this.setAttribute(t,o),this.save(e)}),removeItem:n(function(t){this.removeAttribute(t),this.save(e)}),clear:n(function(){for(var t,o=this.XMLDocument.documentElement.attributes,n=0;t=o[n];n++)this.removeAttribute(t.name);this.save(e)})}}())}(),$(window).one("load",function(){var t=localStorage.getItem("report");if(t){t=t.split("_moreurl_separator_");var e=function(o){return""==o?void e(t.shift()):void $.get("undefined"==typeof _MOREURL_REQ?"/stat.html?"+o:_MOREURL_REQ+"?"+o,function(){return t.length?(e(t.shift()),void localStorage.setItem("report",t.join("_moreurl_separator_"))):void localStorage.removeItem("report")})};e(t.shift())}}),window.moreurl=t,$(document).click(function(e){var o=e.target,n=$(o).data("moreurl-dict");n&&t(o,n)}),$.ajax_withck=function(t){return"POST"==t.type&&(t.data=$.extend(t.data||{},{ck:get_cookie("ck")})),$.ajax(t)},$.postJSON_withck=function(t,e,o){return $.post_withck(t,e,o,"json")},$.post_withck=function(t,e,o,n){return $.isFunction(e)&&(n=o,o=e,e={}),$.ajax({type:"POST",url:t,data:$.extend(e,{ck:get_cookie("ck")}),success:o,dataType:n||"text"})},$("html").click(function(t){var e=$(t.target),o=e.attr("class");o&&$(o.match(/a_(\w+)/gi)).each($.proxy(function(e,o){var n=Douban[o.replace(/^a_/,"init_")];"function"==typeof n&&(t.preventDefault(),n.call(this,t))},e[0]))})});
+    ;(function() {
+        var USER_ID=82160871;
+window.Ilmen=window.Ilmen||{};var Ilmen=window.Ilmen;Ilmen.ui={},Ilmen.utils={},Ilmen.data={},Ilmen.user={id:USER_ID},Ilmen.requireLogin=function(n){Ilmen.user.id||(n.stopImmediatePropagation(),Douban.init_show_login())};
+    })();
+    Do.add('dialog', {path: 'https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js', type: 'js', requires: ['https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css']});
+    Do.global('https://img1.doubanio.com/f/sns/b5793c2d7c298173d57ecf7d96708b5615336def/js/sns/fp/base.js', 'dialog');
+</script>
+<script type="text/javascript" src="https://img1.doubanio.com/f/shire/0495cb173e298c28593766009c7b0a953246c5b5/js/jquery-1.8.3.js"></script>
+<link rel="stylesheet" href="https://img1.doubanio.com/f/shire/32336a6003aedfb3aed372bf3ae0b51c92d12316/css/core/_init_.css">
+<link rel="stylesheet" href="https://img1.doubanio.com/f/ilmen/034c879366382fa78a55c15406399d6977db7adf/css/ilmen/common.css">
+<link rel="stylesheet" href="https://img1.doubanio.com/f/ilmen/75ba35fadc87ea9d052896f99e9de067746f9788/css/ilmen/init.css">
+<link rel="stylesheet" href="https://img1.doubanio.com/misc/mixed_static/1ebcdea508bfcd3a.css">
+
+    <link rel="shortcut icon" href="https://img1.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+
+<script type="text/javascript">var _body_start = new Date();</script>
+
+    
+   
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/94e8e44/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <ul>
+    <li>
+    <a id="top-nav-doumail-link" href="https://www.douban.com/doumail/">豆邮</a>
+    </li>
+    <li class="nav-user-account">
+      <a target="_blank" href="https://accounts.douban.com/passport/setting/" class="bn-more">
+        <span>MewX的帐号</span><span class="arrow"></span>
+      </a>
+      <div class="more-items">
+        <table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/mine/">个人主页</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/orders/">我的订单</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/wallet/">我的钱包</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://accounts.douban.com/passport/setting/">帐号管理</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/accounts/logout?source=main&ck=lCAN">退出</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  <div class="top-nav-reminder">
+    <a href="https://www.douban.com/notification/" class="lnk-remind">提醒</a>
+    <div id="top-nav-notimenu" class="more-items">
+      <div class="bd">
+        <p>加载中...</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="on">
+      <a href="https://www.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;82160871&quot;}">豆瓣</a>
+    </li>
+    <li class="">
+      <a href="https://book.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;82160871&quot;}">读书</a>
+    </li>
+    <li class="">
+      <a href="https://movie.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;82160871&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;82160871&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;82160871&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;82160871&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;82160871&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://douban.fm&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;82160871&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;82160871&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;82160871&quot;}">豆品</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    USER_ID: "82160871",
+    UPLOAD_AUTH_TOKEN: "82160871:a78ed044282201620dca758e206a9bc6de4f5b46",
+    SSE_TOKEN: "f57c5c751a694207298ea7a03b5606634a928174",
+    SSE_TIMESTAMP: "1672092338",
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/94e8e44/shire/bundle.js" defer="defer"></script>
+
+
+
+
+      
+    
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/94e8e44/sns/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-nav-sns" class="nav">
+  <div class="nav-wrap">
+    <div class="nav-primary">
+     
+      <div class="nav-logo">
+        <a href="https://www.douban.com">豆瓣社区</a>
+      </div>
+
+      <div class="nav-search">
+  <form action="https://www.douban.com/search" method="get">
+	<fieldset>
+      <legend>搜索：</legend>
+	  <label for="inp-query">搜索你感兴趣的内容和人...</label>
+	  <div class="inp">
+	    <input type="hidden" name="source" value="suggest">
+		<input id="inp-query" name="q" size="22" maxlength="60" autocomplete="off" value="">
+	  </div>
+	  <div class="inp-btn"><input type="submit" value="搜索"></div>
+	</fieldset>
+  </form>
+</div>
+
+      
+
+<div class="nav-items">
+  <ul>
+    <li><a href="https://www.douban.com">首页</a></li>
+	<li><a href="https://www.douban.com/mine/">我的豆瓣</a></li>
+      <li>
+        <a href="https://www.douban.com/explore">
+          浏览发现
+        </a>
+      </li>
+      <li>
+        <a href="https://www.douban.com/gallery">
+          话题广场
+          <img src="https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif" alt="new" style="position: absolute; top: -7px; right: -13px;" />
+        </a>
+      </li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/94e8e44/sns/bundle.js" defer="defer"></script>
+
+
+
+
+
+
+    
+
+<div id="wrapper">
+        
+
+        
+<div id="content">
+    
+    
+
+
+<div id="db-usr-profile">
+<div class="pic">
+    <a href="https://www.douban.com/people/mewcatcher/">
+        <img width="48" height="48" src="https://img2.doubanio.com/icon/u82160871-12.jpg" alt="MewX">
+    </a>
+</div>
+<div class="info">
+        <h1>MewX玩过的游戏(273)</h1>
+        
+    <ul>
+          <li><a href="https://www.douban.com/people/mewcatcher/">我的主页</a></li>
+          <li><a href="https://www.douban.com/people/mewcatcher/statuses">广播</a></li>
+          <li><a href="https://www.douban.com/people/mewcatcher/photos">相册</a></li>
+          <li><a href="https://www.douban.com/people/mewcatcher/notes">日记</a></li>
+          <li><a href="https://www.douban.com/people/mewcatcher/doulists">豆列</a></li>
+    </ul>
+
+</div>
+</div>
+    <div class="clear"></div>
+
+
+    <div class="grid-16-8 clearfix">
+        
+        
+        <div class="article">
+               
+
+
+
+
+<div class="tabs">
+    
+        <a href="?action=wish" >想玩(194)</a>
+    
+        <a href="?action=do" >在玩(33)</a>
+    
+        <a href="?action=collect" class=on>玩过(273)</a>
+    
+</div>
+
+
+<div class="game-list">
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/34877482/"><img src="https://img9.doubanio.com/lpic/s34265706.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/34877482/">守望先锋“归来” Overwatch 2</a>
+            </div>
+            <div class="desc">
+                PC / PS4 / XONE / 第一人称射击 / 大型多人在线 / 2022-10-05
+                <div class="rating-info">
+                    <span class="rating-star allstar30"></span>
+                    <span class="date">2022-12-04</span>
+                        <span class="tags">标签: 美国 暴雪 FPS 2022</span>
+                </div>
+            </div>
+        <div>从头开始一个老游戏确实体验不咋样，虽然FPS倒也是一直手残</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="34877482" data-rating="3">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/34877482/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/35764203/"><img src="https://img2.doubanio.com/lpic/s34208221.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/35764203/">NS运动 Nintendo Switch Sports</a>
+            </div>
+            <div class="desc">
+                NS / 体育 / 2022-04-29 / 2022-04-29
+                <div class="rating-info">
+                    <span class="rating-star allstar50"></span>
+                    <span class="date">2022-11-24</span>
+                        <span class="tags">标签: 休闲 运动 多人</span>
+                </div>
+            </div>
+        <div>比租羽毛球场便宜的快乐</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="35764203" data-rating="5">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/35764203/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/26366234/"><img src="https://img9.doubanio.com/lpic/s28048165.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/26366234/">两点之间 Two Dots</a>
+            </div>
+            <div class="desc">
+                IPHN / IPAD / ANDR / 益智 / 2014-05-29
+                <div class="rating-info">
+                    <span class="rating-star allstar40"></span>
+                    <span class="date">2022-08-23</span>
+                        <span class="tags">标签: 消除 益智 休闲 手游 2014</span>
+                </div>
+            </div>
+        <div>近年少见的精致的手机游戏了。画面和游戏性都还行。关卡设计不合理但是问题不大，本身就是需要有恰饭关卡的。</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="26366234" data-rating="4">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/26366234/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/34676679/"><img src="https://img9.doubanio.com/lpic/s33440934.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/34676679/">开箱整理 Unpacking</a>
+            </div>
+            <div class="desc">
+                PC / PS4 / XONE / NS / PS5 / XSX / 益智 / 模拟 / 2021-11-02
+                <div class="rating-info">
+                    <span class="rating-star allstar40"></span>
+                    <span class="date">2022-06-26</span>
+                        <span class="tags">标签: 像素 模拟经营 解谜 独立游戏 休闲</span>
+                </div>
+            </div>
+        <div>很适合老年玩家，也略适合部分猎奇玩家（因为房间主人是女生，当然如果是男生的话就太好收拾 =，= unbiasly speaking）</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="34676679" data-rating="4">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/34676679/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/27118351/"><img src="https://img1.doubanio.com/lpic/s34027900.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/27118351/">帝国时代4 Age of Empires IV</a>
+            </div>
+            <div class="desc">
+                PC / 即时战略 / 策略 / 2021-10-28 / 2021-10-28
+                <div class="rating-info">
+                    <span class="rating-star allstar50"></span>
+                    <span class="date">2022-01-22</span>
+                        <span class="tags">标签: RTS Microsoft 沙盒 策略</span>
+                </div>
+            </div>
+        <div>老了战役打不动了，xgpu还是真香，微软感觉买了索尼，我买爆xbox</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="27118351" data-rating="5">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/27118351/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/26727125/"><img src="https://img9.doubanio.com/lpic/s28817664.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/26727125/">星露谷物语 Stardew Valley</a>
+            </div>
+            <div class="desc">
+                PC / MAC / IPHN / IPAD / ANDR / PS4 / XONE / VITA / NS / LIN / 模拟 / 角色扮演 / 2016-02-27 / 2016-02-27
+                <div class="rating-info">
+                    <span class="rating-star allstar40"></span>
+                    <span class="date">2021-12-02</span>
+                        <span class="tags">标签: 模拟经营 像素 RPG 生存 休闲</span>
+                </div>
+            </div>
+        <div>和Animal Crossing感觉很像，不过每天都要吃东西有点尴尬，感觉一旦游戏需要吃东西，对我来说就是生存般的难题。我一定是在野外生存不了的，以后去野外玩要带两周的吃的才行。操作十分不适应，为啥不能随地丢垃圾，仓鼠表示背包比大菠萝2还不经装。</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="26727125" data-rating="4">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/26727125/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/35377549/"><img src="https://img1.doubanio.com/lpic/s33907459.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/35377549/">宝可梦 明亮珍珠 ポケットモンスター シャイニングパール</a>
+            </div>
+            <div class="desc">
+                NS / 角色扮演 / 2021-11-19 / 2021-11-19
+                <div class="rating-info">
+                    <span class="rating-star allstar40"></span>
+                    <span class="date">2021-11-28</span>
+                        <span class="tags">标签: 任天堂 宝可梦 日本 Switch 2021 角色扮演</span>
+                </div>
+            </div>
+        <div>和剑盾比起来真是不错啊，内容丰富很多。怎么现在游戏内容都不如十几年前的。。。非常不能理解</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="35377549" data-rating="4">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/35377549/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/26425670/"><img src="https://img1.doubanio.com/lpic/s28896788.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/26425670/">盗贼之海 Sea of Thieves</a>
+            </div>
+            <div class="desc">
+                PC / XONE / XSX / 大型多人在线 / 角色扮演 / 冒险 / 2018-03-20 / 2018-03-20
+                <div class="rating-info">
+                    <span class="rating-star allstar40"></span>
+                    <span class="date">2021-11-18</span>
+                        <span class="tags">标签: 合作 沙盒 解谜 RPG 冒险</span>
+                </div>
+            </div>
+        <div>xgpu跟小伙伴一起玩，然而还是弃坑了，老玩家欺负新玩家，我只能走了（</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="26425670" data-rating="4">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/26425670/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/34800632/"><img src="https://img1.doubanio.com/lpic/s33461889.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/34800632/">模拟火车世界 2020 Train Sim World 2020</a>
+            </div>
+            <div class="desc">
+                PC / PS4 / XONE / XBOX / 模拟 / 2018-07-24
+                <div class="rating-info">
+                    <span class="rating-star allstar30"></span>
+                    <span class="date">2021-11-18</span>
+                        <span class="tags">标签: XboxOne 2018 模拟 驾驶</span>
+                </div>
+            </div>
+        <div>xgpu 还是弃了，感觉玩这游戏在工作 ：）</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="34800632" data-rating="3">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/34800632/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/35367438/"><img src="https://img9.doubanio.com/lpic/s34265715.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/35367438/">暗黑破坏神2 狱火重生 Diablo II: Resurrected</a>
+            </div>
+            <div class="desc">
+                PC / PS4 / XONE / NS / PS5 / XSX / 角色扮演 / 动作 / 2021-09-23 / 2021-09-23
+                <div class="rating-info">
+                    <span class="rating-star allstar40"></span>
+                    <span class="date">2021-11-14</span>
+                        <span class="tags">标签: 2021 暴雪 ARPG</span>
+                </div>
+            </div>
+        <div>NEC地狱打完baal，刷装备随缘吧。虽然高清了，但是不得不说暴雪垃圾服务器，进游戏要排队，排个半小时到一小时，加入房间间隔1-2分钟。20年前的代码真是一行没改？背包还是要开背包号，1202年了什么设计这是？</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="35367438" data-rating="4">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/35367438/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/34347214/"><img src="https://img1.doubanio.com/lpic/s33297869.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/34347214/">十二分钟 Twelve Minutes</a>
+            </div>
+            <div class="desc">
+                IPHN / ANDR / 冒险 / 2021-08-19
+                <div class="rating-info">
+                    <span class="rating-star allstar50"></span>
+                    <span class="date">2021-11-06</span>
+                        <span class="tags">标签: 独立 2021 解谜 时间循环 悬疑</span>
+                </div>
+            </div>
+        <div>不错啊，这家公司专门做回忆类的作品嘛。Deathloop和这个twelve-minute loop有异曲同工之妙！</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="34347214" data-rating="5">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/34347214/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/27054049/"><img src="https://img9.doubanio.com/lpic/s34147616.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/27054049/">仙剑奇侠传七 仙劍奇俠傳七</a>
+            </div>
+            <div class="desc">
+                PC / PS4 / PS5 / XSX / 角色扮演 / 冒险 / 动作 / 2021-10-15 / 2021-10-15
+                <div class="rating-info">
+                    <span class="rating-star allstar30"></span>
+                    <span class="date">2021-10-31</span>
+                        <span class="tags">标签: 国产 RPG PC 剧情 沙盒</span>
+                </div>
+            </div>
+        <div>画面不错，unreal4确实是模板化了很多。剧情有点烂，而且战斗更烂，反正我就跑呗，队友打？这边建议直接开除叶灵纵和天地游的策划。表情依然呆板，bug依然堪比2077，再接再厉吧。。 //还是买了原价steam版，下次再方块就不买了 =，=</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="27054049" data-rating="3">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/27054049/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/30485336/"><img src="https://img1.doubanio.com/lpic/s30022189.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/30485336/">影子工厂 Impostor Factory</a>
+            </div>
+            <div class="desc">
+                PC / MAC / 冒险 / 2021-09-30 / 2021-10-01
+                <div class="rating-info">
+                    <span class="rating-star allstar50"></span>
+                    <span class="date">2021-10-03</span>
+                        <span class="tags">标签: 像素 RPG 剧情 独立游戏</span>
+                </div>
+            </div>
+        <div>Impostor一语双关真的是妙，一方面联系到了Impostor Syndrome说的是女主，另一方面说的是游戏多层级的人物objects。本来还以为会遇到狗血剧情，结果是这么精彩的续集，玩的我老泪纵横，就这么串起来了，真是欣慰。期待续作……</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="30485336" data-rating="5">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/30485336/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/27608217/"><img src="https://img2.doubanio.com/lpic/s33841003.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/27608217/">迷室4：往逝 The Room: Old Sins</a>
+            </div>
+            <div class="desc">
+                PC / IPHN / ANDR / 益智 / 角色扮演 / 冒险 / 2018-01-25
+                <div class="rating-info">
+                    <span class="rating-star allstar50"></span>
+                    <span class="date">2021-08-29</span>
+                        <span class="tags">标签: 解密 推理 密室逃脱 益智</span>
+                </div>
+            </div>
+        <div>还不错，逐渐有剧情了，期待5</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="27608217" data-rating="5">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/27608217/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/26615836/"><img src="https://img9.doubanio.com/lpic/s33450386.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/26615836/">十三机兵防卫圈 十三機兵防衛圏</a>
+            </div>
+            <div class="desc">
+                PS4 / NS / 文字冒险 / 策略 / 2019-11-28
+                <div class="rating-info">
+                    <span class="rating-star allstar50"></span>
+                    <span class="date">2021-08-22</span>
+                        <span class="tags">标签: ATLUS 日本 2019 科幻 SEGA PlayStation</span>
+                </div>
+            </div>
+        <div>拖了快一年，终于通关了，画风非常喜欢，剧情用抽丝剥茧地呈现出来，机甲战斗直接用指点江山的地图呈现，意外地有趣。科幻的架空设定也是非常棒了，本以为分成5个区（加0区）就没了，结果还有更甚。期待下一作。</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a href="javascript:;" class="collect-btn" data-id="26615836" data-rating="5">修改</a>
+                </span>
+                <span class='gact'>
+                    <a class="js-remove-collect" title="删除这个收藏" data-url="/j/ilmen/thing/26615836/interest" href="javascript:;">删除</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="template-collect-popup">
+    <form action="/j/ilmen/thing/{id}/interest">
+                {interestTmpl}
+                {ratingTmpl}
+                {platformTmpl}
+        <div class="item item-tags">
+            <label for="tags">标签(多个标签用空格分隔): </label>
+            <input name="tags" type="text" class="inp-tags" value="{selected_tags}" />
+            <div id="mytags"></div>
+            <div id="populartags"></div>
+        </div>
+        <div class="item">
+            <label class="reason">简短评论</label>
+            <textarea name="comment">{comment}</textarea>
+            <span class="count">350</span>
+        </div>
+        <div class="submit-item">
+            <div class="item-share">
+                        分享到:
+                <label for="dlg-opt-share">
+                    <input type="checkbox" id="dlg-opt-share" name="share-shuo" value="1" {isShuoChecked} />我的广播
+                </label>
+            </div>
+            <span class="bn-flat">
+                <input type="submit" value="保存" />
+            </span>
+        </div>
+    </form>
+</script>
+
+
+    
+    
+
+    
+        <div class="paginator">
+        <span class="prev">
+            &lt;前页
+        </span>
+        
+        
+
+                <span class="thispage" data-total-page="19">1</span>
+                
+            <a href="?action=collect&amp;start=15" >2</a>
+        
+                
+            <a href="?action=collect&amp;start=30" >3</a>
+        
+                
+            <a href="?action=collect&amp;start=45" >4</a>
+        
+                
+            <a href="?action=collect&amp;start=60" >5</a>
+        
+                
+            <a href="?action=collect&amp;start=75" >6</a>
+        
+                
+            <a href="?action=collect&amp;start=90" >7</a>
+        
+                
+            <a href="?action=collect&amp;start=105" >8</a>
+        
+                
+            <a href="?action=collect&amp;start=120" >9</a>
+        
+            <span class="break">...</span>
+                
+            <a href="?action=collect&amp;start=255" >18</a>
+        
+            <a href="?action=collect&amp;start=270" >19</a>
+        
+        <span class="next">
+            <link rel="next" href="?action=collect&amp;start=15"/>
+            <a href="?action=collect&amp;start=15" >后页&gt;</a>
+        </span>
+
+            <span class="count">(共273个)</span>
+        </div>
+
+
+
+        </div>
+        <div class="aside">
+                
+<div class="mod side-nav">
+    &gt; <a href="/game/explore">发现更多游戏</a>
+</div>
+
+        </div>
+        <div class="extra">
+            
+        </div>
+    </div>
+</div>
+
+        
+<div id="footer">
+    
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2022 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about/legal">法律声明</a>
+    
+    · <a href="https://help.douban.com/?app=main" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="https://img1.doubanio.com/f/shire/df6a1d712d36db03e9bddb32cbd5fa080bfcddfc/js/core/do/_init_.js"></script>
+
+<script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/7c348a77fe02a2ef.js"></script>
+
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5WP579" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5WP579');</script>
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7019765-1']);
+_gaq.push(['_setCampNameKey', 'dcn']);
+_gaq.push(['_setCampSourceKey', 'dcs']);
+_gaq.push(['_setCampMediumKey', 'dcm']);
+_gaq.push(['_setCampTermKey', 'dct']);
+_gaq.push(['_setCampContentKey', 'dcc']);
+_gaq.push(['_addOrganic', 'baidu', 'word']);
+_gaq.push(['_addOrganic', 'soso', 'w']);
+_gaq.push(['_addOrganic', '3721', 'name']);
+_gaq.push(['_addOrganic', 'youdao', 'q']);
+_gaq.push(['_addOrganic', 'so.360.cn', 'q']);
+_gaq.push(['_addOrganic', 'vnet', 'kw']);
+_gaq.push(['_addOrganic', 'sogou', 'query']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣']);
+_gaq.push(['_addIgnoredOrganic', 'douban']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣网']);
+_gaq.push(['_addIgnoredOrganic', 'www.douban.com']);
+_gaq.push(['_setDomainName', '.douban.com']);
+
+
+    _gaq.push(['_setCustomVar', 1, 'responsive_view_mode', 'desktop', 3]);
+
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+    _gaq.push(['_setVar', '8216']);
+
+window._ga_init = function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+};
+if (window.addEventListener) {
+    window.addEventListener('load', _ga_init, false);
+} else {
+    window.attachEvent('onload', _ga_init);
+}
+</script>
+
+
+
+
+
+
+
+<!-- dae-web-ilmen--default-6bc9957f95-mb9xx-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+
+
