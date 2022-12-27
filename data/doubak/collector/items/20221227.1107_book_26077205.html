@@ -1,0 +1,3268 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-webkit book-new-nav">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Web应用安全权威指南 (豆瓣)</title>
+  
+<script>!function(e){var o=function(o,n,t){var c,i,r=new Date;n=n||30,t=t||"/",r.setTime(r.getTime()+24*n*60*60*1e3),c="; expires="+r.toGMTString();for(i in o)e.cookie=i+"="+o[i]+c+"; path="+t},n=function(o){var n,t,c,i=o+"=",r=e.cookie.split(";");for(t=0,c=r.length;t<c;t++)if(n=r[t].replace(/^\s+|\s+$/g,""),0==n.indexOf(i))return n.substring(i.length,n.length).replace(/\"/g,"");return null},t=e.write,c={"douban.com":1,"douban.fm":1,"google.com":1,"google.cn":1,"googleapis.com":1,"gmaptiles.co.kr":1,"gstatic.com":1,"gstatic.cn":1,"google-analytics.com":1,"googleadservices.com":1},i=function(e,o){var n=new Image;n.onload=function(){},n.src="https://www.douban.com/j/except_report?kind=ra022&reason="+encodeURIComponent(e)+"&environment="+encodeURIComponent(o)},r=function(o){try{t.call(e,o)}catch(e){t(o)}},a=/<script.*?src\=["']?([^"'\s>]+)/gi,g=/http:\/\/(.+?)\.([^\/]+).+/i;e.writeln=e.write=function(e){var t,l=a.exec(e);return l&&(t=g.exec(l[1]))?c[t[2]]?void r(e):void("tqs"!==n("hj")&&(i(l[1],location.href),o({hj:"tqs"},1),setTimeout(function(){location.replace(location.href)},50))):void r(e)}}(document);</script>
+
+  
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+  
+<meta http-equiv="mobile-agent" content="format=html5; url=https://m.douban.com/book/subject/26077205/">
+<meta name="keywords" content="Web应用安全权威指南,德丸浩,人民邮电出版社,2014-10,简介,作者,书评,论坛,推荐,二手">
+<meta name="description" content="图书Web应用安全权威指南 介绍、书评、论坛及推荐 ">
+
+  <script>var _head_start = new Date();</script>
+  
+  <link href="https://img1.doubanio.com/f/book/8011541306494bc2ff483299d952d9c65753c43d/css/book/master.css" rel="stylesheet" type="text/css">
+
+  <link href="https://img1.doubanio.com/f/book/222a5c61e041638af8defc87cf97f4a863a77922/css/book/base/init.css" rel="stylesheet">
+  <style type="text/css"></style>
+  <script src="https://img1.doubanio.com/f/book/0495cb173e298c28593766009c7b0a953246c5b5/js/book/lib/jquery/jquery.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/4888ee2fda6812f70a064a51c93b84fde8e4a3c2/js/douban.js"></script>
+  <script src="https://img1.doubanio.com/f/book/0322e3e810e475f1c82adb7d1c6ccfa1c0fa969c/js/book/master.js"></script>
+  
+
+  
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/book/35ee0bfceaf192ef298d0729f3c3d40c0e2341d9/css/book/subject.css">
+  <link href="https://img1.doubanio.com/f/book/5d301503fbbd8e09f3114583859789884e942f47/css/book/annotation/like.css" rel="stylesheet">
+  <script src="https://img1.doubanio.com/f/shire/7965e09b0065d26bfd22d390de956c22a48b9008/js/lib/jquery.snippet.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/2c0c1c6b83f9a457b0f38c38a32fc43a42ec9bad/js/do.js" data-cfg-autoload="false"></script>
+  <script src="https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js"></script>
+  <script src="https://img1.doubanio.com/f/book/2e421e5ec8f2869d31535206c0ac0322532be1f8/js/book/mod/hide.js"></script>
+  <script src="https://img1.doubanio.com/f/book/cc6b1a77c3812c7dd20b0374332fade081e1c0b0/js/book/subject/unfold.js"></script>
+  <!-- IDG Adsense代理广告代码 -->
+  <script data-ad-client="ca-pub-4792467485927557" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="alternate" href="https://book.douban.com/feed/subject/26077205/reviews" type="application/rss+xml" title="RSS">
+  <style type="text/css"> h2 {color: #007722;} </style>
+  <script type='text/javascript'>
+    var _vds = _vds || [];
+    (function(){ _vds.push(['setAccountId', '22c937bbd8ebd703f2d8e9445f7dfd03']);
+        _vds.push(['setCS1','user_id','1']);
+            (function() {var vds = document.createElement('script');
+                vds.type='text/javascript';
+                vds.async = true;
+                vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(vds, s);
+            })();
+    })();
+</script>
+
+  
+  <script type='text/javascript'>
+    var _vwo_code=(function(){
+      var account_id=249272,
+          settings_tolerance=2000,
+          library_tolerance=2500,
+          use_existing_jquery=false,
+          // DO NOT EDIT BELOW THIS LINE
+          f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+  </script>
+
+  
+
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"Book",
+  "workExample": [],
+  "name" : "Web应用安全权威指南",
+  "author": 
+  [
+    {
+      "@type": "Person",
+      "name": "德丸浩"
+    }
+  ]
+,
+  "url" : "https://book.douban.com/subject/26077205/",
+  "isbn" : "9787115370471",
+  "sameAs": "https://book.douban.com/subject/26077205/"
+}
+</script>
+
+  
+  
+  <meta property="og:title" content="Web应用安全权威指南" />
+  <meta property="og:description" content="《web应用安全权威指南》系日本web安全第一人德丸浩所创，是作者从业多年的经验总结。作者首先简要介绍了web应用的安全隐患以及产生原因，然后详细介绍了web安全的基础，如http、会话管理、同源策略..." />
+  <meta property="og:site_name" content="豆瓣" />
+  <meta property="og:url" content="https://book.douban.com/subject/26077205/" />
+  <meta property="og:image" content="https://img2.doubanio.com/view/subject/l/public/s29938062.jpg" />
+  <meta property="og:type" content="book" />
+      <meta property="book:author" content="德丸浩" />
+  <meta property="book:isbn" content="9787115370471" />
+
+
+  <script>  </script>
+  <link rel="stylesheet" href="https://img1.doubanio.com/misc/mixed_static/4237393ad061c327.css">
+
+  <link rel="shortcut icon" href="https://img1.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  
+    <script>var _body_start = new Date();</script>
+    
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/94e8e44/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <ul>
+    <li>
+    <a id="top-nav-doumail-link" href="https://www.douban.com/doumail/">豆邮</a>
+    </li>
+    <li class="nav-user-account">
+      <a target="_blank" href="https://accounts.douban.com/passport/setting/" class="bn-more">
+        <span>MewX的帐号</span><span class="arrow"></span>
+      </a>
+      <div class="more-items">
+        <table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/mine/">个人主页</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/orders/">我的订单</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/wallet/">我的钱包</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://accounts.douban.com/passport/setting/">帐号管理</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/accounts/logout?source=book&ck=lCAN">退出</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  <div class="top-nav-reminder">
+    <a href="https://www.douban.com/notification/" class="lnk-remind">提醒</a>
+    <div id="top-nav-notimenu" class="more-items">
+      <div class="bd">
+        <p>加载中...</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="">
+      <a href="https://www.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;82160871&quot;}">豆瓣</a>
+    </li>
+    <li class="on">
+      <a href="https://book.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;82160871&quot;}">读书</a>
+    </li>
+    <li class="">
+      <a href="https://movie.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;82160871&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;82160871&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;82160871&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;82160871&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;82160871&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://douban.fm&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;82160871&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;82160871&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;82160871&quot;}">豆品</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    USER_ID: "82160871",
+    UPLOAD_AUTH_TOKEN: "82160871:a78ed044282201620dca758e206a9bc6de4f5b46",
+    SSE_TOKEN: "c1206a2f3f3ddc9086a5abfc396afb4ed9141675",
+    SSE_TIMESTAMP: "1672099772",
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/94e8e44/shire/bundle.js" defer="defer"></script>
+
+
+
+
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/94e8e44/book/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+<div id="db-nav-book" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https:&#47;&#47;book.douban.com">豆瓣读书</a>
+    </div>
+    <div class="nav-search">
+      <form action="https:&#47;&#47;search.douban.com&#47;book/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">
+          </label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="书名、作者、ISBN" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1001" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="nav-secondary">
+    
+
+<div class="nav-items">
+  <ul>
+    <li    ><a href="https://book.douban.com/mine"
+     >我读</a>
+    </li>
+    <li    ><a href="https://book.douban.com/updates"
+     >动态</a>
+    </li>
+    <li    ><a href="https://book.douban.com/recommended"
+     >豆瓣猜</a>
+    </li>
+    <li    ><a href="https://book.douban.com/tag/"
+     >分类浏览</a>
+    </li>
+    <li    ><a href="https://book.douban.com/cart/"
+     >购书单</a>
+    </li>
+    <li    ><a href="https://read.douban.com/ebooks/?dcs=book-nav&dcm=douban"
+            target="_blank"
+     >电子图书</a>
+    </li>
+    <li    ><a href="https://market.douban.com/book?utm_campaign=book_nav_freyr&utm_source=douban&utm_medium=pc_web"
+     >豆瓣书店</a>
+    </li>
+    <li    ><a href="https://book.douban.com/annual/2022?fullscreen=1&source=navigation"
+            target="_blank"
+     >2022年度榜单</a>
+    </li>
+    <li    ><a href="https://www.douban.com/standbyme/2021?fullscreen=true&hidenav=true&autorotate=false&source=book_navigation"
+            target="_blank"
+     >2021书影音报告</a>
+    </li>
+    <li          class=" book-cart"
+    ><a href="https://market.douban.com/cart/?biz_type=book&utm_campaign=book_nav_cart&utm_source=douban&utm_medium=pc_web"
+            target="_blank"
+     >购物车</a>
+    </li>
+  </ul>
+</div>
+
+    <a href="https://book.douban.com/annual/2022?fullscreen=1&source=book_navigation" class="bookannual"></a>
+  </div>
+</div>
+
+<script id="suggResult" type="text/x-jquery-tmpl">
+  <li data-link="{{= url}}">
+            <a href="{{= url}}" onclick="moreurl(this, {from:'book_search_sugg', query:'{{= keyword }}', subject_id:'{{= id}}', i: '{{= index}}', type: '{{= type}}'})">
+            <img src="{{= pic}}" width="40" />
+            <div>
+                <em>{{= title}}</em>
+                {{if year}}
+                    <span>{{= year}}</span>
+                {{/if}}
+                <p>
+                {{if type == "b"}}
+                    {{= author_name}}
+                {{else type == "a" }}
+                    {{if en_name}}
+                        {{= en_name}}
+                    {{/if}}
+                {{/if}}
+                 </p>
+            </div>
+        </a>
+        </li>
+  </script>
+
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/94e8e44/book/bundle.js" defer="defer"></script>
+
+
+
+
+
+    <div id="wrapper">
+        
+
+    <div id="dale_book_subject_top_icon"></div>
+<h1>
+    <span property="v:itemreviewed">Web应用安全权威指南</span>
+    <div class="clear"></div>
+</h1>
+
+        
+  <div id="content">
+    
+    <div class="grid-16-8 clearfix">
+      
+      <div class="article">
+
+
+
+<div class="indent">
+  <div class="subjectwrap clearfix">
+    
+    
+
+
+
+<div class="subject clearfix">
+<div id="mainpic" class="">
+
+  
+
+  <a class="nbg"
+      href="https://img2.doubanio.com/view/subject/l/public/s29938062.jpg" title="Web应用安全权威指南">
+      <img src="https://img2.doubanio.com/view/subject/s/public/s29938062.jpg" title="点击看大图" alt="Web应用安全权威指南"
+         rel="v:photo" style="max-width: 135px;max-height: 200px;">
+  </a>
+    <br>
+        <p class="gact">
+          <a class="" href="https://book.douban.com/subject/26077205/edit">
+            更新图书信息或封面
+          </a>
+        </p>
+</div>
+
+
+
+
+
+<div id="info" class="">
+
+
+
+    
+    
+  
+    <span>
+      <span class="pl"> 作者</span>:
+        
+            
+            <a class="" href="/search/%E5%BE%B7%E4%B8%B8%E6%B5%A9">德丸浩</a>
+    </span><br/>
+
+    
+    
+  
+    <span class="pl">出版社:</span>
+      <a href="https://book.douban.com/press/2609">人民邮电出版社</a>
+    <br>
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+    <span>
+      <span class="pl"> 译者</span>:
+        
+            
+            <a class="" href="/search/%E8%B5%B5%E6%96%87">赵文</a>
+        
+           /
+            
+            <a class="" href="/search/%E5%88%98%E6%96%8C">刘斌</a>
+    </span><br/>
+
+    
+    
+  
+    <span class="pl">出版年:</span> 2014-10<br/>
+
+    
+    
+  
+    <span class="pl">页数:</span> 378<br/>
+
+    
+    
+  
+    <span class="pl">定价:</span> 79<br/>
+
+    
+    
+  
+    <span class="pl">装帧:</span> 平装<br/>
+
+    
+    
+  
+    <span class="pl">丛书:</span>&nbsp;<a href="https://book.douban.com/series/28503">图灵程序设计丛书·Web开发系列</a><br>
+
+    
+    
+  
+    
+      
+      <span class="pl">ISBN:</span> 9787115370471<br/>
+
+    
+    
+  
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+
+
+
+
+<div id="interest_sectl" class="">
+  <div class="rating_wrap clearbox" rel="v:rating">
+    <div class="rating_logo">
+            豆瓣评分
+    </div>
+    <div class="rating_self clearfix" typeof="v:Rating">
+      <strong class="ll rating_num " property="v:average"> 8.5 </strong>
+      <span property="v:best" content="10.0"></span>
+      <div class="rating_right ">
+          <div class="ll bigstar45"></div>
+            <div class="rating_sum">
+                <span class="">
+                    <a href="comments" class="rating_people"><span property="v:votes">49</span>人评价</a>
+                </span>
+            </div>
+
+
+      </div>
+    </div>
+          
+            
+            
+<span class="stars5 starstop" title="力荐">
+    5星
+</span>
+
+            
+<div class="power" style="width:53px"></div>
+
+            <span class="rating_per">32.7%</span>
+            <br>
+            
+            
+<span class="stars4 starstop" title="推荐">
+    4星
+</span>
+
+            
+<div class="power" style="width:64px"></div>
+
+            <span class="rating_per">38.8%</span>
+            <br>
+            
+            
+<span class="stars3 starstop" title="还行">
+    3星
+</span>
+
+            
+<div class="power" style="width:43px"></div>
+
+            <span class="rating_per">26.5%</span>
+            <br>
+            
+            
+<span class="stars2 starstop" title="较差">
+    2星
+</span>
+
+            
+<div class="power" style="width:3px"></div>
+
+            <span class="rating_per">2.0%</span>
+            <br>
+            
+            
+<span class="stars1 starstop" title="很差">
+    1星
+</span>
+
+            
+<div class="power" style="width:0px"></div>
+
+            <span class="rating_per">0.0%</span>
+            <br>
+  </div>
+        
+</div>
+
+  </div>
+  
+      
+
+
+
+
+
+
+
+  
+  <div id="interest_sect_level" class="clearfix">    <div class="j a_stars">
+
+      <span class="mr10">
+        我最近在读这本书
+      </span>
+      <span class="color_gray">2018-07-30</span>
+      &nbsp; &nbsp;
+      <a href="javascript:void(0)" class="collect_btn" name="pbtn-26077205">修改</a>
+      &nbsp;
+      
+<form method="POST" action="remove" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="lCAN"/></div>
+    <input type="submit" class="minisubmit j a_confirm_link " value="删除" title="删除这个收藏" />
+</form>
+
+      <br/>
+
+          
+    
+    我的评价:
+    <span id="rating"> <span id="stars" data-solid="https://img1.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" data-hollow="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" data-solid-2x="https://img1.doubanio.com/f/shire/7258904022439076d57303c3b06ad195bf1dc41a/pics/rating_icons/star_onmouseover@2x.png" data-hollow-2x="https://img1.doubanio.com/f/shire/95cc2fa733221bb8edd28ad56a7145a5ad33383e/pics/rating_icons/star_hollow_hover@2x.png">
+
+                    <a href="https://book.douban.com/subject/26077205/?rating=1&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star1" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/26077205/?rating=2&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star2" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/26077205/?rating=3&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star3" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/26077205/?rating=4&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star4" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/26077205/?rating=5&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star5" width="16" height="16"/>
+        </a>
+    </span><span id="rateword" class="pl"></span>
+    <input id="n_rating" type="hidden" value=""  />
+    </span>
+
+
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+  
+  <div class="gtleft">
+    <ul class="ul_subject_menu bicelink color_gray pt6 clearfix">
+        <li>
+          <img src="https://img1.doubanio.com/f/shire/5bbf02b7b5ec12b23e214a580b6f9e481108488c/pics/add-review.gif" />&nbsp;
+          <a class="" href="https://book.douban.com/annotation/write?sid=26077205" rel="nofollow">写笔记</a>
+        </li>
+
+        <li>
+          <img src="https://img1.doubanio.com/f/shire/5bbf02b7b5ec12b23e214a580b6f9e481108488c/pics/add-review.gif" />&nbsp;<a class="" href="https://book.douban.com/subject/26077205/new_review" rel="nofollow">写书评</a>
+        </li>
+
+        <li>
+
+<span class="rr">
+
+
+    <img src="/pics/add-cart.gif"/>
+        <a name="26077205" class="j a_add2cart" href="javascript:;">加入购书单</a>
+  <span class="hidden">已在<a href="https://book.douban.com/cart">购书单</a></span>
+</span><br class="clearfix" />
+</li>
+      
+        <li>
+          
+
+
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/sns/9919c071eab1c25bc462d58a582feb79e3867be4/css/sns/doulist/new_doulist_button.css">
+    <div class="doulist-add-btn">
+
+  
+
+  
+  <a href="javascript:void(0)"
+     data-id="26077205"
+     data-cate="1001"
+     data-canview="True"
+     data-url="https://book.douban.com/subject/26077205/"
+     data-catename="图书"
+     data-link="https://www.douban.com/people/mewcatcher/doulists/all?add=26077205&amp;cat=1001"
+     data-title="Web应用安全权威指南"
+     data-picture="https://img2.doubanio.com/view/subject/l/public/s29938062.jpg"
+     class="lnk-doulist-add"
+     onclick="moreurl(this, { 'from':'doulist-btn-1001-26077205-82160871'})">
+      <i></i>添加到书单
+  </a>
+    </div>
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css">
+  <script src="https://img1.doubanio.com/f/shire/3f6bfbf287470b91aacba40f0b19cb2056910f2e/js/core/do/loader.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js"></script>
+  <script>
+    Do(function() {
+      loader.batch([
+        "https://img1.doubanio.com/f/sns/339d5de8cb2b7ac836b834518bc33260e83e0a79/js/sns/doulist/doulist_dialog.js",
+      ]).done(function() {
+        $(document).delegate('.lnk-doulist-add', 'click', function(e) {
+          e.preventDefault();
+          var self = $(this);
+          if(window._USER_ABNORMAL) {
+            show_abnormal && show_abnormal()
+            return
+          }
+          var param = $.extend({'url':''}, $(this).data(), {link: this.href});
+          // 兼容jquery 1.8.x
+          var newParam = {};
+          for (key in param) {
+            if (typeof param[key] === 'number') {
+              param[key] = self.attr('data-'+key);
+            }
+            if (param.hasOwnProperty(key)) {
+              newParam[$.camelCase(key)] = param[key];
+            }
+          }
+          self.doulistDialog(newParam);
+        });
+
+      });
+    });
+  </script>
+
+        </li>
+
+        
+        
+    
+    <li class="rec" id="C-26077205">
+        <a href="#" data-url="https://book.douban.com/subject/26077205/" data-desc="" data-title="书籍《Web应用安全权威指南》 (来自豆瓣) " data-pic="https://img2.doubanio.com/view/subject/l/public/s29938062.jpg" class="bn-sharing ">分享到</a> &nbsp;&nbsp;
+    </li>
+    <script>
+    var __cache_url = __cache_url || {};
+    (function(u){
+        if(__cache_url[u]) return;
+        __cache_url[u] = true;
+        window.DoubanShareIcons = 'https://img1.doubanio.com/f/shire/d15ffd71f3f10a7210448fec5a68eaec66e7f7d0/pics/ic_shares.png';
+        var initShareButton = function() {
+          $.ajax({url:u,dataType:'script',cache:true});
+        };
+        if (typeof Do == 'function' && 'ready' in Do) {
+          Do('https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+            'https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js',
+            initShareButton);
+        } else if(typeof Douban == 'object' && 'loader' in Douban) {
+          Douban.loader.batch(
+            'https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+            'https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js'
+          ).done(initShareButton);
+        }
+    })('https://img1.doubanio.com/f/shire/64044c0cde0c2bbf9c3eb94e57da6070d0340c4b/js/lib/sharebutton.js');
+    </script>
+
+    </ul>
+  </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+    <script>
+        var rec_url = 'https://www.douban.com/share/recommend?'
+    </script>
+    <script type="text/javascript" src="https://img1.doubanio.com/f/shire/9238d0db7d5fc042186ec54ebc5b4e64653f5e46/js/dshare.js"></script>
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/share/recommend?sanity_key=_c06c8&amp;apikey=&amp;name=Web%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97&amp;image=https%3A%2F%2Fimg2.doubanio.com%2Fview%2Fsubject%2Fs%2Fpublic%2Fs29938062.jpg&amp;redir=https%3A%2F%2Fbook.douban.com%2Fsubject%2F26077205%2F&amp;href=https%3A%2F%2Fbook.douban.com%2Fsubject%2F26077205%2F&amp;curl=&amp;type=book&amp;properties=%7B%22rating%22%3A%228.5%22%7D&amp;desc=%E5%BE%B7%E4%B8%B8%E6%B5%A9+%2F+%E4%BA%BA%E6%B0%91%E9%82%AE%E7%94%B5%E5%87%BA%E7%89%88%E7%A4%BE" share-id="26077205" data-mode="plain" data-name="Web应用安全权威指南" data-type="book" data-desc="德丸浩 / 人民邮电出版社" data-href="https://book.douban.com/subject/26077205/" data-image="https://img2.doubanio.com/view/subject/s/public/s29938062.jpg" data-properties="{&#34;rating&#34;:&#34;8.5&#34;}" data-redir="https://book.douban.com/subject/26077205/vote?ck=lCAN" data-text="" data-apikey="" data-curl="" data-count="10" data-object_kind="1001" data-object_id="26077205" data-target_type="rec" data-target_action="0" data-action_props="{&#34;subject_url&#34;:&#34;https:\/\/book.douban.com\/subject\/26077205\/&#34;,&#34;subject_title&#34;:&#34;Web应用安全权威指南&#34;}" data-sanity_key="_c06c8" class="lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+
+<script>
+  //bind events for collection button.
+  $('.collect_btn', '#interest_sect_level').each(function(){
+      Douban.init_collect_btn(this);
+  });
+</script>
+
+</div>
+
+<br clear="all">
+<div id="collect_form_26077205"></div>
+<div class="related_info">
+  
+
+
+
+
+
+
+  
+
+  <h2>
+    <span>内容简介</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+<div class="indent" id="link-report">
+    
+      <div class="">
+        <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>《web应用安全权威指南》系日本web安全第一人德丸浩所创，是作者从业多年的经验总结。作者首先简要介绍了web应用的安全隐患以及产生原因，然后详细介绍了web安全的基础，如http、会话管理、同源策略等。此外还重点介绍了web应用的各种安全隐患，对其产生原理及对策进行了详尽的讲解。最后对如何提高web网站的安全性和开发安全的web应用所需要的管理进行了深入的探讨。本书可操作性强，读者可以通过下载已搭建的虚拟机环境亲自体验书中的各种安全隐患。</p>    <p>《web应用安全权威指南》适合web相关的开发人员特别是安全及测试人员阅读。</p>    <p>八大章节全面剖析，深入浅出地讲解了sql注入、xss、csrf等web开发人员必知的web安全知识。通过在vmware player虚拟机上对php样本的攻击，详细介绍了安全隐患产生的原理及应对方法，助你打造安全无虞的web应用。</p></div>
+
+      </div>
+    
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/vendors/7d8c54c10ffd51769880282d4a41609dc465b796/reports.css" />
+    <style>
+      .report-comment { overflow: hidden; visibility: hidden; }
+      .btn-report { float: right; color: #bbb; cursor: pointer; font-size: 13px;}
+    </style>
+    <script src="https://img1.doubanio.com/f/vendors/bd6325a12f40c34cbf2668aafafb4ccd60deab7e/vendors.js"></script>
+    <script src="https://img1.doubanio.com/f/vendors/68e2c291c7d4971661f7e4c3e41e1e99e2c2df4b/reports.js"></script>
+    <script>
+      (function () {
+        const ADD_REPORT = function() {
+          var roots = document.querySelectorAll("#link-report");
+          roots.forEach(function (root) {
+            var btn = document.createElement('span');
+            btn.className = 'btn-report';
+            btn.innerHTML = "投诉";
+            btn.addEventListener('click', function () {
+              if (window.DOUBAN_VENDORS && window.DOUBAN_VENDORS.openReportModal) {
+                window.DOUBAN_VENDORS.openReportModal({
+                  reportUrl: "https://book.douban.com/subject/26077205/" || root.getAttribute('data-url'),
+                  types: ["content"]
+                })
+              }
+            });
+            root.appendChild(btn);
+          })
+        }
+        ADD_REPORT();
+        $("body").delegate(".comment-item", 'mouseenter mouseleave', function (e) {
+          var $report = $(this).find(".report-comment")
+          switch (e.type) {
+            case "mouseenter":
+              $report.css('visibility', 'visible');
+              break;
+            case "mouseleave":
+              $report.css('visibility', 'hidden');
+              break;
+            }
+        });
+        window.ADD_REPORT = ADD_REPORT
+      })()
+    </script>
+
+</div>
+
+  
+      
+
+<style type="text/css" media="screen">
+  .online-partner{display:flex;align-items:center;padding-top:10px;padding-bottom:10px;margin-bottom:20px;border-bottom:1px solid #D8D8D8}.online-partner .online-type{display:flex;align-items:center}.online-partner .online-type:nth-child(2){padding-left:20px}.online-read-or-audio{display:inline-block;color:rgba(0,0,0,0.9);font-size:12px;line-height:24px}.online-read-or-audio a{display:flex;align-items:center;margin-right:10px;padding:0 15px 0 7px;border:1px solid rgba(0,0,0,0.25);border-radius:5px;vertical-align:middle;color:rgba(0,0,0,0.9)}.online-read-or-audio a:after{content:'';width:5px;height:5px;border-right:1px solid rgba(0,0,0,0.8);border-top:1px solid rgba(0,0,0,0.8);transform:rotate(45deg);margin-right:-6px}.online-read-or-audio a:hover{background:#fff;opacity:.8}.online-read-or-audio img{border-radius:50%;box-shadow:0 0 1px 0 rgba(0,0,0,0.6)}.online-read-or-audio span{padding:0 3px 0 5px}
+
+</style>
+
+  <div class="online-partner">
+    <div class="online-type">
+      <span>
+        在线试读
+        ：</span>
+
+        <div class="online-read-or-audio">
+          <a class="impression_track_mod_buyinfo"target="_blank" href="https://www.dedao.cn/reader?id=N5lDqb9b47pXZxGn1kBzPlMyQArYv0qDkqwqe85E2aVKdo9jNgOLRmDJ6nXLm16K&amp;source=douban" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26077205&amp;isbn=7115370478&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vender_subject_text" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26077205&amp;isbn=7115370478&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vender_subject_text')">
+            <img width="16" height="16" src="https://img1.doubanio.com/f/rohirrim/161387ce451872cbf51fcb288cd5ffd1dcd89705/website/static/pics/icon/icon_dedao.png" />
+            <span>得到</span>
+          </a>
+        </div>
+    </div>
+
+  </div>
+
+  
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+    
+  
+
+  <h2>
+    <span>作者简介</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+      <div class="indent ">
+          
+            <div class="">
+            <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>德丸 浩</p>    <p>2008年创立HASH咨询公司，任董事长。主要从事网络安全性的诊断与咨询工作，并在工作之余通过博客普及网络安全知识。兼任KYOCERA Communication Systems股份有限公司技术顾问、独立行政法人信息处理推进机构（IPA）兼职研究员。Twitter ID为@ockeghem。</p>    <p>赵文</p>    <p>程序员，Ruby 语言爱好者。图灵电子书《关于 mruby 的一切》译者。个人博客： http://zhaowen.me</p>    <p>刘斌</p>    <p>程序员，关注于后台开发，Java/Ruby爱好者。个人主页：http://liubin.org</p></div>
+
+            </div>
+      </div>
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+  
+    
+
+
+
+
+  
+
+  <h2>
+    <span>目录</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+<div class="indent" id="dir_26077205_short">
+        第1章 什么是 web应用的安全隐患　　1<br/>
+        1-1 安全隐患即“能用于作恶的bug”　　2<br/>
+        1-2 为什么存在安全隐患会有问题　　3<br/>
+        经济损失　　3<br/>
+        法律要求　　3<br/>
+        对用户造成不可逆的伤害　　4<br/>
+    · · · · · ·
+    (<a href="javascript:$('#dir_26077205_short').hide();$('#dir_26077205_full').show();$.get('/j/subject/j_dir_count',{id:26077205});void(0);">更多</a>)
+</div>
+
+<div class="indent" id="dir_26077205_full" style="display:none">
+        第1章 什么是 web应用的安全隐患　　1<br/>
+        1-1 安全隐患即“能用于作恶的bug”　　2<br/>
+        1-2 为什么存在安全隐患会有问题　　3<br/>
+        经济损失　　3<br/>
+        法律要求　　3<br/>
+        对用户造成不可逆的伤害　　4<br/>
+        欺骗用户　　4<br/>
+        被用于构建僵尸网络　　4<br/>
+        1-3 产生安全隐患的原因　　6<br/>
+        1-4 安全性 bug与安全性功能　　7<br/>
+        1-5 本书的结构　　8<br/>
+        第2章 搭建试验环境 9<br/>
+        2-1试验环境概要　　10<br/>
+        2-2 安装 vmware player　　11<br/>
+        什么是 vmware player　　11<br/>
+        下载 vmware player　　11<br/>
+        安装 vmware player　　12<br/>
+        2-3 安装虚拟机及运行确认　　14<br/>
+        虚拟机启动确认　　14<br/>
+        虚拟机的使用方法　　15<br/>
+        编辑 hosts文件　　16<br/>
+        使用 ping确认连接　　16<br/>
+        apache 与php的运行确认　　17<br/>
+        设置并确认邮箱账号　　17<br/>
+        2-4 安装 fiddler　　18<br/>
+        什么是 fiddler　　18<br/>
+        安装 fiddler　　18<br/>
+        fiddler 的运行确认及简单用法　　18<br/>
+        参考：虚拟机的数据一览　　19<br/>
+        参考：如果无法连接试验环境的pop3服务器　　20<br/>
+        第3章 web 安全基础：http、会话管理、同源策略　　21<br/>
+        3-1 http 与会话管理　　22<br/>
+        为什么要学习 http　　22<br/>
+        最简单的 http　　22<br/>
+        使用 fiddler观察http消息　　23<br/>
+        请求消息　　24<br/>
+        响应消息　　24<br/>
+        状态行　　25<br/>
+        响应头信息　　25<br/>
+        如果将 http比喻为对话　　25<br/>
+        输入－确认－注册模式　　26<br/>
+        post 方法　　28<br/>
+        消息体　　28<br/>
+        百分号编码　　29<br/>
+        referer　　29<br/>
+        get 和post的使用区别　　29<br/>
+        hidden 参数能够被更改　　30<br/>
+        将 hidden参数的更改比作对话　　32<br/>
+        hidden 参数的优点　　32<br/>
+        无状态的 http认证　　33<br/>
+        体验 basic认证　　33<br/>
+        专栏 　认证与授权　　36<br/>
+        cookie 与会话管理　　36<br/>
+        使用 cookie的会话管理　　39<br/>
+        会话管理的拟人化解说　　39<br/>
+        会话 id泄漏的原因　　42<br/>
+        cookie 的属性　　42<br/>
+        专栏 　cookie monster bug　　44<br/>
+        总结　　45<br/>
+        3-2 被动攻击与同源策略　　46<br/>
+        主动攻击与被动攻击　　46<br/>
+        主动攻击　　46<br/>
+        被动攻击　　46<br/>
+        恶意利用正规网站进行的被动攻击　　47<br/>
+        跨站被动攻击　　48<br/>
+        浏览器如何防御被动攻击　　48<br/>
+        沙盒　　49<br/>
+        同源策略　　49<br/>
+        应用程序安全隐患与被动攻击　　52<br/>
+        专栏 　第三方 javascript　　53<br/>
+        javascript 以外的跨域访问　　54<br/>
+        frame 元素与iframe元素　　54<br/>
+        专栏 　x-frame-options　　54<br/>
+        img 元素　　54<br/>
+        script 元素　　54<br/>
+        css　　55<br/>
+        form 元素的action属性　　55<br/>
+        总结　　56<br/>
+        第4章 web应用的各种安全隐患 57<br/>
+        4-1 web 应用的功能与安全隐患的对应关系　　58<br/>
+        安全隐患产生于何处　　58<br/>
+        注入型隐患　　59<br/>
+        总结　　60<br/>
+        4-2 输入处理与安全性　　61<br/>
+        什么是 web应用的输入处理　　61<br/>
+        检验字符编码　　62<br/>
+        转换字符编码　　62<br/>
+        检验并转换字符编码的实例　　62<br/>
+        专栏 　字符编码的自动转换与安全性　　64<br/>
+        输入校验　　64<br/>
+        输入校验的目的　　64<br/>
+        输入校验与安全性　　65<br/>
+        二进制安全与空字节攻击　　65<br/>
+        仅校验输入值并不是安全性策略　　66<br/>
+        输入校验的依据是应用程序的规格　　67<br/>
+        哪些参数需要校验　　67<br/>
+        php 的正则表达式库　　67<br/>
+        使用正则表达式检验输入值的实例（1） 1～5 个字符的字母数字　　68<br/>
+        使用正则表达式检验输入值的实例（2） 住址栏　　70<br/>
+        专栏 　请注意 mb_ereg中的\d与\w　　70<br/>
+        范例　　70<br/>
+        专栏 　输入校验与框架　　71<br/>
+        总结　　72<br/>
+        参考：表示“非控制字符的字符”的正则表达式　　73<br/>
+        4-3 页面显示的相关问题　　75<br/>
+        4.3.1 跨站脚本（基础篇）　　75<br/>
+        概要　　75<br/>
+        攻击手段与影响　　76<br/>
+        xss 窃取cookie值　　76<br/>
+        通过 javascript攻击　　79<br/>
+        篡改网页　　80<br/>
+        反射型 xss与存储型xss　　82<br/>
+        安全隐患的产生原因　　84<br/>
+        html 转义的概要　　84<br/>
+        元素内容的 xss　　85<br/>
+        没有用引号括起来的属性值的 xss　　85<br/>
+        用引号括起来的属性值的 xss　　85<br/>
+        对策　　86<br/>
+        xss 对策的基础　　86<br/>
+        指定响应的字符编码　　87<br/>
+        xss 的辅助性对策　　88<br/>
+        对策总结　　89<br/>
+        参考：使用perl的对策示例　　89<br/>
+        使用 perl进行html转义的方法　　89<br/>
+        指定响应的字符编码　　89<br/>
+        4.3.2 跨站脚本（进阶篇）　　90<br/>
+        href 属性与src属性的xss　　91<br/>
+        生成 url时的对策.　　92<br/>
+        校验链接网址　　92<br/>
+        javascript 的动态生成　　92<br/>
+        事件绑定函数的 xss　　92<br/>
+        script 元素的xss　　94<br/>
+        javascript 字符串字面量动态生成的对策　　95<br/>
+        dom based xss　　97<br/>
+        允许 html标签或css时的对策　　99<br/>
+        参考：perl中转义unicode的函数　　99<br/>
+        4.3.3 错误消息导致的信息泄漏　　100<br/>
+        总结　　100<br/>
+        继续深入学习　　100<br/>
+        4-4 sql 调用相关的安全隐患　　101<br/>
+        4.4.1 sql 注入　　101<br/>
+        概要　　101<br/>
+        攻击手段与影响　　102<br/>
+        示例脚本解说　　102<br/>
+        错误消息导致的信息泄漏　　103<br/>
+        union select 致使的信息泄漏　　104<br/>
+        使用 sql注入绕过认证　　104<br/>
+        通过 sql注入攻击篡改数据　　106<br/>
+        其他攻击　　107<br/>
+        专栏 　数据库中表名与列名的调查方法　　108<br/>
+        安全隐患的产生原因　　109<br/>
+        字符串字面量的问题　　109<br/>
+        针对数值的 sql注入攻击　　110<br/>
+        对策　　110<br/>
+        使用占位符拼接 sql语句　　111<br/>
+        专栏 　采用 mdb2的原因　　111<br/>
+        为什么使用占位符会安全　　111<br/>
+        参考：like语句与通配符　　113<br/>
+        使用占位符的各种处理　　114<br/>
+        sql 注入的辅助性对策　　116<br/>
+        总结　　117<br/>
+        继续深入学习　　117<br/>
+        参考：无法使用占位符时的对策　　117<br/>
+        参考：perl+mysql的安全连接方法　　118<br/>
+        参考：php+pdo+mysql的安全连接方法　　118<br/>
+        参考：java+mysql的安全连接方法　　118<br/>
+        4-5 关键处理中引入的安全隐患　　120<br/>
+        4.5.1 跨站请求伪造（csrf）　　120<br/>
+        概要　　120<br/>
+        攻击手段与影响　　121<br/>
+        输入－执行”模式的 csrf攻击　　121<br/>
+        csrf 攻击与xss攻击　　124<br/>
+        存在确认页面时的 csrf攻击　　125<br/>
+        专栏 　针对内部网络的 csrf攻击　　127<br/>
+        安全隐患的产生原因　　128<br/>
+        对策　　129<br/>
+        筛选出需要防范 csrf攻击的页面　　129<br/>
+        确认是正规用户自愿发送的请求　　130<br/>
+        专栏 　令牌与一次性令牌　　131<br/>
+        csrf 的辅助性对策　　133<br/>
+        对策总结　　133<br/>
+        4-6 不完善的会话管理　　134<br/>
+        4.6.1 会话劫持的原因及影响　　134<br/>
+        预测会话 id　　134<br/>
+        窃取会话 id　　134<br/>
+        挟持会话 id　　135<br/>
+        会话劫持的方法总结　　135<br/>
+        会话劫持的影响　　135<br/>
+        4.6.2 会话 id可预测　　136<br/>
+        概要　　136<br/>
+        攻击手段与影响　　136<br/>
+        常见的会话 id生成方法　　136<br/>
+        使用推测出的会话 id尝试伪装　　137<br/>
+        伪装造成的影响　　137<br/>
+        安全隐患的产生原因　　137<br/>
+        对策　　138<br/>
+        改善 php的会话id的随机性的方法　　138<br/>
+        参考：自制会话管理机制产生的其他隐患　　139<br/>
+        4.6.3 会话 id嵌入url　　139<br/>
+        概要　　139<br/>
+        攻击手段与影响　　140<br/>
+        会话 id嵌入url所需的条件　　140<br/>
+        范例脚本解说　　141<br/>
+        通过 referer泄漏会话id所需的条件　　142<br/>
+        攻击流程　　142<br/>
+        事故性的会话 id泄漏　　143<br/>
+        影响　　144<br/>
+        安全隐患的产生原因　　144<br/>
+        对策　　144<br/>
+        php　　144<br/>
+        java servlet（j2ee）　　145<br/>
+        asp.net　　145<br/>
+        4.6.4 固定会话 id　　145<br/>
+        概要　　145<br/>
+        攻击手段与影响　　146<br/>
+        示例脚本介绍　　146<br/>
+        会话固定攻击解说　　148<br/>
+        登录前的会话固定攻击　　148<br/>
+        会话采纳　　151<br/>
+        仅在 cookie中保存会话id的网站固定会话id　　151<br/>
+        会话固定攻击的影响　　151<br/>
+        安全隐患的产生原因　　152<br/>
+        对策　　152<br/>
+        无法更改会话 id时采用令牌　　153<br/>
+        登录前的会话固定攻击的对策　　154<br/>
+        总结　　154<br/>
+        4-7 重定向相关的安全隐患　　155<br/>
+        4.7.1 自由重定向漏洞　　155<br/>
+        概要　　155<br/>
+        攻击手段与影响　　156<br/>
+        安全隐患的产生原因　　159<br/>
+        允许自由重定向的情况　　159<br/>
+        对策　　160<br/>
+        固定重定向的目标 url　　160<br/>
+        使用编号指定重定向的目标 url　　160<br/>
+        校验重定向的目标域名　　160<br/>
+        专栏 　警告页面　　162<br/>
+        4.7.2 http 消息头注入　　162<br/>
+        概要　　162<br/>
+        攻击手段与影响　　163<br/>
+        重定向至外部域名　　165<br/>
+        专栏 　http 响应截断攻击　　166<br/>
+        生成任意 cookie　　166<br/>
+        显示伪造页面　　168<br/>
+        安全隐患的产生原因　　170<br/>
+        专栏 　http 消息头与换行　　171<br/>
+        对策　　171<br/>
+        对策 1：不将外界参数作为http响应消息头输出　　171<br/>
+        对策 2：执行以下两项内容　　171<br/>
+        专栏 　php 的header函数中进行的换行符校验　　173<br/>
+        4.7.3 重定向相关的安全隐患总结　　173<br/>
+        4-8 cookie 输出相关的安全隐患　　174<br/>
+        4.8.1 cookie 的用途不当　　174<br/>
+        不该保存在 cookie中的数据　　174<br/>
+        参考：最好不要在cookie中保存数据的原因　　174<br/>
+        专栏 　padding oracle 攻击与ms10-070　　176<br/>
+        4.8.2 cookie 的安全属性设置不完善　　176<br/>
+        概要　　176<br/>
+        攻击手段与影响　　177<br/>
+        关于抓包方法的注意点　　180<br/>
+        安全隐患的产生原因　　181<br/>
+        什么样的应用程序不能在 cookie中设置安全属性　　181<br/>
+        对策　　181<br/>
+        给保存会话 id的cookie设置安全属性的方法　　182<br/>
+        使用令牌的对策　　182<br/>
+        使用令牌能确保安全性的原因　　184<br/>
+        除安全属性外其他属性值需要注意的地方　　184<br/>
+        domain 属性　　184<br/>
+        path 属性　　185<br/>
+        expires 属性　　185<br/>
+        httponly 属性　　185<br/>
+        总结　　185<br/>
+        4-9 发送邮件的问题　　186<br/>
+        4.9.1 发送邮件的问题概要　　186<br/>
+        邮件头注入漏洞　　186<br/>
+        使用 hidden参数保存收件人信息　　186<br/>
+        参考：邮件服务器的开放转发　　187<br/>
+        4.9.2 邮件头注入漏洞　　187<br/>
+        概要　　187<br/>
+        攻击手段与影响　　188<br/>
+        攻击方式 1：添加收件人　　190<br/>
+        攻击方式 2：篡改正文　　191<br/>
+        通过邮件头注入攻击添加附件　　192<br/>
+        安全隐患的产生原因　　193<br/>
+        对策　　194<br/>
+        使用专门的程序库来发送邮件　　194<br/>
+        不将外界传入的参数包含在邮件头中　　194<br/>
+        发送邮件时确保外界传入的参数中不包含换行符　　195<br/>
+        邮件头注入的辅助性对策　　195<br/>
+        总结　　196<br/>
+        继续深入学习　　196<br/>
+        10-4 文件处理相关的问题　　197<br/>
+        4.10.1 目录遍历漏洞　　197<br/>
+        概要　　197<br/>
+        攻击手段与影响　　198<br/>
+        专栏 　从脚本源码开始的一连串的信息泄漏　　200<br/>
+        安全隐患的产生原因　　200<br/>
+        对策　　201<br/>
+        避免由外界指定文件名　　201<br/>
+        文件名中不允许包含目录名　　201<br/>
+        专栏 　basename 函数与空字节　　202<br/>
+        限定文件名中仅包含字母和数字　　202<br/>
+        总结　　203<br/>
+        4.10.2 内部文件被公开　　203<br/>
+        概要　　203<br/>
+        攻击手段与影响　　203<br/>
+        安全隐患的产生原因　　204<br/>
+        对策　　205<br/>
+        参考：apache中隐藏特定文件的方法　　205<br/>
+        11-4 调用 os命令引起的安全隐患　　206<br/>
+        4.11.1 os 命令注入　　206<br/>
+        概要　　206<br/>
+        攻击手段与影响　　207<br/>
+        调用 sendmail命令发送邮件　　207<br/>
+        os 命令注入攻击与影响　　209<br/>
+        安全隐患的产生原因　　210<br/>
+        在 shell中执行多条命令　　210<br/>
+        使用了内部调用 shell的函数　　211<br/>
+        安全隐患的产生原因总结　　212<br/>
+        对策　　212<br/>
+        在设计阶段决定对策方针　　213<br/>
+        选择不调用 os命令的实现方法　　213<br/>
+        避免使用内部调用 shell的函数　　213<br/>
+        不将外界输入的字符串传递给命令行参数　　 216<br/>
+        使用安全的函数对传递给 os命令的参数进行转义　　216<br/>
+        os 命令注入攻击的辅助性对策　　217<br/>
+        参考：内部调用shell的函数　　218<br/>
+        12-4 文件上传相关的问题　　219<br/>
+        4.12.1 文件上传问题的概要　　219<br/>
+        针对上传功能的 dos攻击　　219<br/>
+        专栏 　内存使用量与 cpu使用时间等其他需要关注的资源　　220<br/>
+        使上传的文件在服务器上作为脚本执行　　220<br/>
+        诱使用户下载恶意文件　　221<br/>
+        越权下载文件　　222<br/>
+        4.12.2 通过上传文件使服务器执行脚本　　 222<br/>
+        概要　　222<br/>
+        攻击手段与影响　　223<br/>
+        示例脚本解说　　223<br/>
+        专栏 　警惕文件名中的 xss　　224<br/>
+        php 脚本的上传与执行　　224<br/>
+        安全隐患的产生原因　　225<br/>
+        对策　　225<br/>
+        专栏 　校验扩展名时的注意点　　228<br/>
+        4.12.3 文件下载引起的跨站脚本　　228<br/>
+        概要　　228<br/>
+        攻击手段与影响　　229<br/>
+        图像文件引起的 xss　　229<br/>
+        pdf 下载引起的xss　　231<br/>
+        安全隐患的产生原因　　234<br/>
+        内容为图像时　　234<br/>
+        内容不为图像时　　235<br/>
+        对策　　236<br/>
+        文件上传时的对策　　236<br/>
+        专栏 　bmp 格式的注意点与ms07-057　　 238<br/>
+        文件下载时的对策　　238<br/>
+        其他对策　　239<br/>
+        专栏 　将图像托管在其他域名　　240<br/>
+        参考：用户pc中没有安装对应的应用程序时　　240<br/>
+        总结　　241<br/>
+        13-4 include 相关的问题　　242<br/>
+        4.13.1 文件包含攻击　　242<br/>
+        概要　　242<br/>
+        攻击手段与影响　　243<br/>
+        文件包含引发的信息泄漏　　244<br/>
+        执行脚本 1：远程文件包含攻击（rfi）　　244<br/>
+        专栏 　rfi 攻击的变种　　245<br/>
+        执行脚本 2：恶意使用保存会话信息的文件　　246<br/>
+        安全隐患的产生原因　　248<br/>
+        对策　　248<br/>
+        总结　　248<br/>
+        14-4 eval 相关的问题　　249<br/>
+        4.14.1 eval 注入　　249<br/>
+        概要　　249<br/>
+        攻击手段与影响　　250<br/>
+        存在漏洞的应用　　250<br/>
+        攻击手段　　252<br/>
+        安全隐患的产生原因　　253<br/>
+        对策　　253<br/>
+        不使用 eval　　253<br/>
+        避免 eval的参数中包含外界传入的参数　　254<br/>
+        限制外界传入 eval的参数中只包含字母和数字　　254<br/>
+        参考：perl的eval代码块形式　　254<br/>
+        总结　　255<br/>
+        继续深入学习　　255<br/>
+        15-4 共享资源相关的问题　　256<br/>
+        4.15.1 竞态条件漏洞　　256<br/>
+        概要　　256<br/>
+        攻击手段与影响　　257<br/>
+        安全隐患的产生原因　　258<br/>
+        对策　　259<br/>
+        避免使用共享资源　　259<br/>
+        使用互斥锁　　259<br/>
+        总结　　260<br/>
+        参考：java servlet的其他注意点　　260<br/>
+        第5章 典型安全功能　　261<br/>
+        5-1 认证　　262<br/>
+        5.1.1 登录功能　　262<br/>
+        针对登录功能的攻击　　262<br/>
+        通过 sql注入攻击来跳过登录功能　　262<br/>
+        通过 sql注入攻击获取用户密码　　263<br/>
+        在登录页面进行暴力破解　　263<br/>
+        通过社会化攻击得到用户密码　　263<br/>
+        通过钓鱼方法获取密码　　264<br/>
+        登录功能被破解后的影响　　264<br/>
+        如何防止非法登录　　264<br/>
+        确保系统中不存在 sql注入等安全性bug　　264<br/>
+        设置难以猜测的密码　　265<br/>
+        密码的字符种类和长度要求　　265<br/>
+        密码的使用现状　　266<br/>
+        应用程序设计中关于密码的需求　　266<br/>
+        严格的密码检查原则　　267<br/>
+        5.1.2 针对暴力破解攻击的对策　　268<br/>
+        初步认识账号锁定　　268<br/>
+        暴力破解攻击的检测和对策　　268<br/>
+        字典攻击　　269<br/>
+        joe 账号检索　　269<br/>
+        逆向暴力破解　　269<br/>
+        针对变种暴力破解的对策　　269<br/>
+        5.1.3 密码保存方法　　271<br/>
+        保护密码的必要性　　271<br/>
+        利用加密方式进行密码保护及其注意事项　　271<br/>
+        专栏 　数据库加密和密码保护　　272<br/>
+        利用信息摘要来进行密码保护及其注意事项　　 272<br/>
+        什么是信息摘要　　272<br/>
+        专栏 　密码学级别的散列函数需要满足的要求　　273<br/>
+        利用信息摘要保护密码　　273<br/>
+        威胁 1： 离线暴力破解　　274<br/>
+        威胁 2：彩虹破解（rainbow crack）　　275<br/>
+        威胁 3：在用户数据库里创建密码字典　　276<br/>
+        如何防止散列值被破解　　277<br/>
+        对策 1： salt（加盐）　　277<br/>
+        对策 2：stretching（延展计算）　　278<br/>
+        实现示例　　278<br/>
+        专栏 　密码泄露途径　　280<br/>
+        5.1.4 自动登录　　280<br/>
+        危险的实现方式示例　　281<br/>
+        安全的自动登录实现方式　　281<br/>
+        延长会话有效期　　282<br/>
+        使用令牌实现自动登录　　283<br/>
+        基于认证票的自动登录方式　　286<br/>
+        三种方法的比较　　286<br/>
+        如何降低自动登录带来的风险　　286<br/>
+        5.1.5 登录表单　　286<br/>
+        专栏 　密码确实需要掩码显示吗　　287<br/>
+        5.1.6 如何显示错误消息　　288<br/>
+        5.1.7 退出登录功能　　289<br/>
+        5.1.8 认证功能总结　　290<br/>
+        参考：彩虹表原理　　290<br/>
+        5-2账号管理　　293<br/>
+        5.2.1 用户注册　　293<br/>
+        邮箱地址确认　　293<br/>
+        防止用户 id重复　　295<br/>
+        例子 1：id相同密码不同可以注册的网站　　295<br/>
+        例子 2：用户id没有添加唯一性约束的网站　　295<br/>
+        应对自动用户注册　　296<br/>
+        利用 captcha防止自动注册　　296<br/>
+        5.2.2 修改密码　　297<br/>
+        确认当前密码　　297<br/>
+        修改密码后向用户发送邮件通知　　298<br/>
+        密码修改功能容易发生的漏洞　　298<br/>
+        5.2.3 修改邮箱地址　　298<br/>
+        修改邮箱地址功能要考虑的安全对策　　299<br/>
+        5.2.4 密码找回　　299<br/>
+        面向管理员的密码找回功能　　300<br/>
+        面向用户的密码找回功能　　300<br/>
+        对用户进行身份确认　　301<br/>
+        如何发送密码通知　　301<br/>
+        5.2.5 账号冻结　　302<br/>
+        5.2.6 账号删除　　303<br/>
+        5.2.7 账号管理总结　　303<br/>
+        5 3 授权　　304<br/>
+        5.3.1 什么是授权　　304<br/>
+        5.3.2 典型的授权漏洞　　304<br/>
+        更改资源 id后可以查看没有权限查看的信息　　304<br/>
+        只控制菜单的显示或不显示　　305<br/>
+        使用 hidden参数或者cookie保存权限信息　　 306<br/>
+        授权漏洞总结　　307<br/>
+        专栏 　将私密信息嵌入 url进行授权处理　　307<br/>
+        5.3.3 授权管理的需求设计　　307<br/>
+        专栏 　什么是角色　　308<br/>
+        5.3.4 如何正确实现授权管理　　308<br/>
+        5.3.5 总结　　309<br/>
+        5 4 日志输出　　310<br/>
+        5.4.1 日志输出的目的　　310<br/>
+        5.4.2 日志种类　　310<br/>
+        错误日志　　311<br/>
+        访问日志　　311<br/>
+        调试日志　　311<br/>
+        5.4.3 有关日志输出的需求　　311<br/>
+        需要记录到日志里的所有事件　　312<br/>
+        日志里应包括的信息和格式　　312<br/>
+        日志文件保护　　312<br/>
+        日志文件保存位置　　313<br/>
+        日志文件保存期限　　313<br/>
+        服务器的时间调整　　313<br/>
+        5.4.4 实现日志输出　　313<br/>
+        5.4.5 总结　　314<br/>
+        第6章 字符编码和安全 315<br/>
+        6-1 字符编码和安全概要　　316<br/>
+        6-2 字符集　　317<br/>
+        什么是字符集　　317<br/>
+        ascii 和iso-8859-1　　317<br/>
+        jis 规定的字符集　　318<br/>
+        微软标准字符集　　318<br/>
+        unicode　　319<br/>
+        gb2312　　319<br/>
+        gbk　　319<br/>
+        gb18030　　320<br/>
+        不同字符相同编码的问题　　320<br/>
+        字符集的处理引起的漏洞　　320<br/>
+        6-3 字符编码方式　　321<br/>
+        什么是编码方式　　321<br/>
+        shift_jis　　321<br/>
+        euc-jp　　325<br/>
+        iso-2022-jp　　326<br/>
+        utf-16　　326<br/>
+        utf-8　　327<br/>
+        gb2312　　329<br/>
+        gbk　　330<br/>
+        gb18030　　331<br/>
+        6-4 由字符编码引起的漏洞总结　　332<br/>
+        字符编码方式中非法数据导致的漏洞　　332<br/>
+        对字符编码方式处理存在纰漏导致的漏洞　　 332<br/>
+        在不同字符集间变换导致的漏洞　　332<br/>
+        6-5 如何正确处理字符编码　　333<br/>
+        在应用内统一使用的字符集　　333<br/>
+        输入非法数据时报错并终止处理　　335<br/>
+        处理数据时使用正确的编码方式　　335<br/>
+        专栏 　调用 htmlspecialchars函数时必须指定字符编码方式　　336<br/>
+        输出时设置正确的字符编码方式　　336<br/>
+        其他对策：尽量避免编码自动检测　　337<br/>
+        6-6 总结　　338<br/>
+        如何提高 web网站的安全性 第7章　　339<br/>
+        7-1 针对 web服务器的攻击途径和防范措施　　341<br/>
+        7.1.1 利用基础软件漏洞进行攻击　　341<br/>
+        7.1.2 非法登录　　341<br/>
+        7.1.3 对策　　341<br/>
+        停止运行不需要的软件　　342<br/>
+        定期实施漏洞防范措施　　342<br/>
+        选定软件时确认软件的升级状况　　342<br/>
+        确定打补丁方式　　343<br/>
+        关注各种漏洞相关信息　　344<br/>
+        确认漏洞后调查补丁状况以及防范对策、并制定对应计划　　344<br/>
+        执行漏洞对应计划　　345<br/>
+        对不需要对外公开的端口或服务加以访问限制　　346<br/>
+        通过端口扫描确认各端口服务状态　　347<br/>
+        提高认证强度　　348<br/>
+        7-2 防范伪装攻击的对策　　349<br/>
+        7.2.1 网络伪装的手段　　349<br/>
+        针对 dns服务器的攻击　　349<br/>
+        专栏 　visa 域名问题　　350<br/>
+        arp 欺骗攻击　　350<br/>
+        7.2.2 钓鱼攻击　　350<br/>
+        7.2.3 web 网站的伪装攻击对策　　351<br/>
+        网络层的对策　　351<br/>
+        同一网段内不放置可能存在漏洞的服务器　　 351<br/>
+        强化 dns运维　　351<br/>
+        引入 ssl/tls　　352<br/>
+        专栏 　免费的数字证书　　354<br/>
+        使用便于记忆的域名　　354<br/>
+        7-3 防范网络监听、篡改的对策　　355<br/>
+        7.3.1 网络监听、篡改的途径　　355<br/>
+        通过无线网进行监听、篡改　　355<br/>
+        利用交换机端口镜像　　355<br/>
+        利用代理服务器　　355<br/>
+        伪装成 dhcp服务器　　355<br/>
+        使用 arp欺骗攻击和dns缓存污染攻击（dns cache poisoning）　　355<br/>
+        7.3.2 中间人攻击　　356<br/>
+        使用 fiddler模拟中间人攻击　　356<br/>
+        专栏 　请不要手动安装证书　　358<br/>
+        7.3.3 对策　　359<br/>
+        使用 ssl时的注意事项　　359<br/>
+        专栏 　ssl 认证标签　　360<br/>
+        7-4 防范恶意软件的对策　　361<br/>
+        7.4.1 什么是 web网站的恶意软件对策　　361<br/>
+        7.4.2 恶意软件的感染途径　　361<br/>
+        7.4.3 web 网站恶意软件防范对策概要　　362<br/>
+        7.4.4 如何确保服务器不被恶意软件感染　　363<br/>
+        探讨是否需要制定针对恶意软件的防范措施　　 363<br/>
+        制定病毒防范政策并向用户公开　　363<br/>
+        使用防病毒软件　　364<br/>
+        专栏 　web 网站的防病毒对策和gumblar的关系　　365<br/>
+        7-5 总结　　366<br/>
+        开发安全的 web应用所需要的管理 第8章　　367<br/>
+        8-1 开发管理中的安全对策概要　　368<br/>
+        8-2 开发体制　　369<br/>
+        开发标准的制定　　369<br/>
+        教育培训　　369<br/>
+        8-3 开发过程　　371<br/>
+        8.3.1 规划阶段的注意事项　　371<br/>
+        8.3.2 招标时的注意事项　　371<br/>
+        专栏 　谁应该对安全漏洞负责　　372<br/>
+        8.3.3 需求分析时的注意事项　　372<br/>
+        8.3.4 概要设计的推进方法　　373<br/>
+        8.3.5 详细设计和编码阶段的注意事项　　 374<br/>
+        8.3.6 安全性测试的重要性及其方法　　374<br/>
+        8.3.7 web 健康诊断基准　　374<br/>
+        8.3.8 承包方测试　　376<br/>
+        8.3.9 发包方测试（验收）　　376<br/>
+        8.3.10 运维阶段的注意事项　　377<br/>
+        8-4 总结　　378<br/>
+     · · · · · ·     (<a href="javascript:$('#dir_26077205_full').hide();$('#dir_26077205_short').show();void(0);">收起</a>)
+</div>
+
+    
+
+
+
+
+
+  
+
+  <h2>
+    <span>&#34;Web应用安全权威指南&#34;试读</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+<div class="indent">
+<p>本章将对“安全隐患”这一贯穿全书的主题加以概述，包 括什么是安全隐患，安全隐患会带来哪些问题，安全隐患 是如何产生的，等等。本章最后会给出全书的结构和学习方法。 
+
+
+1.1　安全隐患即“能用于作恶的Bug”
+
+程序Bug对于开发者来说如同家常便饭。应用程序有了Bug，就会出现各种不正常的现象。例如，显示出错误的结果、需要进行的处理迟迟不能结束、网页布局错乱、响应速度极为..</p>
+<ul class="col2-list clearfix">
+
+<li>
+    <a href="https://book.douban.com/reading/33071895/">第1章：什么是 Web应用的 安全隐患 </a>
+</li>
+</ul>
+<div align="right">  · · · · · ·    (<a href="https://book.douban.com/subject/26077205/reading/">查看全部试读</a>)</div>
+</div>
+
+
+
+  
+
+
+<link rel="stylesheet" href="https://img1.doubanio.com/f/verify/fada435abd10ae2583d995730a9e06e6e20a9a05/entry_creator/dist/author_subject/style.css">
+
+<div id="author_subject" class="author-wrapper">
+  <div class="loading"></div>
+</div>
+
+<script type="text/javascript">
+  var answerObj = {
+    TYPE: 'book',
+    SUBJECT_ID: '26077205',
+    ISALL: 'False' || false,
+    USER_ID: '82160871'
+  }
+</script>
+<script src="https://img1.doubanio.com/f/book/61252f2f9b35f08b37f69d17dfe48310dd295347/js/book/lib/react/bundle.js"></script>
+<script type="text/javascript" src="https://img1.doubanio.com/f/verify/82d2333c56fe1813ad6ee312f35a915941d906ae/entry_creator/dist/author_subject/index.js"></script> 
+  
+      
+
+
+
+
+
+
+
+
+<div class="ugc-mod blockquote-list-wrapper">
+  <div class="hd">
+    <h2>
+      原文摘录
+      &nbsp;&nbsp;· · · · · ·&nbsp;
+      <span class="pl">( <a href="blockquotes">全部</a> )</span>
+    </h2>
+
+    <ul class="blockquote-list">
+      
+        <li>
+          <figure>
+            未指定Domain属性时，Cookie只被发送至生成它的服务器。换言之，未指定Domain属性的Cookie发送范围最小，最安全。
+设置了Secure属性的Cookie尽在SSL传输的情况下能够被发送给服务器。而未设置安全属性的Cookie则无关是否为SSL传输，都会被发送。
+设置了HttpOnly属性也无法彻底抵御跨站脚本攻击，但是能加大攻击的难度。 (<a href="https://book.douban.com/annotation/33380770/">查看原文</a>)
+
+            <div class="blockquote-extra">
+              <div class='blockquote-meta'>
+                <a href="https://www.douban.com/people/yuan13xian/" class="author-avatar">
+                  <img width="20" height="20" src="https://img1.doubanio.com/icon/u1000021-7.jpg">
+                </a>
+                <a class="author-name" href="https://www.douban.com/people/yuan13xian/">我很严肃的</a>
+                  <span>1赞</span>
+                <datetime>2014-11-10 22:00:30</datetime>
+              </div>
+
+              
+              <figcaption title="引自第43页">
+                —— 引自第43页
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+      
+        <li>
+          <figure>
+            同源策略（Same Origin Policy）是禁止Javascript进行跨站访问的安全策略。它也是浏览器的沙盒环境所提供的一项制约。
+严格来说，“同源”需满足以下全部条件。
+
+ - URL的主机（FQDN： Full Qualified Dmoain Name，全称域名）一致。
+ - Schema（协议）一致。
+ - 端口号一致。 (<a href="https://book.douban.com/annotation/33380832/">查看原文</a>)
+
+            <div class="blockquote-extra">
+              <div class='blockquote-meta'>
+                <a href="https://www.douban.com/people/yuan13xian/" class="author-avatar">
+                  <img width="20" height="20" src="https://img1.doubanio.com/icon/u1000021-7.jpg">
+                </a>
+                <a class="author-name" href="https://www.douban.com/people/yuan13xian/">我很严肃的</a>
+                <datetime>2014-11-10 22:17:13</datetime>
+              </div>
+
+              
+              <figcaption title="引自第49页">
+                —— 引自第49页
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+    </ul>
+
+      <p class="pl"> &gt; <a href="blockquotes">全部原文摘录</a> </p>
+  </div>
+</div>
+
+
+
+  
+      
+
+
+
+
+<div class="subject_show block5">
+<h2>
+    
+  
+
+  <h2>
+    <span>丛书信息</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+</h2>
+<div>
+　　<a href="https://book.douban.com/series/28503">图灵程序设计丛书·Web开发系列</a>(共173册)，
+这套丛书还有
+
+《深入浅出HTML》《Flex 3程序设计》《Web安全开发指南》《精通Ext JS》《学习JavaScript数据结构与算法（第2版）》
+等
+。
+</div>
+</div>
+<script>
+$(function(){$(".knnlike a").click(function(){return moreurl(this,{'from':'knnlike'})})})
+</script>
+
+  
+
+
+
+
+  
+
+
+
+
+<div id="rec-ebook-section" class="block5 subject_show">
+  
+
+  
+  
+
+  <h2>
+    <span>喜欢读&#34;Web应用安全权威指南&#34;的人也喜欢的电子书</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+  <div class="tips-mod">
+    支持 Web、iPhone、iPad、Android 阅读器
+  </div>
+  <div class="content clearfix">
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/12055070/?dcs=subject-rec&amp;dcm=douban&amp;dct=26077205" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/12055070.1653694581.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/12055070/" target="_blank">Web性能权威指南</a>
+          </div>
+          <div class="price">
+              
+    9.99元
+
+          </div>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/6473199/?dcs=subject-rec&amp;dcm=douban&amp;dct=26077205" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/6473199.1653712355.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/6473199/" target="_blank">白帽子讲Web安全</a>
+          </div>
+          <div class="price">
+              
+    17.25元
+
+          </div>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/12187424/?dcs=subject-rec&amp;dcm=douban&amp;dct=26077205" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/12187424.1653694541.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/12187424/" target="_blank">CPU自制入门</a>
+          </div>
+          <div class="price">
+              
+    49.99元
+
+          </div>
+        </dd>
+      </dl>
+  </div>
+</div>
+
+<div id="db-rec-section" class="block5 subject_show knnlike">
+  
+  
+  
+
+  <h2>
+    <span>喜欢读&#34;Web应用安全权威指南&#34;的人也喜欢</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+  <div class="content clearfix">
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/25733421/" onclick="moreurl(this, {'total': 10, 'clicked': '25733421', 'pos': 0, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s28741402.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/25733421/" onclick="moreurl(this, {'total': 10, 'clicked': '25733421', 'pos': 0, 'identifier': 'book-rec-books'})" class="">
+            Web之困：现代Web应用安全指南
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26640242/" onclick="moreurl(this, {'total': 10, 'clicked': '26640242', 'pos': 1, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s28315310.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26640242/" onclick="moreurl(this, {'total': 10, 'clicked': '26640242', 'pos': 1, 'identifier': 'book-rec-books'})" class="">
+            有趣的二进制
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/10793814/" onclick="moreurl(this, {'total': 10, 'clicked': '10793814', 'pos': 2, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s10321223.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/10793814/" onclick="moreurl(this, {'total': 10, 'clicked': '10793814', 'pos': 2, 'identifier': 'book-rec-books'})" class="">
+            黑客攻防技术宝典（第2版）
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/25955740/" onclick="moreurl(this, {'total': 10, 'clicked': '25955740', 'pos': 3, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s27398305.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/25955740/" onclick="moreurl(this, {'total': 10, 'clicked': '25955740', 'pos': 3, 'identifier': 'book-rec-books'})" class="">
+            Web渗透测试
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/20451827/" onclick="moreurl(this, {'total': 10, 'clicked': '20451827', 'pos': 4, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s24562945.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/20451827/" onclick="moreurl(this, {'total': 10, 'clicked': '20451827', 'pos': 4, 'identifier': 'book-rec-books'})" class="">
+            Web前端黑客技术揭秘
+          </a>
+        </dd>
+      </dl>
+        <dl class="clear"></dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/11589836/" onclick="moreurl(this, {'total': 10, 'clicked': '11589836', 'pos': 5, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s11337006.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/11589836/" onclick="moreurl(this, {'total': 10, 'clicked': '11589836', 'pos': 5, 'identifier': 'book-rec-books'})" class="">
+            捉虫日记
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/25815527/" onclick="moreurl(this, {'total': 10, 'clicked': '25815527', 'pos': 6, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s27206354.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/25815527/" onclick="moreurl(this, {'total': 10, 'clicked': '25815527', 'pos': 6, 'identifier': 'book-rec-books'})" class="">
+            SQL注入攻击与防御（第2版）
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26920403/" onclick="moreurl(this, {'total': 10, 'clicked': '26920403', 'pos': 7, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s29169294.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26920403/" onclick="moreurl(this, {'total': 10, 'clicked': '26920403', 'pos': 7, 'identifier': 'book-rec-books'})" class="">
+            Ruby原理剖析
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/1754792/" onclick="moreurl(this, {'total': 10, 'clicked': '1754792', 'pos': 8, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s5652308.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/1754792/" onclick="moreurl(this, {'total': 10, 'clicked': '1754792', 'pos': 8, 'identifier': 'book-rec-books'})" class="">
+            黑客大曝光
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26293733/" onclick="moreurl(this, {'total': 10, 'clicked': '26293733', 'pos': 9, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s27976251.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26293733/" onclick="moreurl(this, {'total': 10, 'clicked': '26293733', 'pos': 9, 'identifier': 'book-rec-books'})" class="">
+            24小时365天不间断服务
+          </a>
+        </dd>
+      </dl>
+        <dl class="clear"></dl>
+  </div>
+</div>
+
+  
+      
+
+
+
+
+<div id="comments-section">
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/book/d63a579a99fd372b4398731a279a1382e6eac71e/css/book/lib/subject-comments/comments-section.css"/>
+    <div class="mod-hd">
+        
+
+        <a class="redbutt j a_collect_btn rr" name="cbtn-26077205" href="javascript:;" rel="nofollow">
+            <span>我来说两句</span>
+        </a>
+
+            
+  
+
+  <h2>
+    <span>短评</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/subject/26077205/comments/">全部 20 条</a>
+        ) </span>
+
+  </h2>
+
+
+    </div>
+    <div class="nav-tab">
+        
+    <div class="tabs-wrapper  line">
+                <a class="short-comment-tabs on-tab"
+                    href="https://book.douban.com/subject/26077205/comments?sort=score" 
+                    data-tab="score">热门</a>
+                <span>/</span>
+                <a class="short-comment-tabs "
+                    href="https://book.douban.com/subject/26077205/comments?sort=time" 
+                    data-tab="time">最新</a>
+                <span>/</span>
+                <a class="short-comment-tabs "
+                    href="https://book.douban.com/subject/26077205/comments?sort=follows" 
+                    data-tab="follows">好友</a>
+    </div>
+
+    </div>
+    <div id="comment-list-wrapper" class="indent">
+        
+  
+  <div class="comment-list score show" id="score">
+      <ul>
+          
+  <li class="comment-item" data-cid="853912169">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-853912169" class="vote-count">0</span>
+              <a id="btn-853912169" href="" class="j vote-comment" data-cid="853912169">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/103280313/">sakura79</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/853912169">2014-10-14 16:27:00</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">内容比较浅显，易懂，而且非常详实，解释的概念很清楚，例子很形象。非常适合初中级开发人员，尤其是对安全问题一知半解的工程师。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=853912169"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1808865710">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1808865710" class="vote-count">0</span>
+              <a id="btn-1808865710" href="" class="j vote-comment" data-cid="1808865710">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/136803878/">shinji</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1808865710">2019-06-19 17:58:04</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">入门级。对整体有一个系统的了解，讲到的点都讲的很清楚。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=1808865710"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="3530806055">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-3530806055" class="vote-count">0</span>
+              <a id="btn-3530806055" href="" class="j vote-comment" data-cid="3530806055">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/263620351/">Shening</a>
+            <span class="user-stars allstar30 rating" title="还行"></span>
+          <a class="comment-time" href="/comment/3530806055">2022-10-14 10:44:18</a>
+          <span class="comment-location">湖南</span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">对于现在有很多内容已经过时了，但讲的非常细，对于理解有很大帮助，如果是刚入门web安全建议看看，不用特地学习php去看例子（不是主流了），看懂语法就行。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=3530806055"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="2823527759">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2823527759" class="vote-count">0</span>
+              <a id="btn-2823527759" href="" class="j vote-comment" data-cid="2823527759">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/1117079/">jim</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/2823527759">2021-04-03 10:57:10</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">入门级好书</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=2823527759"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1224906272">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1224906272" class="vote-count">0</span>
+              <a id="btn-1224906272" href="" class="j vote-comment" data-cid="1224906272">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/reisenreisen/">狂气之瞳改</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1224906272">2017-08-05 09:04:19</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">web安全最佳入门。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=1224906272"></div>
+    </div>
+  </li>
+
+      </ul>
+  </div>
+
+        
+  
+  <div class="comment-list time noshow" id="time">
+      <ul>
+          
+  <li class="comment-item" data-cid="3530806055">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-3530806055" class="vote-count">0</span>
+              <a id="btn-3530806055" href="" class="j vote-comment" data-cid="3530806055">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/263620351/">Shening</a>
+            <span class="user-stars allstar30 rating" title="还行"></span>
+          <a class="comment-time" href="/comment/3530806055">2022-10-14 10:44:18</a>
+          <span class="comment-location">湖南</span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">对于现在有很多内容已经过时了，但讲的非常细，对于理解有很大帮助，如果是刚入门web安全建议看看，不用特地学习php去看例子（不是主流了），看懂语法就行。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=3530806055"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="2823527759">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2823527759" class="vote-count">0</span>
+              <a id="btn-2823527759" href="" class="j vote-comment" data-cid="2823527759">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/1117079/">jim</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/2823527759">2021-04-03 10:57:10</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">入门级好书</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=2823527759"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1793889521">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1793889521" class="vote-count">1</span>
+              <a id="btn-1793889521" href="" class="j vote-comment" data-cid="1793889521">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/lix0x7/">lix7</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1793889521">2020-10-20 11:25:04</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">很全面，但是比较零碎繁杂、不深入。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=1793889521"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1797922439">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1797922439" class="vote-count">0</span>
+              <a id="btn-1797922439" href="" class="j vote-comment" data-cid="1797922439">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/75994619/">新世纪续命战士</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1797922439">2019-09-28 23:10:20</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">这书也是别人推荐来读的，当时也的确被封面上的‘在虚拟机上体验攻击流程’吸引了。读完一遍后的感受是，这本书的确是偏防御的，涵盖的面比较广，对于每种安全问题都给了应对策略，不过所谓的‘攻击流程’这个就有点言过其实了，无非就是给几段有安全漏洞的php代码，然后进入存在该恶意代码的网站体验下后果(该网站的服务器位于虚拟机中)然后分析下就完事了，没有让我感受到那种实战的快感</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=1797922439"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1808865710">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1808865710" class="vote-count">0</span>
+              <a id="btn-1808865710" href="" class="j vote-comment" data-cid="1808865710">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/136803878/">shinji</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1808865710">2019-06-19 17:58:04</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">入门级。对整体有一个系统的了解，讲到的点都讲的很清楚。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26077205/?comment_id=1808865710"></div>
+    </div>
+  </li>
+
+      </ul>
+  </div>
+
+            
+  
+  <div class="comment-list follows noshow" id="follows">
+      
+      <ul>
+        <li class="comment-item">
+          <p class="blank-tip">你关注的人还没有写短评呢</p>
+        </li>
+      </ul>
+  </div>
+
+        
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/vendors/7d8c54c10ffd51769880282d4a41609dc465b796/reports.css" />
+    <style>
+      .report-comment { overflow: hidden; visibility: hidden; }
+      .btn-report { float: right; color: #bbb; cursor: pointer; font-size: 13px;}
+    </style>
+    <script src="https://img1.doubanio.com/f/vendors/bd6325a12f40c34cbf2668aafafb4ccd60deab7e/vendors.js"></script>
+    <script src="https://img1.doubanio.com/f/vendors/68e2c291c7d4971661f7e4c3e41e1e99e2c2df4b/reports.js"></script>
+    <script>
+      (function () {
+        const ADD_REPORT = function() {
+          var roots = document.querySelectorAll(".report-comment");
+          roots.forEach(function (root) {
+            var btn = document.createElement('span');
+            btn.className = 'btn-report';
+            btn.innerHTML = "投诉";
+            btn.addEventListener('click', function () {
+              if (window.DOUBAN_VENDORS && window.DOUBAN_VENDORS.openReportModal) {
+                window.DOUBAN_VENDORS.openReportModal({
+                  reportUrl: "" || root.getAttribute('data-url'),
+                  types: ["content"]
+                })
+              }
+            });
+            root.appendChild(btn);
+          })
+        }
+        ADD_REPORT();
+        $("body").delegate(".comment-item", 'mouseenter mouseleave', function (e) {
+          var $report = $(this).find(".report-comment")
+          switch (e.type) {
+            case "mouseenter":
+              $report.css('visibility', 'visible');
+              break;
+            case "mouseleave":
+              $report.css('visibility', 'hidden');
+              break;
+            }
+        });
+        window.ADD_REPORT = ADD_REPORT
+      })()
+    </script>
+
+    </div>
+        <p>&gt; <a href="https://book.douban.com/subject/26077205/comments/">更多短评 20 条</a></p>
+    <script src="https://img1.doubanio.com/f/book/6eba6f43fb7592ab783e390f654c0d6a96b1598e/js/book/lib/subject-comments/comments-section.js"></script>
+    <script>
+     (function () {
+            if (window.SUBJECT_COMMENTS_SECTION) {
+                // tab handler
+                SUBJECT_COMMENTS_SECTION.createTabHandler();
+                // expand handler
+                SUBJECT_COMMENTS_SECTION.createExpandHandler({
+                    root: document.getElementById('comment-list-wrapper'),
+                });
+                SUBJECT_COMMENTS_SECTION.createVoteHandler({
+                    api: '/j/comment/:id/vote',
+                    root: document.getElementById('comment-list-wrapper'),
+                    voteSelector: '.vote-comment',
+                    textSelector: '.vote-count',
+                    afterVote: function (elem) {
+                        var parentNode = elem.parentNode;
+                        var successElem = document.createElement('span');
+                        successElem.innerHTML = '已投票';
+                        parentNode.removeChild(elem);
+                        parentNode.appendChild(successElem);
+                    }
+                });
+            }
+        })()
+    </script>
+</div>
+
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://img1.doubanio.com/misc/mixed_static/6078555e83c38f2.css">
+
+    <section id="reviews-wrapper" class="reviews mod book-content">
+        <header>
+            
+                <a href="new_review" rel="nofollow" class="create-review redbutt rr "
+                    data-isverify="True"
+                    data-verify-url="https://www.douban.com/accounts/phone/verify?redir=https://book.douban.com/subject/26077205/new_review">
+                    <span>我要写书评</span>
+                </a>
+            <h2>
+                    Web应用安全权威指南的书评 · · · · · ·
+
+                    <span class="pl">( <a href="reviews">全部 1 条</a> )</span>
+            </h2>
+        </header>
+
+            <div class="review_filter">
+                            <a href="javascript:;;" class="cur" data-sort="">热门</a> &#047;
+                            <a href="javascript:;;" data-sort="time">最新</a> &#047;
+                            <a href="javascript:;;" data-sort="follow">好友</a>
+            </div>
+            <script>
+                var cur_sort = '';
+                $('#reviews-wrapper .review_filter a').on('click', function () {
+                    var sort = $(this).data('sort');
+                    if(sort === cur_sort) return;
+
+                    if(sort === 'follow' && false){
+                        window.location.href = '//www.douban.com/accounts/login?source=movie';
+                        return;
+                    }
+
+                    if($('#reviews-wrapper .review_filter').data('doing')) return;
+                    $('#reviews-wrapper .review_filter').data('doing', true);
+
+                    cur_sort = sort;
+
+                    $('#reviews-wrapper .review_filter a').removeClass('cur');
+                    $(this).addClass('cur');
+
+                    $.getJSON('reviews', { sort: sort }, function(res) {
+                        $('#reviews-wrapper .review-list').remove();
+                        $('#reviews-wrapper [href="reviews?sort=follow"]').parent().remove();
+                        $('#reviews-wrapper .review_filter').after(res.html);
+                        $('#reviews-wrapper .review_filter').data('doing', false);
+                        $('#reviews-wrapper .review_filter').removeData('doing');
+
+                        if (res.count === 0) {
+                            $('#reviews-wrapper .review-list').html('<span class="no-review">你关注的人还没写过长评</span>');
+                        }
+                    });
+                });
+            </script>
+
+
+            
+
+
+
+<div class="review-list  ">
+        
+    
+
+            
+    
+    <div data-cid="7294573">
+        <div class="main review-item" id="7294573">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/gtfx/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/u54186291-13.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/gtfx/" class="name">Go7hic</a>
+
+            <span class="allstar40 main-title-rating" title="推荐"></span>
+
+        <span content="2014-12-27" class="main-meta">2014-12-27 22:16:14</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/7294573/">很不错的一本 Web 安全书</a></h2>
+
+                <div id="review_7294573_short" class="review-short" data-rid="7294573">
+                    <div class="short-content">
+
+                        这是一本对 web 安全讲解的非常全面的一本书，虽然可能没有国内道哥和余弦那两本书的深度，没讲什么攻击的奇淫技巧，但是有那两本书的广度，感觉这本更偏重 防，当做指南还是不错的，对各种 web 应用安全的防范策略介绍的非常全面，每个 web 开发者都应该去读读。 
+
+                        &nbsp;(<a href="javascript:;" id="toggle-7294573-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_7294573_full" class="hidden">
+                    <div id="review_7294573_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="7294573" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-7294573">
+                                1
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="7294573" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-7294573">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/7294573/#comments" class="reply ">1回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+    
+
+    <script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/5a2ccc4318d75e65.js"></script>
+    <!-- COLLECTED CSS -->
+</div>
+
+
+
+
+
+
+
+
+                <p class="pl">
+                    &gt;
+                        <a href="reviews">
+                            更多书评
+                                1篇
+                        </a>
+                </p>
+    </section>
+<!-- COLLECTED JS -->
+
+
+
+  
+<div class="annotation">
+</div>
+
+<script>
+  $('document').ready(function () {
+    $.get(`/subject/26077205/annotation_html`, function (r) {
+      $('.annotation').html(r.html);
+    });
+  });
+</script>
+
+  
+    
+
+
+
+
+
+<div id="db-discussion-section" class="indent ugc-mod">
+
+
+    
+  
+
+  <h2>
+    <span>论坛</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+        
+<table class="olt"><tr><td><td><td><td></tr>
+        
+        <tr>
+            <td class="pl"><a href="https://book.douban.com/subject/26077205/discussion/60408596/" title="记录一下怀疑是错误的地方">记录一下怀疑是错误的地方</a></td>
+            <td class="pl"><span>来自</span><a href="https://www.douban.com/people/danzhu/">danzhu</a></td>
+            <td class="pl"><span></span></td>
+            <td class="pl"><span>2015-01-30 17:33:45</span></td>
+        </tr>
+</table>
+
+
+            <p class="pl" align="right">&gt;
+                <a class="" href="https://book.douban.com/subject/26077205/discussion/create" rel="nofollow">在这本书的论坛里发言</a>
+            </p>
+
+
+</div>
+
+
+
+</div>
+<script type="text/javascript">
+$(function(){if($.browser.msie && $.browser.version == 6.0){
+    var maxWidth = parseInt($('#info').css('max-width'));
+    if($('#info').width() > maxWidth)
+        $('#info').width(maxWidth)
+}});
+</script>
+</div>
+      <div class="aside">
+        
+  
+  
+
+
+
+
+
+
+  <div id="dale_book_subject_top_right"></div>
+
+  
+
+
+
+
+
+
+<style type="text/css" media="screen">
+  .add2cartContainer{overflow:hidden;vertical-align:bottom;line-height:1;padding:10px 0}.add2cartContainer .add2cart{margin-right:0;display:inline-block}.buyinfo .bs{margin:0}.buyinfo .current-version-list{margin-bottom:27px}.buyinfo .secondhand-books-list{margin-top:-10px}.buyinfo .secondhand-books-list li{display:block}.buyinfo .secondhand-books-list .flex-wrap{display:flex}.buyinfo .secondhand-books-list .flex-wrap .vendor-name{flex:0 0 33%}.buyinfo .secondhand-books-list .flex-wrap .cell:last-child{width:70px;flex:initial;text-align:right}.buyinfo li{display:flex;flex-direction:column;padding:12px 0;position:relative;line-height:1;border-bottom:1px solid rgba(0,0,0,0.08)}.buyinfo li .cell{flex:1}.buyinfo li .cell:first-child a{line-height:20px}.buyinfo li .vendor-name.cell,.buyinfo li .vendor-name{flex:0 0 33%;align-self:normal;line-height:20px}.buyinfo li .price-btn-wrapper{display:flex}.buyinfo li .price-btn-wrapper>.cell{display:flex;margin-bottom:5px}.buyinfo li .price-btn-wrapper>.cell:last-child{margin-bottom:0}.buyinfo li .price-btn-wrapper>.cell .cell:last-child{padding-right:1px;width:70px;flex:initial;text-align:right}.buyinfo li .buylink-price{line-height:20px}.buyinfo li .buylink-price.promotion{color:#c34}.buyinfo li s{padding-left:2px;line-height:20px;font-family:Helvetica;font-size:11px;color:rgba(0,0,0,0.25);letter-spacing:0;vertical-align:top}.buyinfo li .publisher{color:rgba(0,0,0,0.25)}.buyinfo li .buy-book-btn{display:inline-block;height:20px;line-height:20px;width:70px;text-align:center;background:#fff;border-radius:3px;font-size:12px;box-shadow:0 0 1px 0 rgba(0,0,0,0.07)}.buyinfo li .buy-book-btn:hover{opacity:.8}.buyinfo li .secondhand-book-btn,.buyinfo li .paper-book-btn{color:#EB9108}.buyinfo li .secondhand-book-btn:hover,.buyinfo li .paper-book-btn:hover{background:#EB9108;color:#fff}.buyinfo li .e-book-btn{color:#32A998}.buyinfo li .e-book-btn:hover{background:#32A998;color:#fff}.buyinfo li .go-shopping{display:inline-block;line-height:20px;width:70px;text-align:center}.buyinfo .more-info{color:rgba(0,0,0,0.5);font-size:12px}.buyinfo .more-info.not-onsale{color:rgba(0,0,0,0.5)}.buyinfo .cell.not-onsale .more-info{line-height:20px}.buyinfo-printed{margin-bottom:15px}.buyinfo-printed.no-border{border-bottom:0}.buyinfo-printed .presale-indicator{margin:0;width:auto;text-indent:0;background:none;color:rgba(0,0,0,0.5)}.gray_ad{padding:18px 16px;background:#F6F6F2}.gray_ad h2{margin-bottom:10px;font-size:15px;color:#0B7C2A}.gray_ad .ebook-tag{margin-top:5px;color:#999;font-size:12px}
+
+  .presale-indicator {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 24px;
+  height: 15px;
+  line-height: 15px;
+  background: url(https://img1.doubanio.com/f/book/1679c65572eac1371f9872807199dea6e55a7f06/pics/book/cart/presale_text.gif) no-repeat;
+  text-indent: -9999px;
+  vertical-align: middle;
+  *vertical-align: 0px;
+  _vertical-align: 2px;
+  margin-left: 0.5em;
+}
+
+</style>
+
+  <div class="gray_ad buyinfo" id="buyinfo">
+      <div class="buyinfo-printed" id="buyinfo-printed">
+        
+
+          
+  
+
+  <h2>
+    <span>当前版本有售</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+          
+  <ul class="bs current-version-list">
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://www.dedao.cn/eBook/N5lDqb9b47pXZxGn1kBzPlMyQArYv0qDkqwqe85E2aVKdo9jNgOLRmDJ6nXLm16K?source=douban" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26077205&amp;isbn=7115370478&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>得到</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_mod_buyinfo" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26077205&amp;isbn=7115370478&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://www.dedao.cn/eBook/N5lDqb9b47pXZxGn1kBzPlMyQArYv0qDkqwqe85E2aVKdo9jNgOLRmDJ6nXLm16K?source=douban" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26077205&amp;isbn=7115370478&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        39.99元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://www.dedao.cn/eBook/N5lDqb9b47pXZxGn1kBzPlMyQArYv0qDkqwqe85E2aVKdo9jNgOLRmDJ6nXLm16K?source=douban" class="buy-book-btn e-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26077205&amp;isbn=7115370478&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买电子书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?lowest=6620&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6620&amp;pos=2&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIOZR5aEQISA1AYUyUCEgNRGV0UCyJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIWA1cdWhwdS0IJRmtAX2lyNGY8Z2JKdS5TRWxmW2MwfFxTDh43Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sQCxsDUB9aFAsaAlwrXCXbkrCDucnMnJjS3YxrJTIi%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVBhYFUxpSCltXWwg%253D&amp;cntvendor=2&amp;srcsubj=26077205&amp;type=bkbuy&amp;subject=26077205" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26077205&amp;isbn=7115370478&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>京东商城</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_mod_buyinfo" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26077205&amp;isbn=7115370478&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?lowest=6620&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6620&amp;pos=1&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIOZR5aEQISA1AYUyUCEgNRGV0UCyJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIWA1cdWhwdS0IJRmtAX2lyNGY8Z2JKdS5TRWxmW2MwfFxTDh43Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sQCxsDUB9aFAsaAlwrXCXbkrCDucnMnJjS3YxrJTIi%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVBhYFUxpSCltXWwg%253D&amp;cntvendor=2&amp;srcsubj=26077205&amp;type=bkbuy&amp;subject=26077205" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26077205&amp;isbn=7115370478&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        66.20元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?lowest=6620&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6620&amp;pos=1&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIOZR5aEQISA1AYUyUCEgNRGV0UCyJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIWA1cdWhwdS0IJRmtAX2lyNGY8Z2JKdS5TRWxmW2MwfFxTDh43Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sQCxsDUB9aFAsaAlwrXCXbkrCDucnMnJjS3YxrJTIi%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVBhYFUxpSCltXWwg%253D&amp;cntvendor=2&amp;srcsubj=26077205&amp;type=bkbuy&amp;subject=26077205" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26077205&amp;isbn=7115370478&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+  </ul>
+
+
+      </div>
+      
+  <div class="add2cartContainer no-border">
+    
+  <span class="add2cartWidget ll">
+        
+        <a href="javascript:;" class="j  a_add2cart add2cart"
+          name="26077205">
+          <span>+ 加入购书单</span></a>
+        <span class="color_gary book-in-cart hidden"
+          >
+            已在购书单&nbsp;
+            <a href="https://book.douban.com/cart">查看</a>
+          <a class="delete-cart-item" rel="26077205" href="https://book.douban.com/cart">删除</a>
+        </span>
+  </span>
+  
+
+  </div>
+
+  </div>
+
+<script>
+  $(document).ready(function() {
+    $('.impression_track_mod_buyinfo').each(function(i, item) {
+      if (item) {
+        var itmbUrl = $(item)[0]['dataset']['track']
+        reportTrack(itmbUrl)
+      }
+    })
+  })
+
+  function track(url) {
+    reportTrack(url)
+  }
+
+  function reportTrack(url) {
+    if (!url) { return false }
+    $.ajax({ url: url, dataType: 'text/html' })
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+  
+
+<style type="text/css" media="screen">
+  .version_works h2{margin-bottom:20px}.version_works li.mb8{display:flex;flex-direction:column;padding-bottom:10px}.version_works li.mb8:last-child{padding-bottom:0;margin-bottom:0}.version_works .meta-wrapper{justify-content:space-between;display:flex}.version_works .meta-wrapper .count span{padding-right:10px}.version_works .buyinfo{display:flex;flex-direction:column;margin-top:10px;background:rgba(255,255,255,0.7)}.version_works .buyinfo li{padding:10px}.version_works .current-version-list{margin-bottom:0}.version_works .secondhand-books-list{margin:0}
+
+</style>
+
+
+
+
+  <div id="dale_book_subject_top_middle"></div>
+  
+
+
+
+
+
+
+  
+    
+
+
+
+  
+  
+
+  <h2>
+    <span>以下书单推荐</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/subject/26077205/doulists">全部</a>
+        ) </span>
+
+  </h2>
+
+
+  <div id="db-doulist-section" class="indent">
+    <ul class="bs">
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/2512365/" target="_blank">前端</a>
+                <span class="pl">(cowboy)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/1743362/" target="_blank">web开发</a>
+                <span class="pl">(FlamingTree)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/1650571/" target="_blank">书籍列表</a>
+                <span class="pl">(十甫寸)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/109665742/" target="_blank">技术架构设计</a>
+                <span class="pl">(葡萄)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/42653994/" target="_blank">安全</a>
+                <span class="pl">(心皿)</span>
+            </li>
+    </ul>
+  </div>
+
+  <div id="dale_book_subject_middle_mini"></div>
+  
+    
+
+
+
+
+
+  
+  
+
+  <h2>
+    <span>谁读这本书?</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+<div id="collector">
+  
+
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/mewcatcher/"><img src="https://img2.doubanio.com/icon/u82160871-12.jpg" alt="MewX" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/mewcatcher/">MewX</a><br/>
+      <div class="pl ll">          2018年7月30日          在读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/171863619/"><img src="https://img2.doubanio.com/icon/u171863619-1.jpg" alt="用户5844468072" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/171863619/">用户5844468072</a><br/>
+      <div class="pl ll">          12月15日          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/36757603/"><img src="https://img9.doubanio.com/icon/u36757603-6.jpg" alt="JT" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/36757603/">JT</a><br/>
+      <div class="pl ll">          12月8日          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/3573392/"><img src="https://img9.doubanio.com/icon/u3573392-5.jpg" alt="WhisperHeart" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/3573392/">WhisperHeart</a><br/>
+      <div class="pl ll">          12月4日          在读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+
+
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26077205/comments?status=N">21人在读</a></p>
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26077205/comments?status=P">59人读过</a></p>
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26077205/comments?status=F">355人想读</a></p>
+
+</div>
+
+
+
+
+
+  
+<!-- douban ad begin -->
+<div id="dale_book_subject_middle_right"></div>
+<script type="text/javascript">
+    (function (global) {
+        if(!document.getElementsByClassName) {
+            document.getElementsByClassName = function(className) {
+                return this.querySelectorAll("." + className);
+            };
+            Element.prototype.getElementsByClassName = document.getElementsByClassName;
+
+        }
+        var articles = global.document.getElementsByClassName('article'),
+            asides = global.document.getElementsByClassName('aside');
+
+        if (articles.length > 0 && asides.length > 0 && articles[0].offsetHeight >= asides[0].offsetHeight) {
+            (global.DoubanAdSlots = global.DoubanAdSlots || []).push('dale_book_subject_middle_right');
+        }
+    })(this);
+</script>
+<!-- douban ad end -->
+
+  
+    
+
+
+
+
+
+
+<h2>
+  
+  
+
+  <h2>
+    <span>二手市场</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+</h2>
+<div class="indent">
+  <ul class="bs">
+  <li class="">
+      <a class=" " href="https://book.douban.com/subject/26077205/offers">1本二手书欲转让</a>
+        <span class="">
+          (59.00
+            元)
+        </span>
+    </li>
+    <li>
+        <a href='https://book.douban.com/subject/26077205/new_offer' class="rr">在豆瓣转让</a>
+
+      有355人想读,手里有一本闲着?
+    </li>
+    <li>
+      <div class="rr">
+        <a href="https://shoushu.kongfz.com/?utm_source=douban&utm_medium=new_offer">孔网上门收书</a>
+      </div>
+      转让给其他二手平台？
+    </li>
+  </ul>
+</div>
+
+  
+<p class="pl">订阅关于Web应用安全权威指南的评论: <br/><span class="feed">
+    <a href="https://book.douban.com/feed/subject/26077205/reviews"> feed: rss 2.0</a></span></p>
+
+
+      </div>
+      <div class="extra">
+        
+  
+<!-- douban ad begin -->
+<div id="dale_book_subject_bottom_super_banner"></div>
+<script type="text/javascript">
+    (function (global) {
+        var body = global.document.body,
+            html = global.document.documentElement;
+
+        var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        if (height >= 2000) {
+            (global.DoubanAdSlots = global.DoubanAdSlots || []).push('dale_book_subject_bottom_super_banner');
+        }
+    })(this);
+</script>
+<!-- douban ad end -->
+
+
+      </div>
+    </div>
+  </div>
+
+        
+<div id="footer">
+
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2022 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about/legal">法律声明</a>
+    
+    · <a href="https://help.douban.com/?app=book" target="_blank">帮助中心</a>
+    · <a href="https://book.douban.com/library_invitation">图书馆合作</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+</div>
+
+    </div>
+      
+
+    <script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/77fcd61a77ae3d96.js"></script>
+    <!-- mako -->
+    
+  
+
+
+
+
+
+
+
+
+    
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = '//erebor.douban.com/',
+            userId = '82160871',
+            browserId = 'tTZKimEHBGs',
+            criteria = '7:安全|7:web安全|7:信息安全|7:Web|7:计算机|7:网络安全|7:软件开发|7:互联网|7:黑客|7:Web安全|3:/subject/26077205/',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_book_subject_top_icon', 'dale_book_subject_top_right', 'dale_book_subject_top_middle', 'dale_book_subject_middle_mini'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', '//img1.doubanio.com/MnJwNGlleS9mL2FkanMvY2M1OGQyNTQ2N2I2YmQzOTlmNTliMGJiMjI4MWRhZTlkNTNjYTFkZC9hZC5yZWxlYXNlLmpz');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; 
+    g.type='text/javascript';
+    g.defer=true; 
+    g.async=true; 
+    g.src=p+'://s.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-16', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id])
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '1', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- dae-web-book--default-58c9d57876-tcldb-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

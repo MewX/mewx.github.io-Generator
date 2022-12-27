@@ -1,0 +1,3851 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-webkit book-new-nav">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>The Elements of Statistical Learning (豆瓣)</title>
+  
+<script>!function(e){var o=function(o,n,t){var c,i,r=new Date;n=n||30,t=t||"/",r.setTime(r.getTime()+24*n*60*60*1e3),c="; expires="+r.toGMTString();for(i in o)e.cookie=i+"="+o[i]+c+"; path="+t},n=function(o){var n,t,c,i=o+"=",r=e.cookie.split(";");for(t=0,c=r.length;t<c;t++)if(n=r[t].replace(/^\s+|\s+$/g,""),0==n.indexOf(i))return n.substring(i.length,n.length).replace(/\"/g,"");return null},t=e.write,c={"douban.com":1,"douban.fm":1,"google.com":1,"google.cn":1,"googleapis.com":1,"gmaptiles.co.kr":1,"gstatic.com":1,"gstatic.cn":1,"google-analytics.com":1,"googleadservices.com":1},i=function(e,o){var n=new Image;n.onload=function(){},n.src="https://www.douban.com/j/except_report?kind=ra022&reason="+encodeURIComponent(e)+"&environment="+encodeURIComponent(o)},r=function(o){try{t.call(e,o)}catch(e){t(o)}},a=/<script.*?src\=["']?([^"'\s>]+)/gi,g=/http:\/\/(.+?)\.([^\/]+).+/i;e.writeln=e.write=function(e){var t,l=a.exec(e);return l&&(t=g.exec(l[1]))?c[t[2]]?void r(e):void("tqs"!==n("hj")&&(i(l[1],location.href),o({hj:"tqs"},1),setTimeout(function(){location.replace(location.href)},50))):void r(e)}}(document);</script>
+
+  
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+  
+<meta http-equiv="mobile-agent" content="format=html5; url=https://m.douban.com/book/subject/3294335/">
+<meta name="keywords" content="The Elements of Statistical Learning,Trevor Hastie,Robert Tibshirani,Jerome Friedman,Springer-Verlag New York Inc.,2009-10-1,简介,作者,书评,论坛,推荐,二手">
+<meta name="description" content="图书The Elements of Statistical Learning 介绍、书评、论坛及推荐 ">
+
+  <script>var _head_start = new Date();</script>
+  
+  <link href="https://img1.doubanio.com/f/book/8011541306494bc2ff483299d952d9c65753c43d/css/book/master.css" rel="stylesheet" type="text/css">
+
+  <link href="https://img1.doubanio.com/f/book/222a5c61e041638af8defc87cf97f4a863a77922/css/book/base/init.css" rel="stylesheet">
+  <style type="text/css"></style>
+  <script src="https://img1.doubanio.com/f/book/0495cb173e298c28593766009c7b0a953246c5b5/js/book/lib/jquery/jquery.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/4888ee2fda6812f70a064a51c93b84fde8e4a3c2/js/douban.js"></script>
+  <script src="https://img1.doubanio.com/f/book/0322e3e810e475f1c82adb7d1c6ccfa1c0fa969c/js/book/master.js"></script>
+  
+
+  
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/book/35ee0bfceaf192ef298d0729f3c3d40c0e2341d9/css/book/subject.css">
+  <link href="https://img1.doubanio.com/f/book/5d301503fbbd8e09f3114583859789884e942f47/css/book/annotation/like.css" rel="stylesheet">
+  <script src="https://img1.doubanio.com/f/shire/7965e09b0065d26bfd22d390de956c22a48b9008/js/lib/jquery.snippet.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/2c0c1c6b83f9a457b0f38c38a32fc43a42ec9bad/js/do.js" data-cfg-autoload="false"></script>
+  <script src="https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js"></script>
+  <script src="https://img1.doubanio.com/f/book/2e421e5ec8f2869d31535206c0ac0322532be1f8/js/book/mod/hide.js"></script>
+  <script src="https://img1.doubanio.com/f/book/cc6b1a77c3812c7dd20b0374332fade081e1c0b0/js/book/subject/unfold.js"></script>
+  <!-- IDG Adsense代理广告代码 -->
+  <script data-ad-client="ca-pub-4792467485927557" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="alternate" href="https://book.douban.com/feed/subject/3294335/reviews" type="application/rss+xml" title="RSS">
+  <style type="text/css"> h2 {color: #007722;} </style>
+  <script type='text/javascript'>
+    var _vds = _vds || [];
+    (function(){ _vds.push(['setAccountId', '22c937bbd8ebd703f2d8e9445f7dfd03']);
+        _vds.push(['setCS1','user_id','1']);
+            (function() {var vds = document.createElement('script');
+                vds.type='text/javascript';
+                vds.async = true;
+                vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(vds, s);
+            })();
+    })();
+</script>
+
+  
+  <script type='text/javascript'>
+    var _vwo_code=(function(){
+      var account_id=249272,
+          settings_tolerance=2000,
+          library_tolerance=2500,
+          use_existing_jquery=false,
+          // DO NOT EDIT BELOW THIS LINE
+          f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+  </script>
+
+  
+
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"Book",
+  "workExample": [],
+  "name" : "The Elements of Statistical Learning",
+  "author": 
+  [
+    {
+      "@type": "Person",
+      "name": "Trevor Hastie"
+    }
+    ,
+    {
+      "@type": "Person",
+      "name": "Robert Tibshirani"
+    }
+    ,
+    {
+      "@type": "Person",
+      "name": "Jerome Friedman"
+    }
+  ]
+,
+  "url" : "https://book.douban.com/subject/3294335/",
+  "isbn" : "9780387848570",
+  "sameAs": "https://book.douban.com/subject/3294335/"
+}
+</script>
+
+  
+  
+  <meta property="og:title" content="The Elements of Statistical Learning" />
+  <meta property="og:description" content="During the past decade there has been an explosion in computation and information technology. With i..." />
+  <meta property="og:site_name" content="豆瓣" />
+  <meta property="og:url" content="https://book.douban.com/subject/3294335/" />
+  <meta property="og:image" content="https://img2.doubanio.com/view/subject/l/public/s7004243.jpg" />
+  <meta property="og:type" content="book" />
+      <meta property="book:author" content="Trevor Hastie" />
+      <meta property="book:author" content="Robert Tibshirani" />
+      <meta property="book:author" content="Jerome Friedman" />
+  <meta property="book:isbn" content="9780387848570" />
+
+
+  <script>  </script>
+  <link rel="stylesheet" href="https://img1.doubanio.com/misc/mixed_static/4237393ad061c327.css">
+
+  <link rel="shortcut icon" href="https://img1.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  
+    <script>var _body_start = new Date();</script>
+    
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/94e8e44/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <ul>
+    <li>
+    <a id="top-nav-doumail-link" href="https://www.douban.com/doumail/">豆邮</a>
+    </li>
+    <li class="nav-user-account">
+      <a target="_blank" href="https://accounts.douban.com/passport/setting/" class="bn-more">
+        <span>MewX的帐号</span><span class="arrow"></span>
+      </a>
+      <div class="more-items">
+        <table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/mine/">个人主页</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/orders/">我的订单</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/wallet/">我的钱包</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://accounts.douban.com/passport/setting/">帐号管理</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/accounts/logout?source=book&ck=lCAN">退出</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  <div class="top-nav-reminder">
+    <a href="https://www.douban.com/notification/" class="lnk-remind">提醒</a>
+    <div id="top-nav-notimenu" class="more-items">
+      <div class="bd">
+        <p>加载中...</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="">
+      <a href="https://www.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;82160871&quot;}">豆瓣</a>
+    </li>
+    <li class="on">
+      <a href="https://book.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;82160871&quot;}">读书</a>
+    </li>
+    <li class="">
+      <a href="https://movie.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;82160871&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;82160871&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;82160871&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;82160871&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;82160871&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://douban.fm&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;82160871&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;82160871&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;82160871&quot;}">豆品</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    USER_ID: "82160871",
+    UPLOAD_AUTH_TOKEN: "82160871:a78ed044282201620dca758e206a9bc6de4f5b46",
+    SSE_TOKEN: "84ac8668fdd911db6ca2563d2fdf2c0defe6221f",
+    SSE_TIMESTAMP: "1672099791",
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/94e8e44/shire/bundle.js" defer="defer"></script>
+
+
+
+
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/94e8e44/book/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+<div id="db-nav-book" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https:&#47;&#47;book.douban.com">豆瓣读书</a>
+    </div>
+    <div class="nav-search">
+      <form action="https:&#47;&#47;search.douban.com&#47;book/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">
+          </label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="书名、作者、ISBN" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1001" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="nav-secondary">
+    
+
+<div class="nav-items">
+  <ul>
+    <li    ><a href="https://book.douban.com/mine"
+     >我读</a>
+    </li>
+    <li    ><a href="https://book.douban.com/updates"
+     >动态</a>
+    </li>
+    <li    ><a href="https://book.douban.com/recommended"
+     >豆瓣猜</a>
+    </li>
+    <li    ><a href="https://book.douban.com/tag/"
+     >分类浏览</a>
+    </li>
+    <li    ><a href="https://book.douban.com/cart/"
+     >购书单</a>
+    </li>
+    <li    ><a href="https://read.douban.com/ebooks/?dcs=book-nav&dcm=douban"
+            target="_blank"
+     >电子图书</a>
+    </li>
+    <li    ><a href="https://market.douban.com/book?utm_campaign=book_nav_freyr&utm_source=douban&utm_medium=pc_web"
+     >豆瓣书店</a>
+    </li>
+    <li    ><a href="https://book.douban.com/annual/2022?fullscreen=1&source=navigation"
+            target="_blank"
+     >2022年度榜单</a>
+    </li>
+    <li    ><a href="https://www.douban.com/standbyme/2021?fullscreen=true&hidenav=true&autorotate=false&source=book_navigation"
+            target="_blank"
+     >2021书影音报告</a>
+    </li>
+    <li          class=" book-cart"
+    ><a href="https://market.douban.com/cart/?biz_type=book&utm_campaign=book_nav_cart&utm_source=douban&utm_medium=pc_web"
+            target="_blank"
+     >购物车</a>
+    </li>
+  </ul>
+</div>
+
+    <a href="https://book.douban.com/annual/2022?fullscreen=1&source=book_navigation" class="bookannual"></a>
+  </div>
+</div>
+
+<script id="suggResult" type="text/x-jquery-tmpl">
+  <li data-link="{{= url}}">
+            <a href="{{= url}}" onclick="moreurl(this, {from:'book_search_sugg', query:'{{= keyword }}', subject_id:'{{= id}}', i: '{{= index}}', type: '{{= type}}'})">
+            <img src="{{= pic}}" width="40" />
+            <div>
+                <em>{{= title}}</em>
+                {{if year}}
+                    <span>{{= year}}</span>
+                {{/if}}
+                <p>
+                {{if type == "b"}}
+                    {{= author_name}}
+                {{else type == "a" }}
+                    {{if en_name}}
+                        {{= en_name}}
+                    {{/if}}
+                {{/if}}
+                 </p>
+            </div>
+        </a>
+        </li>
+  </script>
+
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/94e8e44/book/bundle.js" defer="defer"></script>
+
+
+
+
+
+    <div id="wrapper">
+        
+
+    <div id="dale_book_subject_top_icon"></div>
+<h1>
+    <span property="v:itemreviewed">The Elements of Statistical Learning</span>
+    <div class="clear"></div>
+</h1>
+
+        
+  <div id="content">
+    
+    <div class="grid-16-8 clearfix">
+      
+      <div class="article">
+
+
+
+<div class="indent">
+  <div class="subjectwrap clearfix">
+    
+    
+
+
+
+<div class="subject clearfix">
+<div id="mainpic" class="">
+
+  
+
+  <a class="nbg"
+      href="https://img2.doubanio.com/view/subject/l/public/s7004243.jpg" title="The Elements of Statistical Learning">
+      <img src="https://img2.doubanio.com/view/subject/s/public/s7004243.jpg" title="点击看大图" alt="The Elements of Statistical Learning"
+         rel="v:photo" style="max-width: 135px;max-height: 200px;">
+  </a>
+    <br>
+        <p class="gact">
+          <a class="" href="https://book.douban.com/subject/3294335/edit">
+            更新图书信息或封面
+          </a>
+        </p>
+</div>
+
+
+
+
+
+<div id="info" class="">
+
+
+
+    
+    
+  
+    <span>
+      <span class="pl"> 作者</span>:
+        
+            
+            <a class="" href="/search/Trevor%20Hastie">Trevor Hastie</a>
+        
+           /
+            
+            <a class="" href="/search/Robert%20Tibshirani">Robert Tibshirani</a>
+        
+           /
+            
+            <a class="" href="/search/Jerome%20Friedman">Jerome Friedman</a>
+    </span><br/>
+
+    
+    
+  
+    
+        <span class="pl">出版社:</span> Springer-Verlag New York Inc.<br/>
+
+    
+    
+  
+
+    
+    
+  
+    <span class="pl">副标题:</span> Data Mining, Inference, and Prediction<br/>
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+    <span class="pl">出版年:</span> 2009-10-1<br/>
+
+    
+    
+  
+    <span class="pl">页数:</span> 745<br/>
+
+    
+    
+  
+    <span class="pl">定价:</span> GBP 62.99<br/>
+
+    
+    
+  
+    <span class="pl">装帧:</span> Hardcover<br/>
+
+    
+    
+  
+    <span class="pl">丛书:</span>&nbsp;<a href="https://book.douban.com/series/24296">Springer Series in Statistics</a><br>
+
+    
+    
+  
+    
+      
+      <span class="pl">ISBN:</span> 9780387848570<br/>
+
+    
+    
+  
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+
+
+
+
+<div id="interest_sectl" class="">
+  <div class="rating_wrap clearbox" rel="v:rating">
+    <div class="rating_logo">
+            豆瓣评分
+    </div>
+    <div class="rating_self clearfix" typeof="v:Rating">
+      <strong class="ll rating_num " property="v:average"> 9.4 </strong>
+      <span property="v:best" content="10.0"></span>
+      <div class="rating_right ">
+          <div class="ll bigstar45"></div>
+            <div class="rating_sum">
+                <span class="">
+                    <a href="comments" class="rating_people"><span property="v:votes">778</span>人评价</a>
+                </span>
+            </div>
+
+
+      </div>
+    </div>
+          
+            
+            
+<span class="stars5 starstop" title="力荐">
+    5星
+</span>
+
+            
+<div class="power" style="width:64px"></div>
+
+            <span class="rating_per">79.9%</span>
+            <br>
+            
+            
+<span class="stars4 starstop" title="推荐">
+    4星
+</span>
+
+            
+<div class="power" style="width:13px"></div>
+
+            <span class="rating_per">17.0%</span>
+            <br>
+            
+            
+<span class="stars3 starstop" title="还行">
+    3星
+</span>
+
+            
+<div class="power" style="width:1px"></div>
+
+            <span class="rating_per">2.3%</span>
+            <br>
+            
+            
+<span class="stars2 starstop" title="较差">
+    2星
+</span>
+
+            
+<div class="power" style="width:0px"></div>
+
+            <span class="rating_per">0.4%</span>
+            <br>
+            
+            
+<span class="stars1 starstop" title="很差">
+    1星
+</span>
+
+            
+<div class="power" style="width:0px"></div>
+
+            <span class="rating_per">0.4%</span>
+            <br>
+  </div>
+        
+</div>
+
+  </div>
+  
+      
+
+
+
+
+
+
+
+  
+  <div id="interest_sect_level" class="clearfix">    <div class="j a_stars">
+
+      <span class="mr10">
+        我最近在读这本书
+      </span>
+      <span class="color_gray">2016-07-27</span>
+      &nbsp; &nbsp;
+      <a href="javascript:void(0)" class="collect_btn" name="pbtn-3294335">修改</a>
+      &nbsp;
+      
+<form method="POST" action="remove" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="lCAN"/></div>
+    <input type="submit" class="minisubmit j a_confirm_link " value="删除" title="删除这个收藏" />
+</form>
+
+      <br/>
+
+          
+    
+    我的评价:
+    <span id="rating"> <span id="stars" data-solid="https://img1.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" data-hollow="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" data-solid-2x="https://img1.doubanio.com/f/shire/7258904022439076d57303c3b06ad195bf1dc41a/pics/rating_icons/star_onmouseover@2x.png" data-hollow-2x="https://img1.doubanio.com/f/shire/95cc2fa733221bb8edd28ad56a7145a5ad33383e/pics/rating_icons/star_hollow_hover@2x.png">
+
+                    <a href="https://book.douban.com/subject/3294335/?rating=1&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star1" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/3294335/?rating=2&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star2" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/3294335/?rating=3&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star3" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/3294335/?rating=4&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star4" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/3294335/?rating=5&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star5" width="16" height="16"/>
+        </a>
+    </span><span id="rateword" class="pl"></span>
+    <input id="n_rating" type="hidden" value=""  />
+    </span>
+
+
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+  
+  <div class="gtleft">
+    <ul class="ul_subject_menu bicelink color_gray pt6 clearfix">
+        <li>
+          <img src="https://img1.doubanio.com/f/shire/5bbf02b7b5ec12b23e214a580b6f9e481108488c/pics/add-review.gif" />&nbsp;
+          <a class="" href="https://book.douban.com/annotation/write?sid=3294335" rel="nofollow">写笔记</a>
+        </li>
+
+        <li>
+          <img src="https://img1.doubanio.com/f/shire/5bbf02b7b5ec12b23e214a580b6f9e481108488c/pics/add-review.gif" />&nbsp;<a class="" href="https://book.douban.com/subject/3294335/new_review" rel="nofollow">写书评</a>
+        </li>
+
+        <li>
+
+<span class="rr">
+
+
+    <img src="/pics/add-cart.gif"/>
+        <a name="3294335" class="j a_add2cart" href="javascript:;">加入购书单</a>
+  <span class="hidden">已在<a href="https://book.douban.com/cart">购书单</a></span>
+</span><br class="clearfix" />
+</li>
+      
+        <li>
+          
+
+
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/sns/9919c071eab1c25bc462d58a582feb79e3867be4/css/sns/doulist/new_doulist_button.css">
+    <div class="doulist-add-btn">
+
+  
+
+  
+  <a href="javascript:void(0)"
+     data-id="3294335"
+     data-cate="1001"
+     data-canview="True"
+     data-url="https://book.douban.com/subject/3294335/"
+     data-catename="图书"
+     data-link="https://www.douban.com/people/mewcatcher/doulists/all?add=3294335&amp;cat=1001"
+     data-title="The Elements of Statistical Learning"
+     data-picture="https://img2.doubanio.com/view/subject/l/public/s7004243.jpg"
+     class="lnk-doulist-add"
+     onclick="moreurl(this, { 'from':'doulist-btn-1001-3294335-82160871'})">
+      <i></i>添加到书单
+  </a>
+    </div>
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css">
+  <script src="https://img1.doubanio.com/f/shire/3f6bfbf287470b91aacba40f0b19cb2056910f2e/js/core/do/loader.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js"></script>
+  <script>
+    Do(function() {
+      loader.batch([
+        "https://img1.doubanio.com/f/sns/339d5de8cb2b7ac836b834518bc33260e83e0a79/js/sns/doulist/doulist_dialog.js",
+      ]).done(function() {
+        $(document).delegate('.lnk-doulist-add', 'click', function(e) {
+          e.preventDefault();
+          var self = $(this);
+          if(window._USER_ABNORMAL) {
+            show_abnormal && show_abnormal()
+            return
+          }
+          var param = $.extend({'url':''}, $(this).data(), {link: this.href});
+          // 兼容jquery 1.8.x
+          var newParam = {};
+          for (key in param) {
+            if (typeof param[key] === 'number') {
+              param[key] = self.attr('data-'+key);
+            }
+            if (param.hasOwnProperty(key)) {
+              newParam[$.camelCase(key)] = param[key];
+            }
+          }
+          self.doulistDialog(newParam);
+        });
+
+      });
+    });
+  </script>
+
+        </li>
+
+        
+        
+    
+    <li class="rec" id="C-3294335">
+        <a href="#" data-url="https://book.douban.com/subject/3294335/" data-desc="" data-title="书籍《The Elements of Statistical Learning》 (来自豆瓣) " data-pic="https://img2.doubanio.com/view/subject/l/public/s7004243.jpg" class="bn-sharing ">分享到</a> &nbsp;&nbsp;
+    </li>
+    <script>
+    var __cache_url = __cache_url || {};
+    (function(u){
+        if(__cache_url[u]) return;
+        __cache_url[u] = true;
+        window.DoubanShareIcons = 'https://img1.doubanio.com/f/shire/d15ffd71f3f10a7210448fec5a68eaec66e7f7d0/pics/ic_shares.png';
+        var initShareButton = function() {
+          $.ajax({url:u,dataType:'script',cache:true});
+        };
+        if (typeof Do == 'function' && 'ready' in Do) {
+          Do('https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+            'https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js',
+            initShareButton);
+        } else if(typeof Douban == 'object' && 'loader' in Douban) {
+          Douban.loader.batch(
+            'https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+            'https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js'
+          ).done(initShareButton);
+        }
+    })('https://img1.doubanio.com/f/shire/64044c0cde0c2bbf9c3eb94e57da6070d0340c4b/js/lib/sharebutton.js');
+    </script>
+
+    </ul>
+  </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+    <script>
+        var rec_url = 'https://www.douban.com/share/recommend?'
+    </script>
+    <script type="text/javascript" src="https://img1.doubanio.com/f/shire/9238d0db7d5fc042186ec54ebc5b4e64653f5e46/js/dshare.js"></script>
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/share/recommend?sanity_key=_3b7c2&amp;apikey=&amp;name=The+Elements+of+Statistical+Learning&amp;image=https%3A%2F%2Fimg2.doubanio.com%2Fview%2Fsubject%2Fs%2Fpublic%2Fs7004243.jpg&amp;redir=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3294335%2F&amp;href=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3294335%2F&amp;curl=&amp;type=book&amp;properties=%7B%22rating%22%3A%229.4%22%7D&amp;desc=Data+Mining%2C+Inference%2C+and+Prediction+%2F+Trevor..." share-id="3294335" data-mode="plain" data-name="The Elements of Statistical Learning" data-type="book" data-desc="Data Mining, Inference, and Prediction / Trevor Hastie / Springer-Verlag New York Inc." data-href="https://book.douban.com/subject/3294335/" data-image="https://img2.doubanio.com/view/subject/s/public/s7004243.jpg" data-properties="{&#34;rating&#34;:&#34;9.4&#34;}" data-redir="https://book.douban.com/subject/3294335/vote?ck=lCAN" data-text="" data-apikey="" data-curl="" data-count="10" data-object_kind="1001" data-object_id="3294335" data-target_type="rec" data-target_action="0" data-action_props="{&#34;subject_url&#34;:&#34;https:\/\/book.douban.com\/subject\/3294335\/&#34;,&#34;subject_title&#34;:&#34;The Elements of Statistical Learning&#34;}" data-sanity_key="_3b7c2" class="lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+
+<script>
+  //bind events for collection button.
+  $('.collect_btn', '#interest_sect_level').each(function(){
+      Douban.init_collect_btn(this);
+  });
+</script>
+
+</div>
+
+<br clear="all">
+<div id="collect_form_3294335"></div>
+<div class="related_info">
+  
+
+
+
+
+
+
+  
+
+  <h2>
+    <span>内容简介</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+<div class="indent" id="link-report">
+    
+      <span class="short">
+        <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>During the past decade there has been an explosion in computation and information technology. With it have come vast amounts of data in a variety of fields such as medicine, biology, finance, and marketing. The challenge of understanding these data has led to the development of new tools in the field of statistics, and spawned new areas such as data mining, machine learning, an...</p><p><a href="javascript:void(0)" class="j a_show_full">(展开全部)</a></p></div>
+       </span>
+      <span class="all hidden">
+        <div class="">
+          <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>During the past decade there has been an explosion in computation and information technology. With it have come vast amounts of data in a variety of fields such as medicine, biology, finance, and marketing. The challenge of understanding these data has led to the development of new tools in the field of statistics, and spawned new areas such as data mining, machine learning, and bioinformatics. Many of these tools have common underpinnings but are often expressed with different terminology. This book describes the important ideas in these areas in a common conceptual framework. While the approach is statistical, the emphasis is on concepts rather than mathematics. Many examples are given, with a liberal use of color graphics. It is a valuable resource for statisticians and anyone interested in data mining in science or industry. The book&#39;s coverage is broad, from supervised learning (prediction) to unsupervised learning. The many topics include neural networks, support vector machines, classification trees and boosting---the first comprehensive treatment of this topic in any book. This major new edition features many topics not covered in the original, including graphical models, random forests, ensemble methods, least angle regression &amp; path algorithms for the lasso, non-negative matrix factorization, and spectral clustering. There is also a chapter on methods for &#34;wide&#34; data (p bigger than n), including multiple testing and false discovery rates.</p></div>
+
+        </div>
+      </span>
+    
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/vendors/7d8c54c10ffd51769880282d4a41609dc465b796/reports.css" />
+    <style>
+      .report-comment { overflow: hidden; visibility: hidden; }
+      .btn-report { float: right; color: #bbb; cursor: pointer; font-size: 13px;}
+    </style>
+    <script src="https://img1.doubanio.com/f/vendors/bd6325a12f40c34cbf2668aafafb4ccd60deab7e/vendors.js"></script>
+    <script src="https://img1.doubanio.com/f/vendors/68e2c291c7d4971661f7e4c3e41e1e99e2c2df4b/reports.js"></script>
+    <script>
+      (function () {
+        const ADD_REPORT = function() {
+          var roots = document.querySelectorAll("#link-report");
+          roots.forEach(function (root) {
+            var btn = document.createElement('span');
+            btn.className = 'btn-report';
+            btn.innerHTML = "投诉";
+            btn.addEventListener('click', function () {
+              if (window.DOUBAN_VENDORS && window.DOUBAN_VENDORS.openReportModal) {
+                window.DOUBAN_VENDORS.openReportModal({
+                  reportUrl: "https://book.douban.com/subject/3294335/" || root.getAttribute('data-url'),
+                  types: ["content"]
+                })
+              }
+            });
+            root.appendChild(btn);
+          })
+        }
+        ADD_REPORT();
+        $("body").delegate(".comment-item", 'mouseenter mouseleave', function (e) {
+          var $report = $(this).find(".report-comment")
+          switch (e.type) {
+            case "mouseenter":
+              $report.css('visibility', 'visible');
+              break;
+            case "mouseleave":
+              $report.css('visibility', 'hidden');
+              break;
+            }
+        });
+        window.ADD_REPORT = ADD_REPORT
+      })()
+    </script>
+
+</div>
+
+  
+      
+
+<style type="text/css" media="screen">
+  .online-partner{display:flex;align-items:center;padding-top:10px;padding-bottom:10px;margin-bottom:20px;border-bottom:1px solid #D8D8D8}.online-partner .online-type{display:flex;align-items:center}.online-partner .online-type:nth-child(2){padding-left:20px}.online-read-or-audio{display:inline-block;color:rgba(0,0,0,0.9);font-size:12px;line-height:24px}.online-read-or-audio a{display:flex;align-items:center;margin-right:10px;padding:0 15px 0 7px;border:1px solid rgba(0,0,0,0.25);border-radius:5px;vertical-align:middle;color:rgba(0,0,0,0.9)}.online-read-or-audio a:after{content:'';width:5px;height:5px;border-right:1px solid rgba(0,0,0,0.8);border-top:1px solid rgba(0,0,0,0.8);transform:rotate(45deg);margin-right:-6px}.online-read-or-audio a:hover{background:#fff;opacity:.8}.online-read-or-audio img{border-radius:50%;box-shadow:0 0 1px 0 rgba(0,0,0,0.6)}.online-read-or-audio span{padding:0 3px 0 5px}
+
+</style>
+
+
+  
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+    
+  
+
+  <h2>
+    <span>作者简介</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+      <div class="indent ">
+          
+            <span class="short">
+                <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>Trevor Hastie, Robert Tibshirani, and Jerome Friedman are professors of statistics at Stanford University. They are prominent researchers in this area: Hastie and Tibshirani developed generalized additive models and wrote a popular book of that title. Hastie co-developed much of the statistical modeling software and environment in R/S-PLUS and invented principal curves and surf...</p><p><a href="javascript:void(0)" class="j a_show_full">(展开全部)</a></p></div>
+
+            </span>
+            <span class="all hidden ">
+                <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>Trevor Hastie, Robert Tibshirani, and Jerome Friedman are professors of statistics at Stanford University. They are prominent researchers in this area: Hastie and Tibshirani developed generalized additive models and wrote a popular book of that title. Hastie co-developed much of the statistical modeling software and environment in R/S-PLUS and invented principal curves and surfaces. Tibshirani proposed the lasso and is co-author of the very successful An Introduction to the Bootstrap. Friedman is the co-inventor of many data-mining tools including CART, MARS, projection pursuit and gradient boosting.</p></div>
+
+            </span>
+      </div>
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+  
+    
+
+
+
+
+  
+
+  <h2>
+    <span>目录</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+<div class="indent" id="dir_3294335_short">
+        Preface to the Second Edition<br/>
+        Preface to the First Edition<br/>
+        1 Introduction<br/>
+        2 Overview of Supervised Learning<br/>
+        2.1 Introduction<br/>
+        2.2 Variable Types and Terminology<br/>
+    · · · · · ·
+    (<a href="javascript:$('#dir_3294335_short').hide();$('#dir_3294335_full').show();$.get('/j/subject/j_dir_count',{id:3294335});void(0);">更多</a>)
+</div>
+
+<div class="indent" id="dir_3294335_full" style="display:none">
+        Preface to the Second Edition<br/>
+        Preface to the First Edition<br/>
+        1 Introduction<br/>
+        2 Overview of Supervised Learning<br/>
+        2.1 Introduction<br/>
+        2.2 Variable Types and Terminology<br/>
+        2.3 Two Simple Approaches to Prediction:<br/>
+        Least Squares and Nearest Neighbors<br/>
+        2.3.1 Linear Models and Least Squares<br/>
+        2.3.2 Nearest-Neighbor Methods<br/>
+        2.3.3 From Least Squares to Nearest Neighbors<br/>
+        2.4 Statistical Decision Theory<br/>
+        2.5 Local Methods in High Dimensions<br/>
+        2.6 Statistical Models, Supervised Learning<br/>
+        and Function Approximation<br/>
+        2.6.1 A Statistical Model<br/>
+        for the Joint Distribution Pr(X, Y )<br/>
+        2.6.2 Supervised Learning<br/>
+        2.6.3 Function Approximation<br/>
+        2.7 Structured Regression Models<br/>
+        2.7.1 Difficulty of the Problem<br/>
+        2.8 Classes of Restricted Estimators<br/>
+        2.8.1 Roughness Penalty and Bayesian Methods<br/>
+        2.8.2 Kernel Methods and Local Regression<br/>
+        2.8.3 Basis Functions and Dictionary Methods<br/>
+        2.9 Model Selection and the Bias–Variance Tradeoff<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        3 Linear Methods for Regression<br/>
+        3.1 Introduction<br/>
+        3.2 Linear Regression Models and Least Squares<br/>
+        3.2.1 Example: Prostate Cancer<br/>
+        3.2.2 The Gauss–Markov Theorem<br/>
+        3.2.3 Multiple Regression<br/>
+        from Simple Univariate Regression<br/>
+        3.2.4 Multiple Outputs<br/>
+        3.3 Subset Selection<br/>
+        3.3.1 Best-Subset Selection<br/>
+        3.3.2 Forward- and Backward-Stepwise Selection<br/>
+        3.3.3 Forward-Stagewise Regression<br/>
+        3.3.4 Prostate Cancer Data Example (Continued)<br/>
+        3.4 Shrinkage Methods<br/>
+        3.4.1 Ridge Regression<br/>
+        3.4.2 The Lasso<br/>
+        3.4.3 Discussion: Subset Selection, Ridge Regression<br/>
+        and the Lasso<br/>
+        3.4.4 Least Angle Regression<br/>
+        3.5 Methods Using Derived Input Directions<br/>
+        3.5.1 Principal Components Regression<br/>
+        3.5.2 Partial Least Squares<br/>
+        3.6 Discussion: A Comparison of the Selection<br/>
+        and Shrinkage Methods<br/>
+        3.7 Multiple Outcome Shrinkage and Selection<br/>
+        3.8 More on the Lasso and Related Path Algorithms<br/>
+        3.8.1 Incremental Forward Stagewise Regression<br/>
+        3.8.2 Piecewise-Linear Path Algorithms<br/>
+        3.8.3 The Dantzig Selector<br/>
+        3.8.4 The Grouped Lasso<br/>
+        3.8.5 Further Properties of the Lasso<br/>
+        3.8.6 Pathwise Coordinate Optimization<br/>
+        3.9 Computational Considerations<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        4 Linear Methods for Classification<br/>
+        4.1 Introduction<br/>
+        4.2 Linear Regression of an Indicator Matrix<br/>
+        4.3 Linear Discriminant Analysis<br/>
+        4.3.1 Regularized Discriminant Analysis<br/>
+        4.3.2 Computations for LDA<br/>
+        4.3.3 Reduced-Rank Linear Discriminant Analysis<br/>
+        4.4 Logistic Regression<br/>
+        4.4.1 Fitting Logistic Regression Models<br/>
+        4.4.2 Example: South African Heart Disease<br/>
+        4.4.3 Quadratic Approximations and Inference<br/>
+        4.4.4 L1 Regularized Logistic Regression<br/>
+        4.4.5 Logistic Regression or LDA?<br/>
+        4.5 Separating Hyperplanes<br/>
+        4.5.1 Rosenblatt’s Perceptron Learning Algorithm .<br/>
+        4.5.2 Optimal Separating Hyperplanes<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        5 Basis Expansions and Regularization<br/>
+        5.1 Introduction<br/>
+        5.2 Piecewise Polynomials and Splines<br/>
+        5.2.1 Natural Cubic Splines<br/>
+        5.2.2 Example: South African Heart Disease (Continued)<br/>
+        5.2.3 Example: Phoneme Recognition<br/>
+        5.3 Filtering and Feature Extraction<br/>
+        5.4 Smoothing Splines<br/>
+        5.4.1 Degrees of Freedom and Smoother Matrices<br/>
+        5.5 Automatic Selection of the Smoothing Parameters<br/>
+        5.5.1 Fixing the Degrees of Freedom<br/>
+        5.5.2 The Bias–Variance Tradeoff<br/>
+        5.6 Nonparametric Logistic Regression<br/>
+        5.7 Multidimensional Splines<br/>
+        5.8 Regularization and Reproducing Kernel Hilbert Spaces<br/>
+        5.8.1 Spaces of Functions Generated by Kernels<br/>
+        5.8.2 Examples of RKHS<br/>
+        5.9 Wavelet Smoothing<br/>
+        5.9.1 Wavelet Bases and the Wavelet Transform<br/>
+        5.9.2 Adaptive Wavelet Filtering<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        Appendix: Computational Considerations for Splines<br/>
+        Appendix: B-splines<br/>
+        Appendix: Computations for Smoothing Splines<br/>
+        6 Kernel Smoothing Methods<br/>
+        6.1 One-Dimensional Kernel Smoothers<br/>
+        6.1.1 Local Linear Regression<br/>
+        6.1.2 Local Polynomial Regression<br/>
+        6.2 Selecting the Width of the Kernel<br/>
+        6.3 Local Regression in IRp<br/>
+        6.4 Structured Local Regression Models in IRp<br/>
+        6.4.1 Structured Kernels<br/>
+        6.4.2 Structured Regression Functions<br/>
+        6.5 Local Likelihood and Other Models<br/>
+        6.6 Kernel Density Estimation and Classification<br/>
+        6.6.1 Kernel Density Estimation<br/>
+        6.6.2 Kernel Density Classification<br/>
+        6.6.3 The Naive Bayes Classifier<br/>
+        6.7 Radial Basis Functions and Kernels<br/>
+        6.8 Mixture Models for Density Estimation and Classification<br/>
+        6.9 Computational Considerations<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        7 Model Assessment and Selection<br/>
+        7.1 Introduction<br/>
+        7.2 Bias, Variance and Model Complexity<br/>
+        7.3 The Bias–Variance Decomposition 223<br/>
+        7.3.1 Example: Bias–Variance Tradeoff<br/>
+        7.4 Optimism of the Training Error Rate<br/>
+        7.5 Estimates of In-Sample Prediction Error<br/>
+        7.6 The Effective Number of Parameters<br/>
+        7.7 The Bayesian Approach and BIC<br/>
+        7.8 Minimum Description Length<br/>
+        7.9 Vapnik–Chervonenkis Dimension<br/>
+        7.9.1 Example (Continued)<br/>
+        7.10 Cross-Validation<br/>
+        7.10.1 K-Fold Cross-Validation<br/>
+        7.10.2 The Wrong and Right Way<br/>
+        to Do Cross-validation<br/>
+        7.10.3 Does Cross-Validation Really Work?<br/>
+        7.11 Bootstrap Methods<br/>
+        7.11.1 Example (Continued)<br/>
+        7.12 Conditional or Expected Test Error?<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        8 Model Inference and Averaging<br/>
+        8.1 Introduction<br/>
+        8.2 The Bootstrap and Maximum Likelihood Methods<br/>
+        8.2.1 A Smoothing Example<br/>
+        8.2.2 Maximum Likelihood Inference<br/>
+        8.2.3 Bootstrap versus Maximum Likelihood<br/>
+        8.3 Bayesian Methods<br/>
+        8.4 Relationship Between the Bootstrap<br/>
+        and Bayesian Inference<br/>
+        8.5 The EM Algorithm<br/>
+        8.5.1 Two-Component Mixture Model<br/>
+        8.5.2 The EM Algorithm in General<br/>
+        8.5.3 EM as a Maximization–Maximization Procedure<br/>
+        8.6 MCMC for Sampling from the Posterior<br/>
+        8.7 Bagging<br/>
+        8.7.1 Example: Trees with Simulated Data<br/>
+        8.8 Model Averaging and Stacking<br/>
+        8.9 Stochastic Search: Bumping<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        9 Additive Models, Trees, and Related Methods<br/>
+        9.1 Generalized Additive Models<br/>
+        9.1.1 Fitting Additive Models<br/>
+        9.1.2 Example: Additive Logistic Regression<br/>
+        9.1.3 Summary<br/>
+        9.2 Tree-Based Methods<br/>
+        9.2.1 Background<br/>
+        9.2.2 Regression Trees<br/>
+        9.2.3 Classification Trees<br/>
+        9.2.4 Other Issues<br/>
+        9.2.5 Spam Example (Continued)<br/>
+        9.3 PRIM: Bump Hunting<br/>
+        9.3.1 Spam Example (Continued)<br/>
+        9.4 MARS: Multivariate Adaptive Regression Splines<br/>
+        9.4.1 Spam Example (Continued)<br/>
+        9.4.2 Example (Simulated Data)<br/>
+        9.4.3 Other Issues<br/>
+        9.5 Hierarchical Mixtures of Experts<br/>
+        9.6 Missing Data<br/>
+        9.7 Computational Considerations<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        10 Boosting and Additive Trees<br/>
+        10.1 Boosting Methods<br/>
+        10.1.1 Outline of This Chapter<br/>
+        10.2 Boosting Fits an Additive Model<br/>
+        10.3 Forward Stagewise Additive Modeling<br/>
+        10.4 Exponential Loss and AdaBoost<br/>
+        10.5 Why Exponential Loss?<br/>
+        10.6 Loss Functions and Robustness<br/>
+        10.7 “Off-the-Shelf” Procedures for Data Mining<br/>
+        10.8 Example: Spam Data<br/>
+        10.9 Boosting Trees<br/>
+        10.10 Numerical Optimization via Gradient Boosting<br/>
+        10.10.1 Steepest Descent<br/>
+        10.10.2 Gradient Boosting<br/>
+        10.10.3 Implementations of Gradient Boosting<br/>
+        10.11 Right-Sized Trees for Boosting<br/>
+        10.12 Regularization<br/>
+        10.12.1 Shrinkage<br/>
+        10.12.2 Subsampling<br/>
+        10.13 Interpretation<br/>
+        10.13.1 Relative Importance of Predictor Variables<br/>
+        10.13.2 Partial Dependence Plots<br/>
+        10.14 Illustrations<br/>
+        10.14.1 California Housing<br/>
+        10.14.2 New Zealand Fish<br/>
+        10.14.3 Demographics Data<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        11 Neural Networks<br/>
+        11.1 Introduction<br/>
+        11.2 Projection Pursuit Regression<br/>
+        11.3 Neural Networks<br/>
+        11.4 Fitting Neural Networks<br/>
+        11.5 Some Issues in Training Neural Networks<br/>
+        11.5.1 Starting Values<br/>
+        11.5.2 Overfitting<br/>
+        11.5.3 Scaling of the Inputs<br/>
+        11.5.4 Number of Hidden Units and Layers<br/>
+        11.5.5 Multiple Minima<br/>
+        11.6 Example: Simulated Data<br/>
+        11.7 Example: ZIP Code Data<br/>
+        11.8 Discussion<br/>
+        11.9 Bayesian Neural Nets and the NIPS 2003 Challenge<br/>
+        11.9.1 Bayes, Boosting and Bagging<br/>
+        11.9.2 Performance Comparisons<br/>
+        11.10 Computational Considerations<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        12 Support Vector Machines and<br/>
+        Flexible Discriminants<br/>
+        12.1 Introduction<br/>
+        12.2 The Support Vector Classifier<br/>
+        12.2.1 Computing the Support Vector Classifier<br/>
+        12.2.2 Mixture Example (Continued)<br/>
+        12.3 Support Vector Machines and Kernels<br/>
+        12.3.1 Computing the SVM for Classification<br/>
+        12.3.2 The SVM as a Penalization Method<br/>
+        12.3.3 Function Estimation and Reproducing Kernels<br/>
+        12.3.4 SVMs and the Curse of Dimensionality<br/>
+        12.3.5 A Path Algorithm for the SVM Classifier<br/>
+        12.3.6 Support Vector Machines for Regression<br/>
+        12.3.7 Regression and Kernels<br/>
+        12.3.8 Discussion<br/>
+        12.4 Generalizing Linear Discriminant Analysis<br/>
+        12.5 Flexible Discriminant Analysis<br/>
+        12.5.1 Computing the FDA Estimates<br/>
+        12.6 Penalized Discriminant Analysis<br/>
+        12.7 Mixture Discriminant Analysis<br/>
+        12.7.1 Example: Waveform Data<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        13 Prototype Methods and Nearest-Neighbors<br/>
+        13.1 Introduction<br/>
+        13.2 Prototype Methods<br/>
+        13.2.1 K-means Clustering<br/>
+        13.2.2 Learning Vector Quantization<br/>
+        13.2.3 Gaussian Mixtures<br/>
+        13.3 k-Nearest-Neighbor Classifiers<br/>
+        13.3.1 Example: A Comparative Study<br/>
+        13.3.2 Example: k-Nearest-Neighbors<br/>
+        and Image Scene Classification<br/>
+        13.3.3 Invariant Metrics and Tangent Distance<br/>
+        13.4 Adaptive Nearest-Neighbor Methods<br/>
+        13.4.1 Example<br/>
+        13.4.2 Global Dimension Reduction<br/>
+        for Nearest-Neighbors<br/>
+        13.5 Computational Considerations<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        14 Unsupervised Learning<br/>
+        14.1 Introduction<br/>
+        14.2 Association Rules<br/>
+        14.2.1 Market Basket Analysis<br/>
+        14.2.2 The Apriori Algorithm<br/>
+        14.2.3 Example: Market Basket Analysis<br/>
+        14.2.4 Unsupervised as Supervised Learning<br/>
+        14.2.5 Generalized Association Rules<br/>
+        14.2.6 Choice of Supervised Learning Method<br/>
+        14.2.7 Example: Market Basket Analysis (Continued)<br/>
+        14.3 Cluster Analysis<br/>
+        14.3.1 Proximity Matrices<br/>
+        14.3.2 Dissimilarities Based on Attributes<br/>
+        14.3.3 Object Dissimilarity<br/>
+        14.3.4 Clustering Algorithms<br/>
+        14.3.5 Combinatorial Algorithms<br/>
+        14.3.6 K-means<br/>
+        14.3.7 Gaussian Mixtures as Soft K-means Clustering<br/>
+        14.3.8 Example: Human Tumor Microarray Data<br/>
+        14.3.9 Vector Quantization<br/>
+        14.3.10 K-medoids<br/>
+        14.3.11 Practical Issues<br/>
+        14.3.12 Hierarchical Clustering<br/>
+        14.4 Self-Organizing Maps<br/>
+        14.5 Principal Components, Curves and Surfaces<br/>
+        14.5.1 Principal Components<br/>
+        14.5.2 Principal Curves and Surfaces<br/>
+        14.5.3 Spectral Clustering<br/>
+        14.5.4 Kernel Principal Components<br/>
+        14.5.5 Sparse Principal Components<br/>
+        14.6 Non-negative Matrix Factorization<br/>
+        14.6.1 Archetypal Analysis<br/>
+        14.7 Independent Component Analysis<br/>
+        and Exploratory Projection Pursuit<br/>
+        14.7.1 Latent Variables and Factor Analysis<br/>
+        14.7.2 Independent Component Analysis<br/>
+        14.7.3 Exploratory Projection Pursuit<br/>
+        14.7.4 A Direct Approach to ICA<br/>
+        14.8 Multidimensional Scaling<br/>
+        14.9 Nonlinear Dimension Reduction<br/>
+        and Local Multidimensional Scaling<br/>
+        14.10 The Google PageRank Algorithm<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        15 Random Forests<br/>
+        15.1 Introduction<br/>
+        15.2 Definition of Random Forests<br/>
+        15.3 Details of Random Forests<br/>
+        15.3.1 Out of Bag Samples<br/>
+        15.3.2 Variable Importance<br/>
+        15.3.3 Proximity Plots<br/>
+        15.3.4 Random Forests and Overfitting<br/>
+        15.4 Analysis of Random Forests<br/>
+        15.4.1 Variance and the De-Correlation Effect<br/>
+        15.4.2 Bias<br/>
+        15.4.3 Adaptive Nearest Neighbors<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        16 Ensemble Learning<br/>
+        16.1 Introduction<br/>
+        16.2 Boosting and Regularization Paths<br/>
+        16.2.1 Penalized Regression<br/>
+        16.2.2 The “Bet on Sparsity” Principle<br/>
+        16.2.3 Regularization Paths, Over-fitting and Margins<br/>
+        16.3 Learning Ensembles<br/>
+        16.3.1 Learning a Good Ensemble<br/>
+        16.3.2 Rule Ensembles<br/>
+        Bibliographic Notes<br/>
+        Exercises<br/>
+        17 Undirected Graphical Models<br/>
+        17.1 Introduction<br/>
+        17.2 Markov Graphs and Their Properties<br/>
+        17.3 Undirected Graphical Models for Continuous Variables<br/>
+        17.3.1 Estimation of the Parameters<br/>
+        when the Graph Structure is Known<br/>
+        17.3.2 Estimation of the Graph Structure<br/>
+        17.4 Undirected Graphical Models for Discrete Variables<br/>
+        17.4.1 Estimation of the Parameters<br/>
+        when the Graph Structure is Known<br/>
+        17.4.2 Hidden Nodes<br/>
+        17.4.3 Estimation of the Graph Structure<br/>
+        17.4.4 Restricted Boltzmann Machines<br/>
+        Exercises<br/>
+        18 High-Dimensional Problems: p ≫ N<br/>
+        18.1 When p is Much Bigger than N<br/>
+        18.2 Diagonal Linear Discriminant Analysis<br/>
+        and Nearest Shrunken Centroids<br/>
+        18.3 Linear Classifiers with Quadratic Regularization<br/>
+        18.3.1 Regularized Discriminant Analysis<br/>
+        18.3.2 Logistic Regression<br/>
+        with Quadratic Regularization<br/>
+        18.3.3 The Support Vector Classifier<br/>
+        18.3.4 Feature Selection<br/>
+        18.3.5 Computational Shortcuts When p ≫ N<br/>
+        18.4 Linear Classifiers with L1 Regularization<br/>
+        18.4.1 Application of Lasso<br/>
+        to Protein Mass Spectroscopy<br/>
+        18.4.2 The Fused Lasso for Functional Data<br/>
+        18.5 Classification When Features are Unavailable<br/>
+        18.5.1 Example: String Kernels<br/>
+        and Protein Classification<br/>
+        18.5.2 Classification and Other Models Using<br/>
+        Inner-Product Kernels and Pairwise Distances .<br/>
+        18.5.3 Example: Abstracts Classification<br/>
+        18.6 High-Dimensional Regression: Supervised Principal Components<br/>
+        18.6.1 Connection to Latent-Variable Modeling<br/>
+        18.6.2 Relationship with Partial Least Squares<br/>
+        18.6.3 Pre-Conditioning for Feature Selection<br/>
+        18.7 Feature Assessment and the Multiple-Testing Problem<br/>
+        18.7.1 The False Discovery Rate<br/>
+        18.7.2 Asymmetric Cutpoints and the SAM Procedure<br/>
+        18.7.3 A Bayesian Interpretation of the FDR<br/>
+        18.8 Bibliographic Notes<br/>
+        Exercises<br/>
+        References<br/>
+        Author Index<br/>
+        Index<br/>
+     · · · · · ·     (<a href="javascript:$('#dir_3294335_full').hide();$('#dir_3294335_short').show();void(0);">收起</a>)
+</div>
+
+
+
+  
+
+
+<link rel="stylesheet" href="https://img1.doubanio.com/f/verify/fada435abd10ae2583d995730a9e06e6e20a9a05/entry_creator/dist/author_subject/style.css">
+
+<div id="author_subject" class="author-wrapper">
+  <div class="loading"></div>
+</div>
+
+<script type="text/javascript">
+  var answerObj = {
+    TYPE: 'book',
+    SUBJECT_ID: '3294335',
+    ISALL: 'False' || false,
+    USER_ID: '82160871'
+  }
+</script>
+<script src="https://img1.doubanio.com/f/book/61252f2f9b35f08b37f69d17dfe48310dd295347/js/book/lib/react/bundle.js"></script>
+<script type="text/javascript" src="https://img1.doubanio.com/f/verify/82d2333c56fe1813ad6ee312f35a915941d906ae/entry_creator/dist/author_subject/index.js"></script> 
+  
+      
+
+
+
+
+
+
+
+
+<div class="ugc-mod blockquote-list-wrapper">
+  <div class="hd">
+    <h2>
+      原文摘录
+      &nbsp;&nbsp;· · · · · ·&nbsp;
+      <span class="pl">( <a href="blockquotes">全部</a> )</span>
+    </h2>
+
+    <ul class="blockquote-list">
+      
+        <li>
+          <figure>
+            LAR uses least squares directions in the active set of variables.
+Lasso uses least square directions; if a variable crosses zero, it is removed from the active set.
+Boosting uses non-negative least squares directions in the active set. (<a href="https://book.douban.com/annotation/27912170/">查看原文</a>)
+
+            <div class="blockquote-extra">
+              <div class='blockquote-meta'>
+                <a href="https://www.douban.com/people/javelinjs/" class="author-avatar">
+                  <img width="20" height="20" src="https://img9.doubanio.com/icon/u7795452-6.jpg">
+                </a>
+                <a class="author-name" href="https://www.douban.com/people/javelinjs/">维法钵扎店</a>
+                  <span>4 回复</span>
+                  <span>23赞</span>
+                <datetime>2013-08-03 14:12:56</datetime>
+              </div>
+
+              
+              <figcaption title="引自章节：第3章 - Least Angle Regression">
+                —— 引自章节：第3章 - Least Angle Regression
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+      
+        <li>
+          <figure>
+            the bias of the 1-nearest-neighbor estimate is often low, but the variance is high. (<a href="https://book.douban.com/annotation/25718641/">查看原文</a>)
+
+            <div class="blockquote-extra">
+              <div class='blockquote-meta'>
+                <a href="https://www.douban.com/people/kqingchao/" class="author-avatar">
+                  <img width="20" height="20" src="https://img1.doubanio.com/icon/u35370427-8.jpg">
+                </a>
+                <a class="author-name" href="https://www.douban.com/people/kqingchao/">孔明</a>
+                  <span>2赞</span>
+                <datetime>2013-04-11 21:14:29</datetime>
+              </div>
+
+              
+              <figcaption title="引自第417页">
+                —— 引自第417页
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+    </ul>
+
+      <p class="pl"> &gt; <a href="blockquotes">全部原文摘录</a> </p>
+  </div>
+</div>
+
+
+
+  
+      
+
+
+
+
+<div class="subject_show block5">
+<h2>
+    
+  
+
+  <h2>
+    <span>丛书信息</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+</h2>
+<div>
+　　<a href="https://book.douban.com/series/24296">Springer Series in Statistics</a>(共38册)，
+这套丛书还有
+
+《Statistical Demography and Forecasting》《Model Assisted Survey Sampling》《Smoothing Techniques》《Test Equating》《Bayes Theory (Springer Series in Statistics)》
+等
+。
+</div>
+</div>
+<script>
+$(function(){$(".knnlike a").click(function(){return moreurl(this,{'from':'knnlike'})})})
+</script>
+
+  
+
+
+
+
+  
+
+
+
+
+<div id="rec-ebook-section" class="block5 subject_show">
+  
+
+  
+  
+
+  <h2>
+    <span>喜欢读&#34;The Elements of Statistical Learning&#34;的人也喜欢的电子书</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+  <div class="tips-mod">
+    支持 Web、iPhone、iPad、Android 阅读器
+  </div>
+  <div class="content clearfix">
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/1410608/?dcs=subject-rec&amp;dcm=douban&amp;dct=3294335" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/1410608.1653713323.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/1410608/" target="_blank">构建高性能Web站点</a>
+          </div>
+          <div class="price">
+              
+    14.75元
+
+          </div>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/474698/?dcs=subject-rec&amp;dcm=douban&amp;dct=3294335" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/474698.1653694539.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/474698/" target="_blank">图灵的秘密</a>
+          </div>
+          <div class="price">
+              
+    29.99元
+
+          </div>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/1499455/?dcs=subject-rec&amp;dcm=douban&amp;dct=3294335" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/1499455.1653713217.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/1499455/" target="_blank">Python源码剖析</a>
+          </div>
+          <div class="price">
+              
+    38.39元
+
+          </div>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/237278/?dcs=subject-rec&amp;dcm=douban&amp;dct=3294335" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/237278.1653694583.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/237278/" target="_blank">思考的乐趣</a>
+          </div>
+          <div class="price">
+              
+    18.00元
+
+          </div>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/54549376/?dcs=subject-rec&amp;dcm=douban&amp;dct=3294335" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/54549376.1653702411.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/54549376/" target="_blank">扫地出门：美国城市的贫穷与暴利</a>
+          </div>
+          <div class="price">
+              
+    10.99元
+
+          </div>
+        </dd>
+      </dl>
+  </div>
+</div>
+
+<div id="db-rec-section" class="block5 subject_show knnlike">
+  
+  
+  
+
+  <h2>
+    <span>喜欢读&#34;The Elements of Statistical Learning&#34;的人也喜欢</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+  <div class="content clearfix">
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/21706191/" onclick="moreurl(this, {'total': 10, 'clicked': '21706191', 'pos': 0, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s28340848.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/21706191/" onclick="moreurl(this, {'total': 10, 'clicked': '21706191', 'pos': 0, 'identifier': 'book-rec-books'})" class="">
+            An Introduction to Statistical Learni...
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/2061116/" onclick="moreurl(this, {'total': 10, 'clicked': '2061116', 'pos': 1, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s4254558.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/2061116/" onclick="moreurl(this, {'total': 10, 'clicked': '2061116', 'pos': 1, 'identifier': 'book-rec-books'})" class="">
+            Pattern Recognition and Machine L...
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/10758624/" onclick="moreurl(this, {'total': 10, 'clicked': '10758624', 'pos': 2, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s24486538.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/10758624/" onclick="moreurl(this, {'total': 10, 'clicked': '10758624', 'pos': 2, 'identifier': 'book-rec-books'})" class="">
+            Machine Learning
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/2285151/" onclick="moreurl(this, {'total': 10, 'clicked': '2285151', 'pos': 3, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s4233179.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/2285151/" onclick="moreurl(this, {'total': 10, 'clicked': '2285151', 'pos': 3, 'identifier': 'book-rec-books'})" class="">
+            All of Statistics
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/5397287/" onclick="moreurl(this, {'total': 10, 'clicked': '5397287', 'pos': 4, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s29624744.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/5397287/" onclick="moreurl(this, {'total': 10, 'clicked': '5397287', 'pos': 4, 'identifier': 'book-rec-books'})" class="">
+            Bayesian Reasoning and Machine ...
+          </a>
+        </dd>
+      </dl>
+        <dl class="clear"></dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/1888111/" onclick="moreurl(this, {'total': 10, 'clicked': '1888111', 'pos': 5, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s24961408.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/1888111/" onclick="moreurl(this, {'total': 10, 'clicked': '1888111', 'pos': 5, 'identifier': 'book-rec-books'})" class="">
+            Convex Optimization
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/1789534/" onclick="moreurl(this, {'total': 10, 'clicked': '1789534', 'pos': 6, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s4287860.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/1789534/" onclick="moreurl(this, {'total': 10, 'clicked': '1789534', 'pos': 6, 'identifier': 'book-rec-books'})" class="">
+            Information Theory, Inference and ...
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/10590856/" onclick="moreurl(this, {'total': 10, 'clicked': '10590856', 'pos': 7, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s9108113.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/10590856/" onclick="moreurl(this, {'total': 10, 'clicked': '10590856', 'pos': 7, 'identifier': 'book-rec-books'})" class="">
+            统计学习方法
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/11226618/" onclick="moreurl(this, {'total': 10, 'clicked': '11226618', 'pos': 8, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s22705753.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/11226618/" onclick="moreurl(this, {'total': 10, 'clicked': '11226618', 'pos': 8, 'identifier': 'book-rec-books'})" class="">
+            Foundations of Machine Learning
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/4007200/" onclick="moreurl(this, {'total': 10, 'clicked': '4007200', 'pos': 9, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s4019053.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/4007200/" onclick="moreurl(this, {'total': 10, 'clicked': '4007200', 'pos': 9, 'identifier': 'book-rec-books'})" class="">
+            Probabilistic Graphical Models
+          </a>
+        </dd>
+      </dl>
+        <dl class="clear"></dl>
+  </div>
+</div>
+
+  
+      
+
+
+
+
+<div id="comments-section">
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/book/d63a579a99fd372b4398731a279a1382e6eac71e/css/book/lib/subject-comments/comments-section.css"/>
+    <div class="mod-hd">
+        
+
+        <a class="redbutt j a_collect_btn rr" name="cbtn-3294335" href="javascript:;" rel="nofollow">
+            <span>我来说两句</span>
+        </a>
+
+            
+  
+
+  <h2>
+    <span>短评</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/subject/3294335/comments/">全部 152 条</a>
+        ) </span>
+
+  </h2>
+
+
+    </div>
+    <div class="nav-tab">
+        
+    <div class="tabs-wrapper  line">
+                <a class="short-comment-tabs on-tab"
+                    href="https://book.douban.com/subject/3294335/comments?sort=score" 
+                    data-tab="score">热门</a>
+                <span>/</span>
+                <a class="short-comment-tabs "
+                    href="https://book.douban.com/subject/3294335/comments?sort=time" 
+                    data-tab="time">最新</a>
+                <span>/</span>
+                <a class="short-comment-tabs "
+                    href="https://book.douban.com/subject/3294335/comments?sort=follows" 
+                    data-tab="follows">好友</a>
+    </div>
+
+    </div>
+    <div id="comment-list-wrapper" class="indent">
+        
+  
+  <div class="comment-list score show" id="score">
+      <ul>
+          
+  <li class="comment-item" data-cid="593170819">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-593170819" class="vote-count">2</span>
+              <a id="btn-593170819" href="" class="j vote-comment" data-cid="593170819">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/fengxiukeren/">ଲ</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/593170819">2012-12-08 20:45:06</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">好感动啊。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=593170819"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="921267031">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-921267031" class="vote-count">11</span>
+              <a id="btn-921267031" href="" class="j vote-comment" data-cid="921267031">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/3608738/">流年闲草</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/921267031">2015-05-11 23:58:07</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">Frequentist经典，书里不少算法值得亲自推导，细啃收获很大，但是略微不同意老先生对Neural Nets的看法，虽然这个模型从数学上讲是那样的，但是这模型的根源绝对没这么简单，尤其在看了Computational Neural Science以后。目前Bayes统计也要收官啦，下一阶段开啃Hinton用PRML开课的讲义。感谢Hastie！</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=921267031"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="741143558">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-741143558" class="vote-count">0</span>
+              <a id="btn-741143558" href="" class="j vote-comment" data-cid="741143558">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/Thomas.Xie/">蝉</a>
+          <a class="comment-time" href="/comment/741143558">2013-12-31 10:11:19</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">:无</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=741143558"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="590787758">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-590787758" class="vote-count">1</span>
+              <a id="btn-590787758" href="" class="j vote-comment" data-cid="590787758">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/36849435/">阿道克</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/590787758">2018-12-03 15:58:01</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">补标。超经典。这就是真正的武功秘籍。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=590787758"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1029920453">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1029920453" class="vote-count">5</span>
+              <a id="btn-1029920453" href="" class="j vote-comment" data-cid="1029920453">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/52665409/">dodoro</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/1029920453">2018-01-01 11:51:15</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">书强我渣，以后再刷</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=1029920453"></div>
+    </div>
+  </li>
+
+      </ul>
+  </div>
+
+        
+  
+  <div class="comment-list time noshow" id="time">
+      <ul>
+          
+  <li class="comment-item" data-cid="2758931874">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2758931874" class="vote-count">0</span>
+              <a id="btn-2758931874" href="" class="j vote-comment" data-cid="2758931874">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/139863740/">无言的守护者</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/2758931874">2022-10-27 16:05:32</a>
+          <span class="comment-location">中国香港</span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">经典。有一点深。有时候片段之间的联系，不是特别紧密，比较隐喻。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=2758931874"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="3021753780">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-3021753780" class="vote-count">0</span>
+              <a id="btn-3021753780" href="" class="j vote-comment" data-cid="3021753780">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/190628103/">Jane Doe</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/3021753780">2022-09-28 21:29:00</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">A long &#34;Abstract&#34;.</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=3021753780"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1817625597">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1817625597" class="vote-count">0</span>
+              <a id="btn-1817625597" href="" class="j vote-comment" data-cid="1817625597">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/77536581/">Wolfson</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1817625597">2022-08-19 08:28:15</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">看完之后对于之前很多不理解的概念有了基本的认识。这本书里内容非常多，依然有太多没有学会的东西，常读常新。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=1817625597"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="3258605170">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-3258605170" class="vote-count">0</span>
+              <a id="btn-3258605170" href="" class="j vote-comment" data-cid="3258605170">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/King-master/">Rex</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/3258605170">2022-08-09 01:52:52</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">Supplemental textbook for Darcy&#39;s course &#34;Data Programming with Python&#34;</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=3258605170"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="3404103373">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-3404103373" class="vote-count">0</span>
+              <a id="btn-3404103373" href="" class="j vote-comment" data-cid="3404103373">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/zhuanxin2000/">专心</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/3404103373">2022-06-28 19:01:28</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">巨细无遗，逻辑清楚</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/3294335/?comment_id=3404103373"></div>
+    </div>
+  </li>
+
+      </ul>
+  </div>
+
+            
+  
+  <div class="comment-list follows noshow" id="follows">
+      
+      <ul>
+        <li class="comment-item">
+          <p class="blank-tip">你关注的人还没有写短评呢</p>
+        </li>
+      </ul>
+  </div>
+
+        
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/vendors/7d8c54c10ffd51769880282d4a41609dc465b796/reports.css" />
+    <style>
+      .report-comment { overflow: hidden; visibility: hidden; }
+      .btn-report { float: right; color: #bbb; cursor: pointer; font-size: 13px;}
+    </style>
+    <script src="https://img1.doubanio.com/f/vendors/bd6325a12f40c34cbf2668aafafb4ccd60deab7e/vendors.js"></script>
+    <script src="https://img1.doubanio.com/f/vendors/68e2c291c7d4971661f7e4c3e41e1e99e2c2df4b/reports.js"></script>
+    <script>
+      (function () {
+        const ADD_REPORT = function() {
+          var roots = document.querySelectorAll(".report-comment");
+          roots.forEach(function (root) {
+            var btn = document.createElement('span');
+            btn.className = 'btn-report';
+            btn.innerHTML = "投诉";
+            btn.addEventListener('click', function () {
+              if (window.DOUBAN_VENDORS && window.DOUBAN_VENDORS.openReportModal) {
+                window.DOUBAN_VENDORS.openReportModal({
+                  reportUrl: "" || root.getAttribute('data-url'),
+                  types: ["content"]
+                })
+              }
+            });
+            root.appendChild(btn);
+          })
+        }
+        ADD_REPORT();
+        $("body").delegate(".comment-item", 'mouseenter mouseleave', function (e) {
+          var $report = $(this).find(".report-comment")
+          switch (e.type) {
+            case "mouseenter":
+              $report.css('visibility', 'visible');
+              break;
+            case "mouseleave":
+              $report.css('visibility', 'hidden');
+              break;
+            }
+        });
+        window.ADD_REPORT = ADD_REPORT
+      })()
+    </script>
+
+    </div>
+        <p>&gt; <a href="https://book.douban.com/subject/3294335/comments/">更多短评 152 条</a></p>
+    <script src="https://img1.doubanio.com/f/book/6eba6f43fb7592ab783e390f654c0d6a96b1598e/js/book/lib/subject-comments/comments-section.js"></script>
+    <script>
+     (function () {
+            if (window.SUBJECT_COMMENTS_SECTION) {
+                // tab handler
+                SUBJECT_COMMENTS_SECTION.createTabHandler();
+                // expand handler
+                SUBJECT_COMMENTS_SECTION.createExpandHandler({
+                    root: document.getElementById('comment-list-wrapper'),
+                });
+                SUBJECT_COMMENTS_SECTION.createVoteHandler({
+                    api: '/j/comment/:id/vote',
+                    root: document.getElementById('comment-list-wrapper'),
+                    voteSelector: '.vote-comment',
+                    textSelector: '.vote-count',
+                    afterVote: function (elem) {
+                        var parentNode = elem.parentNode;
+                        var successElem = document.createElement('span');
+                        successElem.innerHTML = '已投票';
+                        parentNode.removeChild(elem);
+                        parentNode.appendChild(successElem);
+                    }
+                });
+            }
+        })()
+    </script>
+</div>
+
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://img1.doubanio.com/misc/mixed_static/6078555e83c38f2.css">
+
+    <section id="reviews-wrapper" class="reviews mod book-content">
+        <header>
+            
+                <a href="new_review" rel="nofollow" class="create-review redbutt rr "
+                    data-isverify="True"
+                    data-verify-url="https://www.douban.com/accounts/phone/verify?redir=https://book.douban.com/subject/3294335/new_review">
+                    <span>我要写书评</span>
+                </a>
+            <h2>
+                    The Elements of Statistical Learning的书评 · · · · · ·
+
+                    <span class="pl">( <a href="reviews">全部 32 条</a> )</span>
+            </h2>
+        </header>
+
+            <div class="review_filter">
+                            <a href="javascript:;;" class="cur" data-sort="">热门</a> &#047;
+                            <a href="javascript:;;" data-sort="time">最新</a> &#047;
+                            <a href="javascript:;;" data-sort="follow">好友</a>
+                        &#047;<a href="/subject/3294335/reviews?version=1" data-sort="version">只看本版本的评论</a>
+            </div>
+            <script>
+                var cur_sort = '';
+                $('#reviews-wrapper .review_filter a').on('click', function () {
+                    var sort = $(this).data('sort');
+                    if(sort === cur_sort) return;
+
+                    if(sort === 'follow' && false){
+                        window.location.href = '//www.douban.com/accounts/login?source=movie';
+                        return;
+                    }
+
+                    if($('#reviews-wrapper .review_filter').data('doing')) return;
+                    $('#reviews-wrapper .review_filter').data('doing', true);
+
+                    cur_sort = sort;
+
+                    $('#reviews-wrapper .review_filter a').removeClass('cur');
+                    $(this).addClass('cur');
+
+                    $.getJSON('reviews', { sort: sort }, function(res) {
+                        $('#reviews-wrapper .review-list').remove();
+                        $('#reviews-wrapper [href="reviews?sort=follow"]').parent().remove();
+                        $('#reviews-wrapper .review_filter').after(res.html);
+                        $('#reviews-wrapper .review_filter').data('doing', false);
+                        $('#reviews-wrapper .review_filter').removeData('doing');
+
+                        if (res.count === 0) {
+                            $('#reviews-wrapper .review-list').html('<span class="no-review">你关注的人还没写过长评</span>');
+                        }
+                    });
+                });
+            </script>
+
+
+            
+
+
+
+<div class="review-list  ">
+        
+    
+
+            
+    
+    <div data-cid="4549936">
+        <div class="main review-item" id="4549936">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/chen_1st/" class="avator">
+            <img width="24" height="24" src="https://img1.doubanio.com/icon/u46225736-9.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/chen_1st/" class="name">Chen_1st</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2010-12-27" class="main-meta">2010-12-27 03:07:35</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/4549936/">机器学习 --  从入门到精通</a></h2>
+
+                <div id="review_4549936_short" class="review-short" data-rid="4549936">
+                    <div class="short-content">
+
+                        个人觉得“机器学习 --  从入门到精通”可以作为这本书的副标题。  机器学习、数据挖掘或者模式识别领域有几本非常流行的教材，比如Duda的模式分类，Bishop的PRML。Duda的书第一版是模式识别的奠基之作，现在大家谈论得是第二版，因为内容相对简单，非常流行，但对近20年取得统...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-4549936-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_4549936_full" class="hidden">
+                    <div id="review_4549936_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="4549936" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-4549936">
+                                108
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="4549936" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-4549936">
+                                2
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/4549936/#comments" class="reply ">7回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="5458452">
+        <div class="main review-item" id="5458452">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/32973568/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u32973568-5.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/32973568/" class="name">Joseph</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2012-06-08" class="main-meta">2012-06-08 03:50:57</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/5458452/">不是书评</a></h2>
+
+                <div id="review_5458452_short" class="review-short" data-rid="5458452">
+                    <div class="short-content">
+
+                        评论最下面的部分Version 1是我开始读这本书的时候写的东西，现在加上点基础部分。 对linear algebra, probability 要有非常强的直观认识，对这两个基础学的非常通透。Linear algebra 有几种常用的分解QR, eigendecomposition, SVD，搞清楚它们的作用和几何意义。Bayesian meth...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-5458452-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_5458452_full" class="hidden">
+                    <div id="review_5458452_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="5458452" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-5458452">
+                                92
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="5458452" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-5458452">
+                                4
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/5458452/#comments" class="reply ">13回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="1846118">
+        <div class="main review-item" id="1846118">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/hh1985/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/u2998907-1.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/hh1985/" class="name">Dr. Who</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2009-03-10" class="main-meta">2009-03-10 19:08:22</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/1846118/">机器学习方面非常优秀的一本书</a></h2>
+
+                <div id="review_1846118_short" class="review-short" data-rid="1846118">
+                    <div class="short-content">
+
+                        我导师(stanford博士毕业)非常欣赏这本书，并把它作为我博士资格考试的参考教材之一。  感谢  ZHENHUI LI 提供的信息。本书作者已经将第二版的电子书放到网上，大家可以免费下载。 http://www-stat.stanford.edu/~tibs/ElemStatLearn/  网上还有一份solution manual, 但是似乎...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-1846118-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_1846118_full" class="hidden">
+                    <div id="review_1846118_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="1846118" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-1846118">
+                                55
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="1846118" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-1846118">
+                                4
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/1846118/#comments" class="reply ">20回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="6325092">
+        <div class="main review-item" id="6325092">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/coder_wander/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u44577832-4.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/coder_wander/" class="name">Kord</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2013-10-12" class="main-meta">2013-10-12 23:26:01</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/3578359/">世界图书出版公司2009版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/6325092/">《统计学习基础》读后感：一点儿都不基础</a></h2>
+
+                <div id="review_6325092_short" class="review-short" data-rid="6325092">
+                    <div class="short-content">
+
+                        有人给我推荐这本书的时候说，有了这本书，就不再需要其他的机器学习教材了。 入手这本书的接下来两个月，我与教材中艰深的统计推断、矩阵、数值算法、凸优化等数学知识展开艰苦的斗争。于是我明白了何谓”不需要其他的机器学习教材“：准确地说，是其他的教材都不需要了；一本...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-6325092-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_6325092_full" class="hidden">
+                    <div id="review_6325092_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="6325092" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-6325092">
+                                44
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="6325092" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-6325092">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/6325092/#comments" class="reply ">8回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="2945036">
+        <div class="main review-item" id="2945036">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/xiaostone01/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u3352217-5.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/xiaostone01/" class="name">王飞</a>
+
+
+        <span content="2010-01-20" class="main-meta">2010-01-20 17:57:23</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/1761179/">Springer2003版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/2945036/">告诉大家一个下载此书的地方</a></h2>
+
+                <div id="review_2945036_short" class="review-short" data-rid="2945036">
+                    <div class="short-content">
+                            <p class="spoiler-tip">这篇书评可能有关键情节透露</p>
+
+                        http://www-stat.stanford.edu/~tibs/ElemStatLearn/  还是老外人品好，把自己的书免费放在互联网上。
+
+                        &nbsp;(<a href="javascript:;" id="toggle-2945036-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_2945036_full" class="hidden">
+                    <div id="review_2945036_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="2945036" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-2945036">
+                                37
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="2945036" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-2945036">
+                                3
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/2945036/#comments" class="reply ">13回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="1561972">
+        <div class="main review-item" id="1561972">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/chengweiwei/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/u3241594-2.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/chengweiwei/" class="name">ROY</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2008-11-21" class="main-meta">2008-11-21 12:22:50</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/1761179/">Springer2003版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/1561972/">Classic!</a></h2>
+
+                <div id="review_1561972_short" class="review-short" data-rid="1561972">
+                    <div class="short-content">
+                            <p class="spoiler-tip">这篇书评可能有关键情节透露</p>
+
+                        　　Elements of statistic learning is one of the most important textbooks on algorithm analysis in the field of machine learning. The authors of this book, Trevor Hastie, Robert Tibshirani and Jerome Friedman, are pioneers in the area and have done really b...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-1561972-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_1561972_full" class="hidden">
+                    <div id="review_1561972_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="1561972" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-1561972">
+                                2
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="1561972" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-1561972">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/1561972/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="1604289">
+        <div class="main review-item" id="1604289">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/doubling/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u2349075-4.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/doubling/" class="name">doubling</a>
+
+            <span class="allstar40 main-title-rating" title="推荐"></span>
+
+        <span content="2009-01-01" class="main-meta">2009-01-01 18:49:02</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/1152126/">电子工业出版社2004版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/1604289/">某人能不能别再毁书不倦了</a></h2>
+
+                <div id="review_1604289_short" class="review-short" data-rid="1604289">
+                    <div class="short-content">
+
+                         douban评论非要给出评价才能发表，这非常难决断 说你好呢，翻译的乱七八糟 说你不好呢，内容实在深刻  说起翻译来，这可是把中文说的比外文还难懂 Jiawei Han的数据挖掘让范明译的污七八糟 结果还让他来翻译这部经典，怀疑他在用google翻译  最后还是忍不住去图书馆复印了原版...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-1604289-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_1604289_full" class="hidden">
+                    <div id="review_1604289_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="1604289" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-1604289">
+                                11
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="1604289" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-1604289">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/1604289/#comments" class="reply ">10回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="7467856">
+        <div class="main review-item" id="7467856">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/kqingchao/" class="avator">
+            <img width="24" height="24" src="https://img1.doubanio.com/icon/u35370427-8.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/kqingchao/" class="name">孔明</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2015-05-09" class="main-meta">2015-05-09 12:01:47</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/7467856/">机器学习、数据挖掘、模式识别的统计学观点</a></h2>
+
+                <div id="review_7467856_short" class="review-short" data-rid="7467856">
+                    <div class="short-content">
+
+                        这个简单的书评只是我个人的观点，所以我觉得先了解一下我的背景是有帮助的：本科计算机，数学功底尚可，研究生方向机器学习、数据挖掘相关应用研究。  缺点： 1，阅读此书前，读者需要具备基本的统计学知识，所以书的内容并不“基础”。 2，书中很少涉及到公式推导，细节并不...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-7467856-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_7467856_full" class="hidden">
+                    <div id="review_7467856_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="7467856" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-7467856">
+                                8
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="7467856" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-7467856">
+                                2
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/7467856/#comments" class="reply ">1回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="5328897">
+        <div class="main review-item" id="5328897">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/1192402/" class="avator">
+            <img width="24" height="24" src="https://img1.doubanio.com/icon/user_normal.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/1192402/" class="name">网神</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2012-03-03" class="main-meta">2012-03-03 11:12:52</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/5328897/">千万别看中文翻译版</a></h2>
+
+                <div id="review_5328897_short" class="review-short" data-rid="5328897">
+                    <div class="short-content">
+
+                        中文翻译版大概是用google翻译翻的，然后排版一下，就出版了。所以中文翻译版中，每个单词翻译是对的，但一句话连起来却怎么也看不懂。最佳阅读方式是，看英文版，个别单词不认识的话，再看中文版对应的那个词。但如果英文版整个句子都不懂的话，那只有去借助baidu/google，并...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-5328897-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_5328897_full" class="hidden">
+                    <div id="review_5328897_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="5328897" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-5328897">
+                                9
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="5328897" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-5328897">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/5328897/#comments" class="reply ">2回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+    
+
+    <script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/5a2ccc4318d75e65.js"></script>
+    <!-- COLLECTED CSS -->
+</div>
+
+
+
+
+
+
+
+
+                <p class="pl">
+                    &gt;
+                        <a href="reviews">
+                            更多书评
+                                32篇
+                        </a>
+                </p>
+    </section>
+<!-- COLLECTED JS -->
+
+
+
+  
+<div class="annotation">
+</div>
+
+<script>
+  $('document').ready(function () {
+    $.get(`/subject/3294335/annotation_html`, function (r) {
+      $('.annotation').html(r.html);
+    });
+  });
+</script>
+
+  
+    
+
+
+
+
+
+<div id="db-discussion-section" class="indent ugc-mod">
+
+
+    
+  
+
+  <h2>
+    <span>论坛</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+        
+<table class="olt"><tr><td><td><td><td></tr>
+        
+        <tr>
+            <td class="pl"><a href="https://book.douban.com/subject/3294335/discussion/616387503/" title="请问这本书比PRML如何？">请问这本书比PRML如何？</a></td>
+            <td class="pl"><span>来自</span><a href="https://www.douban.com/people/84261823/">Igor</a></td>
+            <td class="pl"><span>2 回应</span></td>
+            <td class="pl"><span>2022-03-26 09:23:54</span></td>
+        </tr>
+        
+        <tr>
+            <td class="pl"><a href="https://book.douban.com/subject/3294335/discussion/612108320/" title="如何理解 KNN的 effective number of parameters 是N/k">如何理解 KNN的 effective number of parameters ...</a></td>
+            <td class="pl"><span>来自</span><a href="https://www.douban.com/people/58315824/">porco</a></td>
+            <td class="pl"><span>1 回应</span></td>
+            <td class="pl"><span>2020-02-09 17:13:07</span></td>
+        </tr>
+        
+        <tr>
+            <td class="pl"><a href="https://book.douban.com/subject/3294335/discussion/57664928/" title="数据科学学习群287065023">数据科学学习群287065023</a></td>
+            <td class="pl"><span>来自</span><a href="https://www.douban.com/people/a-ronin/">达博西</a></td>
+            <td class="pl"><span></span></td>
+            <td class="pl"><span>2014-05-14 23:54:44</span></td>
+        </tr>
+</table>
+
+
+            <p class="pl" align="right">&gt;
+                <a class="" href="https://book.douban.com/subject/3294335/discussion/create" rel="nofollow">在这本书的论坛里发言</a>
+            </p>
+
+
+</div>
+
+
+
+</div>
+<script type="text/javascript">
+$(function(){if($.browser.msie && $.browser.version == 6.0){
+    var maxWidth = parseInt($('#info').css('max-width'));
+    if($('#info').width() > maxWidth)
+        $('#info').width(maxWidth)
+}});
+</script>
+</div>
+      <div class="aside">
+        
+  
+  
+
+
+
+
+
+
+  <div id="dale_book_subject_top_right"></div>
+
+  
+
+
+
+
+
+
+<style type="text/css" media="screen">
+  .add2cartContainer{overflow:hidden;vertical-align:bottom;line-height:1;padding:10px 0}.add2cartContainer .add2cart{margin-right:0;display:inline-block}.buyinfo .bs{margin:0}.buyinfo .current-version-list{margin-bottom:27px}.buyinfo .secondhand-books-list{margin-top:-10px}.buyinfo .secondhand-books-list li{display:block}.buyinfo .secondhand-books-list .flex-wrap{display:flex}.buyinfo .secondhand-books-list .flex-wrap .vendor-name{flex:0 0 33%}.buyinfo .secondhand-books-list .flex-wrap .cell:last-child{width:70px;flex:initial;text-align:right}.buyinfo li{display:flex;flex-direction:column;padding:12px 0;position:relative;line-height:1;border-bottom:1px solid rgba(0,0,0,0.08)}.buyinfo li .cell{flex:1}.buyinfo li .cell:first-child a{line-height:20px}.buyinfo li .vendor-name.cell,.buyinfo li .vendor-name{flex:0 0 33%;align-self:normal;line-height:20px}.buyinfo li .price-btn-wrapper{display:flex}.buyinfo li .price-btn-wrapper>.cell{display:flex;margin-bottom:5px}.buyinfo li .price-btn-wrapper>.cell:last-child{margin-bottom:0}.buyinfo li .price-btn-wrapper>.cell .cell:last-child{padding-right:1px;width:70px;flex:initial;text-align:right}.buyinfo li .buylink-price{line-height:20px}.buyinfo li .buylink-price.promotion{color:#c34}.buyinfo li s{padding-left:2px;line-height:20px;font-family:Helvetica;font-size:11px;color:rgba(0,0,0,0.25);letter-spacing:0;vertical-align:top}.buyinfo li .publisher{color:rgba(0,0,0,0.25)}.buyinfo li .buy-book-btn{display:inline-block;height:20px;line-height:20px;width:70px;text-align:center;background:#fff;border-radius:3px;font-size:12px;box-shadow:0 0 1px 0 rgba(0,0,0,0.07)}.buyinfo li .buy-book-btn:hover{opacity:.8}.buyinfo li .secondhand-book-btn,.buyinfo li .paper-book-btn{color:#EB9108}.buyinfo li .secondhand-book-btn:hover,.buyinfo li .paper-book-btn:hover{background:#EB9108;color:#fff}.buyinfo li .e-book-btn{color:#32A998}.buyinfo li .e-book-btn:hover{background:#32A998;color:#fff}.buyinfo li .go-shopping{display:inline-block;line-height:20px;width:70px;text-align:center}.buyinfo .more-info{color:rgba(0,0,0,0.5);font-size:12px}.buyinfo .more-info.not-onsale{color:rgba(0,0,0,0.5)}.buyinfo .cell.not-onsale .more-info{line-height:20px}.buyinfo-printed{margin-bottom:15px}.buyinfo-printed.no-border{border-bottom:0}.buyinfo-printed .presale-indicator{margin:0;width:auto;text-indent:0;background:none;color:rgba(0,0,0,0.5)}.gray_ad{padding:18px 16px;background:#F6F6F2}.gray_ad h2{margin-bottom:10px;font-size:15px;color:#0B7C2A}.gray_ad .ebook-tag{margin-top:5px;color:#999;font-size:12px}
+
+  .presale-indicator {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 24px;
+  height: 15px;
+  line-height: 15px;
+  background: url(https://img1.doubanio.com/f/book/1679c65572eac1371f9872807199dea6e55a7f06/pics/book/cart/presale_text.gif) no-repeat;
+  text-indent: -9999px;
+  vertical-align: middle;
+  *vertical-align: 0px;
+  _vertical-align: 2px;
+  margin-left: 0.5em;
+}
+
+</style>
+
+  <div class="gray_ad buyinfo" id="buyinfo">
+      <div class="buyinfo-printed" id="buyinfo-printed">
+        
+
+          
+  
+
+  <h2>
+    <span>当前版本有售</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+          
+  <ul class="bs current-version-list">
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?lowest=56670&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=56670&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEg9WE1sUARo3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSD1YTWxQBGhgMXgdIMhp9JlsFSXlaZwYYMmpeSlwPHy9dQGILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYDVxpeHQsWBFwZXCUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVChEPVRpYHR1LQglG&amp;cntvendor=1&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>京东商城</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_mod_buyinfo" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?lowest=56670&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=56670&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEg9WE1sUARo3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSD1YTWxQBGhgMXgdIMhp9JlsFSXlaZwYYMmpeSlwPHy9dQGILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYDVxpeHQsWBFwZXCUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVChEPVRpYHR1LQglG&amp;cntvendor=1&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        566.70元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?lowest=56670&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=56670&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEg9WE1sUARo3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSD1YTWxQBGhgMXgdIMhp9JlsFSXlaZwYYMmpeSlwPHy9dQGILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYDVxpeHQsWBFwZXCUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVChEPVRpYHR1LQglG&amp;cntvendor=1&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+  </ul>
+
+
+      </div>
+      
+  <div class="add2cartContainer no-border">
+    
+  <span class="add2cartWidget ll">
+        
+        <a href="javascript:;" class="j  a_add2cart add2cart"
+          name="3294335">
+          <span>+ 加入购书单</span></a>
+        <span class="color_gary book-in-cart hidden"
+          >
+            已在购书单&nbsp;
+            <a href="https://book.douban.com/cart">查看</a>
+          <a class="delete-cart-item" rel="3294335" href="https://book.douban.com/cart">删除</a>
+        </span>
+  </span>
+  
+
+  </div>
+
+  </div>
+
+<script>
+  $(document).ready(function() {
+    $('.impression_track_mod_buyinfo').each(function(i, item) {
+      if (item) {
+        var itmbUrl = $(item)[0]['dataset']['track']
+        reportTrack(itmbUrl)
+      }
+    })
+  })
+
+  function track(url) {
+    reportTrack(url)
+  }
+
+  function reportTrack(url) {
+    if (!url) { return false }
+    $.ajax({ url: url, dataType: 'text/html' })
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+  
+
+<style type="text/css" media="screen">
+  .version_works h2{margin-bottom:20px}.version_works li.mb8{display:flex;flex-direction:column;padding-bottom:10px}.version_works li.mb8:last-child{padding-bottom:0;margin-bottom:0}.version_works .meta-wrapper{justify-content:space-between;display:flex}.version_works .meta-wrapper .count span{padding-right:10px}.version_works .buyinfo{display:flex;flex-direction:column;margin-top:10px;background:rgba(255,255,255,0.7)}.version_works .buyinfo li{padding:10px}.version_works .current-version-list{margin-bottom:0}.version_works .secondhand-books-list{margin:0}
+
+</style>
+
+
+<div class="gray_ad version_works">
+  
+  
+
+  <h2>
+    <span>这本书的其他版本</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/works/1024284">全部8</a>
+        ) </span>
+
+  </h2>
+
+
+  <ul>
+      
+      <li class="mb8 pl">
+        <div class="meta-wrapper">
+          <div class="meta">
+            <a href="https://book.douban.com/subject/1152126/">电子工业出版社 （2004）</a>
+            <div class="count">
+              <span>7.6分</span> 110人读过
+            </div>
+          </div>
+
+            <div class="fold-btn">
+               <a href="javascript:void(0);"><span>展开</span>有售 (1)</a>
+            </div>
+        </div>
+
+        <ul class="buyinfo" style="display: none;">
+          
+  <ul class="bs current-version-list">
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=3770&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgZVHVkRAhY3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSBlUdWRECFhgMXgdIMnF0MwEHUX50ZQdDB1JQTVEPbV9uB3ILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYAVhxcEAMTAFAeXCUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVAxIBVx9bER1LQglG&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>京东商城</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=3770&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgZVHVkRAhY3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSBlUdWRECFhgMXgdIMnF0MwEHUX50ZQdDB1JQTVEPbV9uB3ILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYAVhxcEAMTAFAeXCUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVAxIBVx9bER1LQglG&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        37.70元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=3770&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgZVHVkRAhY3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSBlUdWRECFhgMXgdIMnF0MwEHUX50ZQdDB1JQTVEPbV9uB3ILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYAVhxcEAMTAFAeXCUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVAxIBVx9bER1LQglG&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+  </ul>
+
+
+          
+  <ul class="secondhand-books-list bs">
+</ul>
+
+        </ul>
+      </li>
+      
+      <li class="mb8 pl">
+        <div class="meta-wrapper">
+          <div class="meta">
+            <a href="https://book.douban.com/subject/1761179/">Springer （2003）</a>
+            <div class="count">
+              <span>9.5分</span> 126人读过
+            </div>
+          </div>
+
+        </div>
+
+        <ul class="buyinfo" style="display: none;">
+          
+  <ul class="bs current-version-list">
+  </ul>
+
+
+          
+  <ul class="secondhand-books-list bs">
+</ul>
+
+        </ul>
+      </li>
+      
+      <li class="mb8 pl">
+        <div class="meta-wrapper">
+          <div class="meta">
+            <a href="https://book.douban.com/subject/26278331/">世界图书出版公司 （2015）</a>
+            <div class="count">
+              <span>9.4分</span> 61人读过
+            </div>
+          </div>
+
+            <div class="fold-btn">
+               <a href="javascript:void(0);"><span>展开</span>有售 (2)</a>
+            </div>
+        </div>
+
+        <ul class="buyinfo" style="display: none;">
+          
+  <ul class="bs current-version-list">
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=10820&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DJF8BAL4JK1olXDYCVllfCksXAl9MRANLAjZbERscSkAJHTdNTwcKBlMdBgABFksVBG0KG1sUQl9HCANtcEphVysKYyJ3JlpZPCQfXCh2X2sKTVcZbQEHU1haAUgQM28MGl8RbTYCVW4LZksWAm4NG1gXXAYyVW5dD04QCmYPH1gVXwUGZF5VDHvOg9jeucnMw4zX3MltOHsUM184G2sWbVhsVQ1dCB8VBj9mRlpPBEdcCAozAE8UAW0JH1slXwcDVlxt&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>京东商城</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=10820&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DJF8BAL4JK1olXDYCVllfCksXAl9MRANLAjZbERscSkAJHTdNTwcKBlMdBgABFksVBG0KG1sUQl9HCANtcEphVysKYyJ3JlpZPCQfXCh2X2sKTVcZbQEHU1haAUgQM28MGl8RbTYCVW4LZksWAm4NG1gXXAYyVW5dD04QCmYPH1gVXwUGZF5VDHvOg9jeucnMw4zX3MltOHsUM184G2sWbVhsVQ1dCB8VBj9mRlpPBEdcCAozAE8UAW0JH1slXwcDVlxt&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        108.20元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=10820&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DJF8BAL4JK1olXDYCVllfCksXAl9MRANLAjZbERscSkAJHTdNTwcKBlMdBgABFksVBG0KG1sUQl9HCANtcEphVysKYyJ3JlpZPCQfXCh2X2sKTVcZbQEHU1haAUgQM28MGl8RbTYCVW4LZksWAm4NG1gXXAYyVW5dD04QCmYPH1gVXwUGZF5VDHvOg9jeucnMw4zX3MltOHsUM184G2sWbVhsVQ1dCB8VBj9mRlpPBEdcCAozAE8UAW0JH1slXwcDVlxt&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=6550&amp;pos=2&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F6722393.htm&amp;link2key=ad9766ff17&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>中图网</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=3294335&amp;isbn=0387848576&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=6550&amp;pos=1&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F6722393.htm&amp;link2key=ad9766ff17&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        65.50元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=6550&amp;pos=1&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F6722393.htm&amp;link2key=ad9766ff17&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+  </ul>
+
+
+          
+  <ul class="secondhand-books-list bs">
+</ul>
+
+        </ul>
+      </li>
+      
+      <li class="mb8 pl">
+        <div class="meta-wrapper">
+          <div class="meta">
+            <a href="https://book.douban.com/subject/3578359/">世界图书出版公司 （2009）</a>
+            <div class="count">
+              <span>9.4分</span> 37人读过
+            </div>
+          </div>
+
+            <div class="fold-btn">
+               <a href="javascript:void(0);"><span>展开</span>有售 (1)</a>
+            </div>
+        </div>
+
+        <ul class="buyinfo" style="display: none;">
+          
+  <ul class="bs current-version-list">
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=8800&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgZUE1wQBBY3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSBlQTXBAEFhgMXgdIMmlmNBsnEHlGZA9LMx1ddHQufxILYGILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYAVhxcEAMTAFEZWyUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVAxMPUh5dER1LQglG&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>京东商城</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=8800&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgZUE1wQBBY3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSBlQTXBAEFhgMXgdIMmlmNBsnEHlGZA9LMx1ddHQufxILYGILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYAVhxcEAMTAFEZWyUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVAxMPUh5dER1LQglG&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        88.00元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=8800&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgZUE1wQBBY3EUQDS10iXhBeGlcJDBkNXg9JHUlSSkkFSRwSBlQTXBAEFhgMXgdIMmlmNBsnEHlGZA9LMx1ddHQufxILYGILWStcEAUUAFwYXCUCFgZRH2slAhM3B3WDo7TKouQHj7%252BNx4%252FCK1olAhYAVhxcEAMTAFEZWyUFIt7VrI23kMuZ387TgjIiN2UraxUyETcKXwZIMhM%253D%26t%3DW1dCFFlQCxxKQgFHRE5XDVULR0UVAxMPUh5dER1LQglG&amp;srcsubj=3294335&amp;type=bkbuy&amp;subject=3294335" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=3294335&amp;isbn=0387848576&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+  </ul>
+
+
+          
+  <ul class="secondhand-books-list bs">
+</ul>
+
+        </ul>
+      </li>
+  </ul>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('.fold-btn a').click(function() {
+      var $btn = $(this).find('span');
+      var $target = $(this).parents('.meta-wrapper').eq(0).next('.buyinfo');
+      if ($target.is(':visible')) {
+        $target.css('display', 'none');
+        $btn.text('展开');
+      } else {
+        $target.css('display', 'flex');
+        $btn.text('收起');
+
+        // track
+        if (!($target.attr('data-exposed'))) {
+          $target.find('.impression_track_manually').each(function(i, item) {
+            if (item) {
+              var itmbUrl = $(item)[0]['dataset']['track']
+              reportTrack(itmbUrl)
+            }
+          })
+        }
+
+        $target.attr('data-exposed', true);
+      }
+    })
+  })
+</script>
+
+
+  <div id="dale_book_subject_top_middle"></div>
+  
+
+
+
+
+
+
+  
+    
+
+
+
+  
+  
+
+  <h2>
+    <span>以下书单推荐</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/subject/3294335/doulists">全部</a>
+        ) </span>
+
+  </h2>
+
+
+  <div id="db-doulist-section" class="indent">
+    <ul class="bs">
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/1222833/" target="_blank">技术派心理学</a>
+                <span class="pl">(欧阳)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/1753078/" target="_blank">machine learning textbooks</a>
+                <span class="pl">(厂农)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/420513/" target="_blank">Machine Learning Books</a>
+                <span class="pl">(Sean)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/20172127/" target="_blank">闲着没事读读书（四）</a>
+                <span class="pl">(鹿小羽)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/67675/" target="_blank">数据挖掘参考书</a>
+                <span class="pl">(cruyff)</span>
+            </li>
+    </ul>
+  </div>
+
+  <div id="dale_book_subject_middle_mini"></div>
+  
+    
+
+
+
+
+
+  
+  
+
+  <h2>
+    <span>谁读这本书?</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+<div id="collector">
+  
+
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/265756731/"><img src="https://img2.doubanio.com/icon/u265756731-1.jpg" alt="豆友nzfZ1GQA5Y" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/265756731/">豆友nzfZ1GQA5Y</a><br/>
+      <div class="pl ll">          昨天          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/4430074/"><img src="https://img2.doubanio.com/icon/u4430074-33.jpg" alt="massquantity" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/4430074/">massquantity</a><br/>
+      <div class="pl ll">          12月25日          读过      </div>
+
+        <span class="allstar50" title="力荐"></span>
+      <br/>
+
+      <span class="pl">tags:机器学习</span><br />
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/253059927/"><img src="https://img2.doubanio.com/icon/u253059927-2.jpg" alt="seoyo_yam" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/253059927/">seoyo_yam</a><br/>
+      <div class="pl ll">          12月25日          读过      </div>
+
+        <span class="allstar50" title="力荐"></span>
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/206045213/"><img src="https://img1.doubanio.com/icon/u206045213-18.jpg" alt="Nikitaaa" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/206045213/">Nikitaaa</a><br/>
+      <div class="pl ll">          12月23日          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+
+
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/3294335/comments?status=N">836人在读</a></p>
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/3294335/comments?status=P">538人读过</a></p>
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/3294335/comments?status=F">4064人想读</a></p>
+
+</div>
+
+
+
+
+
+  
+<!-- douban ad begin -->
+<div id="dale_book_subject_middle_right"></div>
+<script type="text/javascript">
+    (function (global) {
+        if(!document.getElementsByClassName) {
+            document.getElementsByClassName = function(className) {
+                return this.querySelectorAll("." + className);
+            };
+            Element.prototype.getElementsByClassName = document.getElementsByClassName;
+
+        }
+        var articles = global.document.getElementsByClassName('article'),
+            asides = global.document.getElementsByClassName('aside');
+
+        if (articles.length > 0 && asides.length > 0 && articles[0].offsetHeight >= asides[0].offsetHeight) {
+            (global.DoubanAdSlots = global.DoubanAdSlots || []).push('dale_book_subject_middle_right');
+        }
+    })(this);
+</script>
+<!-- douban ad end -->
+
+  
+    
+
+
+
+
+
+
+<h2>
+  
+  
+
+  <h2>
+    <span>二手市场</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+</h2>
+<div class="indent">
+  <ul class="bs">
+  <li class="">
+      <a class=" " href="https://book.douban.com/subject/3294335/offers">1本二手书欲转让</a>
+        <span class="">
+          (40.00
+            元)
+        </span>
+    </li>
+    <li>
+        <a href='https://book.douban.com/subject/3294335/new_offer' class="rr">在豆瓣转让</a>
+
+      有4064人想读,手里有一本闲着?
+    </li>
+    <li>
+      <div class="rr">
+        <a href="https://shoushu.kongfz.com/?utm_source=douban&utm_medium=new_offer">孔网上门收书</a>
+      </div>
+      转让给其他二手平台？
+    </li>
+  </ul>
+</div>
+
+  
+<p class="pl">订阅关于The Elements of Statistical Learning的评论: <br/><span class="feed">
+    <a href="https://book.douban.com/feed/subject/3294335/reviews"> feed: rss 2.0</a></span></p>
+
+
+      </div>
+      <div class="extra">
+        
+  
+<!-- douban ad begin -->
+<div id="dale_book_subject_bottom_super_banner"></div>
+<script type="text/javascript">
+    (function (global) {
+        var body = global.document.body,
+            html = global.document.documentElement;
+
+        var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        if (height >= 2000) {
+            (global.DoubanAdSlots = global.DoubanAdSlots || []).push('dale_book_subject_bottom_super_banner');
+        }
+    })(this);
+</script>
+<!-- douban ad end -->
+
+
+      </div>
+    </div>
+  </div>
+
+        
+<div id="footer">
+
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2022 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about/legal">法律声明</a>
+    
+    · <a href="https://help.douban.com/?app=book" target="_blank">帮助中心</a>
+    · <a href="https://book.douban.com/library_invitation">图书馆合作</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+</div>
+
+    </div>
+      
+
+    <script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/77fcd61a77ae3d96.js"></script>
+    <!-- mako -->
+    
+  
+
+
+
+
+
+
+
+
+    
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = '//erebor.douban.com/',
+            userId = '82160871',
+            browserId = 'tTZKimEHBGs',
+            criteria = '7:机器学习|7:统计学习|7:Statistics|7:统计|7:数据挖掘|7:统计学|7:数学|7:Data-Mining|7:计算机|7:MachineLearning|3:/subject/3294335/',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_book_subject_top_icon', 'dale_book_subject_top_right', 'dale_book_subject_top_middle', 'dale_book_subject_middle_mini'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', '//img1.doubanio.com/MnJwNGlleS9mL2FkanMvY2M1OGQyNTQ2N2I2YmQzOTlmNTliMGJiMjI4MWRhZTlkNTNjYTFkZC9hZC5yZWxlYXNlLmpz');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; 
+    g.type='text/javascript';
+    g.defer=true; 
+    g.async=true; 
+    g.src=p+'://s.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-16', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id])
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '1', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- dae-web-book--default-58c9d57876-c6gc7-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,3612 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-webkit book-new-nav">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Site Reliability Engineering (豆瓣)</title>
+  
+<script>!function(e){var o=function(o,n,t){var c,i,r=new Date;n=n||30,t=t||"/",r.setTime(r.getTime()+24*n*60*60*1e3),c="; expires="+r.toGMTString();for(i in o)e.cookie=i+"="+o[i]+c+"; path="+t},n=function(o){var n,t,c,i=o+"=",r=e.cookie.split(";");for(t=0,c=r.length;t<c;t++)if(n=r[t].replace(/^\s+|\s+$/g,""),0==n.indexOf(i))return n.substring(i.length,n.length).replace(/\"/g,"");return null},t=e.write,c={"douban.com":1,"douban.fm":1,"google.com":1,"google.cn":1,"googleapis.com":1,"gmaptiles.co.kr":1,"gstatic.com":1,"gstatic.cn":1,"google-analytics.com":1,"googleadservices.com":1},i=function(e,o){var n=new Image;n.onload=function(){},n.src="https://www.douban.com/j/except_report?kind=ra022&reason="+encodeURIComponent(e)+"&environment="+encodeURIComponent(o)},r=function(o){try{t.call(e,o)}catch(e){t(o)}},a=/<script.*?src\=["']?([^"'\s>]+)/gi,g=/http:\/\/(.+?)\.([^\/]+).+/i;e.writeln=e.write=function(e){var t,l=a.exec(e);return l&&(t=g.exec(l[1]))?c[t[2]]?void r(e):void("tqs"!==n("hj")&&(i(l[1],location.href),o({hj:"tqs"},1),setTimeout(function(){location.replace(location.href)},50))):void r(e)}}(document);</script>
+
+  
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+  
+<meta http-equiv="mobile-agent" content="format=html5; url=https://m.douban.com/book/subject/26675256/">
+<meta name="keywords" content="Site Reliability Engineering,Betsy Beyer,Chris Jones,Jennifer Petoff,Niall Richard Murphy,O&#39;Reilly Media,2016-4-16,简介,作者,书评,论坛,推荐,二手">
+<meta name="description" content="图书Site Reliability Engineering 介绍、书评、论坛及推荐 ">
+
+  <script>var _head_start = new Date();</script>
+  
+  <link href="https://img1.doubanio.com/f/book/8011541306494bc2ff483299d952d9c65753c43d/css/book/master.css" rel="stylesheet" type="text/css">
+
+  <link href="https://img1.doubanio.com/f/book/222a5c61e041638af8defc87cf97f4a863a77922/css/book/base/init.css" rel="stylesheet">
+  <style type="text/css"></style>
+  <script src="https://img1.doubanio.com/f/book/0495cb173e298c28593766009c7b0a953246c5b5/js/book/lib/jquery/jquery.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/4888ee2fda6812f70a064a51c93b84fde8e4a3c2/js/douban.js"></script>
+  <script src="https://img1.doubanio.com/f/book/0322e3e810e475f1c82adb7d1c6ccfa1c0fa969c/js/book/master.js"></script>
+  
+
+  
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/book/35ee0bfceaf192ef298d0729f3c3d40c0e2341d9/css/book/subject.css">
+  <link href="https://img1.doubanio.com/f/book/5d301503fbbd8e09f3114583859789884e942f47/css/book/annotation/like.css" rel="stylesheet">
+  <script src="https://img1.doubanio.com/f/shire/7965e09b0065d26bfd22d390de956c22a48b9008/js/lib/jquery.snippet.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/2c0c1c6b83f9a457b0f38c38a32fc43a42ec9bad/js/do.js" data-cfg-autoload="false"></script>
+  <script src="https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js"></script>
+  <script src="https://img1.doubanio.com/f/book/2e421e5ec8f2869d31535206c0ac0322532be1f8/js/book/mod/hide.js"></script>
+  <script src="https://img1.doubanio.com/f/book/cc6b1a77c3812c7dd20b0374332fade081e1c0b0/js/book/subject/unfold.js"></script>
+  <!-- IDG Adsense代理广告代码 -->
+  <script data-ad-client="ca-pub-4792467485927557" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="alternate" href="https://book.douban.com/feed/subject/26675256/reviews" type="application/rss+xml" title="RSS">
+  <style type="text/css"> h2 {color: #007722;} </style>
+  <script type='text/javascript'>
+    var _vds = _vds || [];
+    (function(){ _vds.push(['setAccountId', '22c937bbd8ebd703f2d8e9445f7dfd03']);
+        _vds.push(['setCS1','user_id','1']);
+            (function() {var vds = document.createElement('script');
+                vds.type='text/javascript';
+                vds.async = true;
+                vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(vds, s);
+            })();
+    })();
+</script>
+
+  
+  <script type='text/javascript'>
+    var _vwo_code=(function(){
+      var account_id=249272,
+          settings_tolerance=2000,
+          library_tolerance=2500,
+          use_existing_jquery=false,
+          // DO NOT EDIT BELOW THIS LINE
+          f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+  </script>
+
+  
+
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"Book",
+  "workExample": [],
+  "name" : "Site Reliability Engineering",
+  "author": 
+  [
+    {
+      "@type": "Person",
+      "name": "Betsy Beyer"
+    }
+    ,
+    {
+      "@type": "Person",
+      "name": "Chris Jones"
+    }
+    ,
+    {
+      "@type": "Person",
+      "name": "Jennifer Petoff"
+    }
+    ,
+    {
+      "@type": "Person",
+      "name": "Niall Richard Murphy"
+    }
+  ]
+,
+  "url" : "https://book.douban.com/subject/26675256/",
+  "isbn" : "9781491929124",
+  "sameAs": "https://book.douban.com/subject/26675256/"
+}
+</script>
+
+  
+  
+  <meta property="og:title" content="Site Reliability Engineering" />
+  <meta property="og:description" content="The overwhelming majority of a software system’s lifespan is spent in use, not in design or implemen..." />
+  <meta property="og:site_name" content="豆瓣" />
+  <meta property="og:url" content="https://book.douban.com/subject/26675256/" />
+  <meta property="og:image" content="https://img2.doubanio.com/view/subject/l/public/s28564292.jpg" />
+  <meta property="og:type" content="book" />
+      <meta property="book:author" content="Betsy Beyer" />
+      <meta property="book:author" content="Chris Jones" />
+      <meta property="book:author" content="Jennifer Petoff" />
+      <meta property="book:author" content="Niall Richard Murphy" />
+  <meta property="book:isbn" content="9781491929124" />
+
+
+  <script>  </script>
+  <link rel="stylesheet" href="https://img1.doubanio.com/misc/mixed_static/4237393ad061c327.css">
+
+  <link rel="shortcut icon" href="https://img1.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  
+    <script>var _body_start = new Date();</script>
+    
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/94e8e44/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <ul>
+    <li>
+    <a id="top-nav-doumail-link" href="https://www.douban.com/doumail/">豆邮</a>
+    </li>
+    <li class="nav-user-account">
+      <a target="_blank" href="https://accounts.douban.com/passport/setting/" class="bn-more">
+        <span>MewX的帐号</span><span class="arrow"></span>
+      </a>
+      <div class="more-items">
+        <table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/mine/">个人主页</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/orders/">我的订单</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/wallet/">我的钱包</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://accounts.douban.com/passport/setting/">帐号管理</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/accounts/logout?source=book&ck=lCAN">退出</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  <div class="top-nav-reminder">
+    <a href="https://www.douban.com/notification/" class="lnk-remind">提醒</a>
+    <div id="top-nav-notimenu" class="more-items">
+      <div class="bd">
+        <p>加载中...</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="">
+      <a href="https://www.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;82160871&quot;}">豆瓣</a>
+    </li>
+    <li class="on">
+      <a href="https://book.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;82160871&quot;}">读书</a>
+    </li>
+    <li class="">
+      <a href="https://movie.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;82160871&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;82160871&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;82160871&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;82160871&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;82160871&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://douban.fm&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;82160871&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;82160871&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;82160871&quot;}">豆品</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    USER_ID: "82160871",
+    UPLOAD_AUTH_TOKEN: "82160871:a78ed044282201620dca758e206a9bc6de4f5b46",
+    SSE_TOKEN: "927ba55d759a52eec136d005412a5318b8fe8c9f",
+    SSE_TIMESTAMP: "1672099769",
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/94e8e44/shire/bundle.js" defer="defer"></script>
+
+
+
+
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/94e8e44/book/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+<div id="db-nav-book" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https:&#47;&#47;book.douban.com">豆瓣读书</a>
+    </div>
+    <div class="nav-search">
+      <form action="https:&#47;&#47;search.douban.com&#47;book/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">
+          </label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="书名、作者、ISBN" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1001" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="nav-secondary">
+    
+
+<div class="nav-items">
+  <ul>
+    <li    ><a href="https://book.douban.com/mine"
+     >我读</a>
+    </li>
+    <li    ><a href="https://book.douban.com/updates"
+     >动态</a>
+    </li>
+    <li    ><a href="https://book.douban.com/recommended"
+     >豆瓣猜</a>
+    </li>
+    <li    ><a href="https://book.douban.com/tag/"
+     >分类浏览</a>
+    </li>
+    <li    ><a href="https://book.douban.com/cart/"
+     >购书单</a>
+    </li>
+    <li    ><a href="https://read.douban.com/ebooks/?dcs=book-nav&dcm=douban"
+            target="_blank"
+     >电子图书</a>
+    </li>
+    <li    ><a href="https://market.douban.com/book?utm_campaign=book_nav_freyr&utm_source=douban&utm_medium=pc_web"
+     >豆瓣书店</a>
+    </li>
+    <li    ><a href="https://book.douban.com/annual/2022?fullscreen=1&source=navigation"
+            target="_blank"
+     >2022年度榜单</a>
+    </li>
+    <li    ><a href="https://www.douban.com/standbyme/2021?fullscreen=true&hidenav=true&autorotate=false&source=book_navigation"
+            target="_blank"
+     >2021书影音报告</a>
+    </li>
+    <li          class=" book-cart"
+    ><a href="https://market.douban.com/cart/?biz_type=book&utm_campaign=book_nav_cart&utm_source=douban&utm_medium=pc_web"
+            target="_blank"
+     >购物车</a>
+    </li>
+  </ul>
+</div>
+
+    <a href="https://book.douban.com/annual/2022?fullscreen=1&source=book_navigation" class="bookannual"></a>
+  </div>
+</div>
+
+<script id="suggResult" type="text/x-jquery-tmpl">
+  <li data-link="{{= url}}">
+            <a href="{{= url}}" onclick="moreurl(this, {from:'book_search_sugg', query:'{{= keyword }}', subject_id:'{{= id}}', i: '{{= index}}', type: '{{= type}}'})">
+            <img src="{{= pic}}" width="40" />
+            <div>
+                <em>{{= title}}</em>
+                {{if year}}
+                    <span>{{= year}}</span>
+                {{/if}}
+                <p>
+                {{if type == "b"}}
+                    {{= author_name}}
+                {{else type == "a" }}
+                    {{if en_name}}
+                        {{= en_name}}
+                    {{/if}}
+                {{/if}}
+                 </p>
+            </div>
+        </a>
+        </li>
+  </script>
+
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/94e8e44/book/bundle.js" defer="defer"></script>
+
+
+
+
+
+    <div id="wrapper">
+        
+
+    <div id="dale_book_subject_top_icon"></div>
+<h1>
+    <span property="v:itemreviewed">Site Reliability Engineering</span>
+    <div class="clear"></div>
+</h1>
+
+        
+  <div id="content">
+    
+    <div class="grid-16-8 clearfix">
+      
+      <div class="article">
+
+
+
+<div class="indent">
+  <div class="subjectwrap clearfix">
+    
+    
+
+
+
+<div class="subject clearfix">
+<div id="mainpic" class="">
+
+  
+
+  <a class="nbg"
+      href="https://img2.doubanio.com/view/subject/l/public/s28564292.jpg" title="Site Reliability Engineering">
+      <img src="https://img2.doubanio.com/view/subject/s/public/s28564292.jpg" title="点击看大图" alt="Site Reliability Engineering"
+         rel="v:photo" style="max-width: 135px;max-height: 200px;">
+  </a>
+    <br>
+        <p class="gact">
+          <a class="" href="https://book.douban.com/subject/26675256/edit">
+            更新图书信息或封面
+          </a>
+        </p>
+</div>
+
+
+
+
+
+<div id="info" class="">
+
+
+
+    
+    
+  
+    <span>
+      <span class="pl"> 作者</span>:
+        
+        
+        <a class="" href="/search/Betsy%20Beyer">Betsy Beyer</a>
+        
+           /
+        
+        <a class="" href="/search/Chris%20Jones">Chris Jones</a>
+        
+           /
+        
+        <a class="" href="/search/Jennifer%20Petoff">Jennifer Petoff</a>
+        
+           /
+        
+        <a class="" href="/search/Niall%20Richard%20Murphy">Niall Richard Murphy</a>
+    </span><br/>
+
+    
+    
+  
+    
+        <span class="pl">出版社:</span> O&#39;Reilly Media<br/>
+
+    
+    
+  
+
+    
+    
+  
+    <span class="pl">副标题:</span> How Google Runs Production Systems<br/>
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+    <span class="pl">出版年:</span> 2016-4-16<br/>
+
+    
+    
+  
+    <span class="pl">页数:</span> 552<br/>
+
+    
+    
+  
+    <span class="pl">定价:</span> USD 44.99<br/>
+
+    
+    
+  
+    <span class="pl">装帧:</span> Paperback<br/>
+
+    
+    
+  
+
+    
+    
+  
+    
+      
+      <span class="pl">ISBN:</span> 9781491929124<br/>
+
+    
+    
+  
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+
+
+
+
+<div id="interest_sectl" class="">
+  <div class="rating_wrap clearbox" rel="v:rating">
+    <div class="rating_logo">
+            豆瓣评分
+    </div>
+    <div class="rating_self clearfix" typeof="v:Rating">
+      <strong class="ll rating_num " property="v:average"> 8.8 </strong>
+      <span property="v:best" content="10.0"></span>
+      <div class="rating_right ">
+          <div class="ll bigstar45"></div>
+            <div class="rating_sum">
+                <span class="">
+                    <a href="comments" class="rating_people"><span property="v:votes">99</span>人评价</a>
+                </span>
+            </div>
+
+
+      </div>
+    </div>
+          
+            
+            
+<span class="stars5 starstop" title="力荐">
+    5星
+</span>
+
+            
+<div class="power" style="width:64px"></div>
+
+            <span class="rating_per">54.5%</span>
+            <br>
+            
+            
+<span class="stars4 starstop" title="推荐">
+    4星
+</span>
+
+            
+<div class="power" style="width:45px"></div>
+
+            <span class="rating_per">38.4%</span>
+            <br>
+            
+            
+<span class="stars3 starstop" title="还行">
+    3星
+</span>
+
+            
+<div class="power" style="width:8px"></div>
+
+            <span class="rating_per">7.1%</span>
+            <br>
+            
+            
+<span class="stars2 starstop" title="较差">
+    2星
+</span>
+
+            
+<div class="power" style="width:0px"></div>
+
+            <span class="rating_per">0.0%</span>
+            <br>
+            
+            
+<span class="stars1 starstop" title="很差">
+    1星
+</span>
+
+            
+<div class="power" style="width:0px"></div>
+
+            <span class="rating_per">0.0%</span>
+            <br>
+  </div>
+        
+</div>
+
+  </div>
+  
+      
+
+
+
+
+
+
+
+  
+  <div id="interest_sect_level" class="clearfix">    <div class="j a_stars">
+
+      <span class="mr10">
+        我最近在读这本书
+      </span>
+      <span class="color_gray">2019-03-28</span>
+      &nbsp; &nbsp;
+      <a href="javascript:void(0)" class="collect_btn" name="pbtn-26675256">修改</a>
+      &nbsp;
+      
+<form method="POST" action="remove" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="lCAN"/></div>
+    <input type="submit" class="minisubmit j a_confirm_link " value="删除" title="删除这个收藏" />
+</form>
+
+      <br/>
+
+          
+    
+    我的评价:
+    <span id="rating"> <span id="stars" data-solid="https://img1.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" data-hollow="https://img1.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" data-solid-2x="https://img1.doubanio.com/f/shire/7258904022439076d57303c3b06ad195bf1dc41a/pics/rating_icons/star_onmouseover@2x.png" data-hollow-2x="https://img1.doubanio.com/f/shire/95cc2fa733221bb8edd28ad56a7145a5ad33383e/pics/rating_icons/star_hollow_hover@2x.png">
+
+                    <a href="https://book.douban.com/subject/26675256/?rating=1&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" id="star1" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/26675256/?rating=2&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" id="star2" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/26675256/?rating=3&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" id="star3" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/26675256/?rating=4&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" id="star4" width="16" height="16"/>
+        </a>
+                    <a href="https://book.douban.com/subject/26675256/?rating=5&amp;ck=lCAN">
+            <img src="https://img1.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" id="star5" width="16" height="16"/>
+        </a>
+    </span><span id="rateword" class="pl"></span>
+    <input id="n_rating" type="hidden" value="5"  />
+    </span>
+
+
+
+        <span>入职读物</span>
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+  
+  <div class="gtleft">
+    <ul class="ul_subject_menu bicelink color_gray pt6 clearfix">
+        <li>
+          <img src="https://img1.doubanio.com/f/shire/5bbf02b7b5ec12b23e214a580b6f9e481108488c/pics/add-review.gif" />&nbsp;
+          <a class="" href="https://book.douban.com/annotation/write?sid=26675256" rel="nofollow">写笔记</a>
+        </li>
+
+        <li>
+          <img src="https://img1.doubanio.com/f/shire/5bbf02b7b5ec12b23e214a580b6f9e481108488c/pics/add-review.gif" />&nbsp;<a class="" href="https://book.douban.com/subject/26675256/new_review" rel="nofollow">写书评</a>
+        </li>
+
+        <li>
+
+<span class="rr">
+
+
+    <img src="/pics/add-cart.gif"/>
+        <a name="26675256" class="j a_add2cart" href="javascript:;">加入购书单</a>
+  <span class="hidden">已在<a href="https://book.douban.com/cart">购书单</a></span>
+</span><br class="clearfix" />
+</li>
+      
+        <li>
+          
+
+
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/sns/9919c071eab1c25bc462d58a582feb79e3867be4/css/sns/doulist/new_doulist_button.css">
+    <div class="doulist-add-btn">
+
+  
+
+  
+  <a href="javascript:void(0)"
+     data-id="26675256"
+     data-cate="1001"
+     data-canview="True"
+     data-url="https://book.douban.com/subject/26675256/"
+     data-catename="图书"
+     data-link="https://www.douban.com/people/mewcatcher/doulists/all?add=26675256&amp;cat=1001"
+     data-title="Site Reliability Engineering"
+     data-picture="https://img2.doubanio.com/view/subject/l/public/s28564292.jpg"
+     class="lnk-doulist-add"
+     onclick="moreurl(this, { 'from':'doulist-btn-1001-26675256-82160871'})">
+      <i></i>添加到书单
+  </a>
+    </div>
+  <link rel="stylesheet" href="https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css">
+  <script src="https://img1.doubanio.com/f/shire/3f6bfbf287470b91aacba40f0b19cb2056910f2e/js/core/do/loader.js"></script>
+  <script src="https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js"></script>
+  <script>
+    Do(function() {
+      loader.batch([
+        "https://img1.doubanio.com/f/sns/339d5de8cb2b7ac836b834518bc33260e83e0a79/js/sns/doulist/doulist_dialog.js",
+      ]).done(function() {
+        $(document).delegate('.lnk-doulist-add', 'click', function(e) {
+          e.preventDefault();
+          var self = $(this);
+          if(window._USER_ABNORMAL) {
+            show_abnormal && show_abnormal()
+            return
+          }
+          var param = $.extend({'url':''}, $(this).data(), {link: this.href});
+          // 兼容jquery 1.8.x
+          var newParam = {};
+          for (key in param) {
+            if (typeof param[key] === 'number') {
+              param[key] = self.attr('data-'+key);
+            }
+            if (param.hasOwnProperty(key)) {
+              newParam[$.camelCase(key)] = param[key];
+            }
+          }
+          self.doulistDialog(newParam);
+        });
+
+      });
+    });
+  </script>
+
+        </li>
+
+        
+        
+    
+    <li class="rec" id="C-26675256">
+        <a href="#" data-url="https://book.douban.com/subject/26675256/" data-desc="" data-title="书籍《Site Reliability Engineering》 (来自豆瓣) " data-pic="https://img2.doubanio.com/view/subject/l/public/s28564292.jpg" class="bn-sharing ">分享到</a> &nbsp;&nbsp;
+    </li>
+    <script>
+    var __cache_url = __cache_url || {};
+    (function(u){
+        if(__cache_url[u]) return;
+        __cache_url[u] = true;
+        window.DoubanShareIcons = 'https://img1.doubanio.com/f/shire/d15ffd71f3f10a7210448fec5a68eaec66e7f7d0/pics/ic_shares.png';
+        var initShareButton = function() {
+          $.ajax({url:u,dataType:'script',cache:true});
+        };
+        if (typeof Do == 'function' && 'ready' in Do) {
+          Do('https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+            'https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js',
+            initShareButton);
+        } else if(typeof Douban == 'object' && 'loader' in Douban) {
+          Douban.loader.batch(
+            'https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+            'https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js'
+          ).done(initShareButton);
+        }
+    })('https://img1.doubanio.com/f/shire/64044c0cde0c2bbf9c3eb94e57da6070d0340c4b/js/lib/sharebutton.js');
+    </script>
+
+    </ul>
+  </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+    <script>
+        var rec_url = 'https://www.douban.com/share/recommend?'
+    </script>
+    <script type="text/javascript" src="https://img1.doubanio.com/f/shire/9238d0db7d5fc042186ec54ebc5b4e64653f5e46/js/dshare.js"></script>
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/share/recommend?sanity_key=_9d9cf&amp;apikey=&amp;name=Site+Reliability+Engineering&amp;image=https%3A%2F%2Fimg2.doubanio.com%2Fview%2Fsubject%2Fs%2Fpublic%2Fs28564292.jpg&amp;redir=https%3A%2F%2Fbook.douban.com%2Fsubject%2F26675256%2F&amp;href=https%3A%2F%2Fbook.douban.com%2Fsubject%2F26675256%2F&amp;curl=&amp;type=book&amp;properties=%7B%22rating%22%3A%228.8%22%7D&amp;desc=How+Google+Runs+Production+Systems+%2F+Betsy+Beye..." share-id="26675256" data-mode="plain" data-name="Site Reliability Engineering" data-type="book" data-desc="How Google Runs Production Systems / Betsy Beyer / O&#39;Reilly Media" data-href="https://book.douban.com/subject/26675256/" data-image="https://img2.doubanio.com/view/subject/s/public/s28564292.jpg" data-properties="{&#34;rating&#34;:&#34;8.8&#34;}" data-redir="https://book.douban.com/subject/26675256/vote?ck=lCAN" data-text="" data-apikey="" data-curl="" data-count="10" data-object_kind="1001" data-object_id="26675256" data-target_type="rec" data-target_action="0" data-action_props="{&#34;subject_url&#34;:&#34;https:\/\/book.douban.com\/subject\/26675256\/&#34;,&#34;subject_title&#34;:&#34;Site Reliability Engineering&#34;}" data-sanity_key="_9d9cf" class="lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+
+<script>
+  //bind events for collection button.
+  $('.collect_btn', '#interest_sect_level').each(function(){
+      Douban.init_collect_btn(this);
+  });
+</script>
+
+</div>
+
+<br clear="all">
+<div id="collect_form_26675256"></div>
+<div class="related_info">
+  
+
+
+
+
+
+
+  
+
+  <h2>
+    <span>内容简介</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+<div class="indent" id="link-report">
+    
+      <span class="short">
+        <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>The overwhelming majority of a software system’s lifespan is spent in use, not in design or implementation. So, why does conventional wisdom insist that software engineers focus primarily on the design and development of large-scale computing systems?</p>    <p>In this collection of essays and articles, key members of Google’s Site Reliability Team explain how and why their commitment to...</p><p><a href="javascript:void(0)" class="j a_show_full">(展开全部)</a></p></div>
+       </span>
+      <span class="all hidden">
+        <div class="">
+          <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>The overwhelming majority of a software system’s lifespan is spent in use, not in design or implementation. So, why does conventional wisdom insist that software engineers focus primarily on the design and development of large-scale computing systems?</p>    <p>In this collection of essays and articles, key members of Google’s Site Reliability Team explain how and why their commitment to the entire lifecycle has enabled the company to successfully build, deploy, monitor, and maintain some of the largest software systems in the world. You’ll learn the principles and practices that enable Google engineers to make systems more scalable, reliable, and efficient—lessons directly applicable to your organization.</p></div>
+
+        </div>
+      </span>
+    
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/vendors/7d8c54c10ffd51769880282d4a41609dc465b796/reports.css" />
+    <style>
+      .report-comment { overflow: hidden; visibility: hidden; }
+      .btn-report { float: right; color: #bbb; cursor: pointer; font-size: 13px;}
+    </style>
+    <script src="https://img1.doubanio.com/f/vendors/bd6325a12f40c34cbf2668aafafb4ccd60deab7e/vendors.js"></script>
+    <script src="https://img1.doubanio.com/f/vendors/68e2c291c7d4971661f7e4c3e41e1e99e2c2df4b/reports.js"></script>
+    <script>
+      (function () {
+        const ADD_REPORT = function() {
+          var roots = document.querySelectorAll("#link-report");
+          roots.forEach(function (root) {
+            var btn = document.createElement('span');
+            btn.className = 'btn-report';
+            btn.innerHTML = "投诉";
+            btn.addEventListener('click', function () {
+              if (window.DOUBAN_VENDORS && window.DOUBAN_VENDORS.openReportModal) {
+                window.DOUBAN_VENDORS.openReportModal({
+                  reportUrl: "https://book.douban.com/subject/26675256/" || root.getAttribute('data-url'),
+                  types: ["content"]
+                })
+              }
+            });
+            root.appendChild(btn);
+          })
+        }
+        ADD_REPORT();
+        $("body").delegate(".comment-item", 'mouseenter mouseleave', function (e) {
+          var $report = $(this).find(".report-comment")
+          switch (e.type) {
+            case "mouseenter":
+              $report.css('visibility', 'visible');
+              break;
+            case "mouseleave":
+              $report.css('visibility', 'hidden');
+              break;
+            }
+        });
+        window.ADD_REPORT = ADD_REPORT
+      })()
+    </script>
+
+</div>
+
+  
+      
+
+<style type="text/css" media="screen">
+  .online-partner{display:flex;align-items:center;padding-top:10px;padding-bottom:10px;margin-bottom:20px;border-bottom:1px solid #D8D8D8}.online-partner .online-type{display:flex;align-items:center}.online-partner .online-type:nth-child(2){padding-left:20px}.online-read-or-audio{display:inline-block;color:rgba(0,0,0,0.9);font-size:12px;line-height:24px}.online-read-or-audio a{display:flex;align-items:center;margin-right:10px;padding:0 15px 0 7px;border:1px solid rgba(0,0,0,0.25);border-radius:5px;vertical-align:middle;color:rgba(0,0,0,0.9)}.online-read-or-audio a:after{content:'';width:5px;height:5px;border-right:1px solid rgba(0,0,0,0.8);border-top:1px solid rgba(0,0,0,0.8);transform:rotate(45deg);margin-right:-6px}.online-read-or-audio a:hover{background:#fff;opacity:.8}.online-read-or-audio img{border-radius:50%;box-shadow:0 0 1px 0 rgba(0,0,0,0.6)}.online-read-or-audio span{padding:0 3px 0 5px}
+
+</style>
+
+
+  
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+    
+  
+
+  <h2>
+    <span>作者简介</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+      <div class="indent ">
+          
+            <span class="short">
+                <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>Betsy Beyer</p>    <p>Betsy Beyer is a Technical Writer for Google in New York City specializing in Site Reliability Engineering. She has previously written documentation for Google’s Data Center and Hardware Operations Teams in Mountain View and across its globally distributed datacenters. Before moving to New York, Betsy was a lecturer on technical writing at Stanford University. En ro...</p><p><a href="javascript:void(0)" class="j a_show_full">(展开全部)</a></p></div>
+
+            </span>
+            <span class="all hidden ">
+                <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>Betsy Beyer</p>    <p>Betsy Beyer is a Technical Writer for Google in New York City specializing in Site Reliability Engineering. She has previously written documentation for Google’s Data Center and Hardware Operations Teams in Mountain View and across its globally distributed datacenters. Before moving to New York, Betsy was a lecturer on technical writing at Stanford University. En route to her current career, Betsy studied International Relations and English Literature, and holds degrees from Stanford and Tulane.</p>    <p>Chris Jones</p>    <p>Chris Jones is a Site Reliability Engineer for Google App Engine, a cloud platform-as-a-service product serving over 28 billion requests per day. Based in San Francisco, he has previously been responsible for the care and feeding of Google’s advertising statistics, data warehousing, and customer support systems. In other lives, Chris has worked in academic IT, analyzed data for political campaigns, and engaged in some light BSD kernel hacking, picking up degrees in Computer Engineering, Economics, and Technology Policy along the way. He’s also a licensed professional engineer.</p>    <p>Jennifer Petoff</p>    <p>Jennifer Petoff is a Program Manager for Google’s Site Reliability Engineering team and based in Dublin, Ireland. She has managed large global projects across wide-ranging domains including scientific research, engineering, human resources, and advertising operations. Jennifer joined Google after spending eight years in the chemical industry. She holds a PhD in Chemistry from Stanford University and a BS in Chemistry and a BA in Psychology from the University of Rochester.</p>    <p>Niall Richard Murphy</p>    <p>Niall Murphy leads the Ads Site Reliability Engineering team at Google Ireland. He has been involved in the Internet industry for about 20 years, and is currently chairperson of INEX, Ireland’s peering hub. He is the author or coauthor of a number of technical papers and/or books, including &#34;IPv6 Network Administration&#34; for O’Reilly, and a number of RFCs. He is currently cowriting a history of the Internet in Ireland, and is the holder of degrees in Computer Science, Mathematics, and Poetry Studies, which is surely some kind of mistake. He lives in Dublin with his wife and two sons.</p></div>
+
+            </span>
+      </div>
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+  
+    
+
+
+
+
+  
+
+  <h2>
+    <span>目录</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+<div class="indent" id="dir_26675256_short">
+        Chapter 1Introduction<br/>
+        The Sysadmin Approach to Service Management<br/>
+        Google’s Approach to Service Management: Site Reliability Engineering<br/>
+        Tenets of SRE<br/>
+        The End of the Beginning<br/>
+        Chapter 2The Production Environment at Google, from the Viewpoint of an SRE<br/>
+    · · · · · ·
+    (<a href="javascript:$('#dir_26675256_short').hide();$('#dir_26675256_full').show();$.get('/j/subject/j_dir_count',{id:26675256});void(0);">更多</a>)
+</div>
+
+<div class="indent" id="dir_26675256_full" style="display:none">
+        Chapter 1Introduction<br/>
+        The Sysadmin Approach to Service Management<br/>
+        Google’s Approach to Service Management: Site Reliability Engineering<br/>
+        Tenets of SRE<br/>
+        The End of the Beginning<br/>
+        Chapter 2The Production Environment at Google, from the Viewpoint of an SRE<br/>
+        Hardware<br/>
+        System Software That “Organizes” the Hardware<br/>
+        Other System Software<br/>
+        Our Software Infrastructure<br/>
+        Our Development Environment<br/>
+        Shakespeare: A Sample Service<br/>
+        Principles<br/>
+        Chapter 3Embracing Risk<br/>
+        Managing Risk<br/>
+        Measuring Service Risk<br/>
+        Risk Tolerance of Services<br/>
+        Motivation for Error Budgets<br/>
+        Chapter 4Service Level Objectives<br/>
+        Service Level Terminology<br/>
+        Indicators in Practice<br/>
+        Objectives in Practice<br/>
+        Agreements in Practice<br/>
+        Chapter 5Eliminating Toil<br/>
+        Toil Defined<br/>
+        Why Less Toil Is Better<br/>
+        What Qualifies as Engineering?<br/>
+        Is Toil Always Bad?<br/>
+        Conclusion<br/>
+        Chapter 6Monitoring Distributed Systems<br/>
+        Definitions<br/>
+        Why Monitor?<br/>
+        Setting Reasonable Expectations for Monitoring<br/>
+        Symptoms Versus Causes<br/>
+        Black-Box Versus White-Box<br/>
+        The Four Golden Signals<br/>
+        Worrying About Your Tail (or, Instrumentation and Performance)<br/>
+        Choosing an Appropriate Resolution for Measurements<br/>
+        As Simple as Possible, No Simpler<br/>
+        Tying These Principles Together<br/>
+        Monitoring for the Long Term<br/>
+        Conclusion<br/>
+        Chapter 7The Evolution of Automation at Google<br/>
+        The Value of Automation<br/>
+        The Value for Google SRE<br/>
+        The Use Cases for Automation<br/>
+        Automate Yourself Out of a Job: Automate ALL the Things!<br/>
+        Soothing the Pain: Applying Automation to Cluster Turnups<br/>
+        Borg: Birth of the Warehouse-Scale Computer<br/>
+        Reliability Is the Fundamental Feature<br/>
+        Recommendations<br/>
+        Chapter 8Release Engineering<br/>
+        The Role of a Release Engineer<br/>
+        Philosophy<br/>
+        Continuous Build and Deployment<br/>
+        Configuration Management<br/>
+        Conclusions<br/>
+        Chapter 9Simplicity<br/>
+        System Stability Versus Agility<br/>
+        The Virtue of Boring<br/>
+        I Won’t Give Up My Code!<br/>
+        The “Negative Lines of Code” Metric<br/>
+        Minimal APIs<br/>
+        Modularity<br/>
+        Release Simplicity<br/>
+        A Simple Conclusion<br/>
+        Practices<br/>
+        Chapter 10Practical Alerting from Time-Series Data<br/>
+        The Rise of Borgmon<br/>
+        Instrumentation of Applications<br/>
+        Collection of Exported Data<br/>
+        Storage in the Time-Series Arena<br/>
+        Rule Evaluation<br/>
+        Alerting<br/>
+        Sharding the Monitoring Topology<br/>
+        Black-Box Monitoring<br/>
+        Maintaining the Configuration<br/>
+        Ten Years On…<br/>
+        Chapter 11Being On-Call<br/>
+        Introduction<br/>
+        Life of an On-Call Engineer<br/>
+        Balanced On-Call<br/>
+        Feeling Safe<br/>
+        Avoiding Inappropriate Operational Load<br/>
+        Conclusions<br/>
+        Chapter 12Effective Troubleshooting<br/>
+        Theory<br/>
+        In Practice<br/>
+        Negative Results Are Magic<br/>
+        Case Study<br/>
+        Making Troubleshooting Easier<br/>
+        Conclusion<br/>
+        Chapter 13Emergency Response<br/>
+        What to Do When Systems Break<br/>
+        Test-Induced Emergency<br/>
+        Change-Induced Emergency<br/>
+        Process-Induced Emergency<br/>
+        All Problems Have Solutions<br/>
+        Learn from the Past. Don’t Repeat It.<br/>
+        Conclusion<br/>
+        Chapter 14Managing Incidents<br/>
+        Unmanaged Incidents<br/>
+        The Anatomy of an Unmanaged Incident<br/>
+        Elements of Incident Management Process<br/>
+        A Managed Incident<br/>
+        When to Declare an Incident<br/>
+        In Summary<br/>
+        Chapter 15Postmortem Culture: Learning from Failure<br/>
+        Google’s Postmortem Philosophy<br/>
+        Collaborate and Share Knowledge<br/>
+        Introducing a Postmortem Culture<br/>
+        Conclusion and Ongoing Improvements<br/>
+        Chapter 16Tracking Outages<br/>
+        Escalator<br/>
+        Outalator<br/>
+        Chapter 17Testing for Reliability<br/>
+        Types of Software Testing<br/>
+        Creating a Test and Build Environment<br/>
+        Testing at Scale<br/>
+        Conclusion<br/>
+        Chapter 18Software Engineering in SRE<br/>
+        Why Is Software Engineering Within SRE Important?<br/>
+        Auxon Case Study: Project Background and Problem Space<br/>
+        Intent-Based Capacity Planning<br/>
+        Fostering Software Engineering in SRE<br/>
+        Conclusions<br/>
+        Chapter 19Load Balancing at the Frontend<br/>
+        Power Isn’t the Answer<br/>
+        Load Balancing Using DNS<br/>
+        Load Balancing at the Virtual IP Address<br/>
+        Chapter 20Load Balancing in the Datacenter<br/>
+        The Ideal Case<br/>
+        Identifying Bad Tasks: Flow Control and Lame Ducks<br/>
+        Limiting the Connections Pool with Subsetting<br/>
+        Load Balancing Policies<br/>
+        Chapter 21Handling Overload<br/>
+        The Pitfalls of “Queries per Second”<br/>
+        Per-Customer Limits<br/>
+        Client-Side Throttling<br/>
+        Criticality<br/>
+        Utilization Signals<br/>
+        Handling Overload Errors<br/>
+        Load from Connections<br/>
+        Conclusions<br/>
+        Chapter 22Addressing Cascading Failures<br/>
+        Causes of Cascading Failures and Designing to Avoid Them<br/>
+        Preventing Server Overload<br/>
+        Slow Startup and Cold Caching<br/>
+        Triggering Conditions for Cascading Failures<br/>
+        Testing for Cascading Failures<br/>
+        Immediate Steps to Address Cascading Failures<br/>
+        Closing Remarks<br/>
+        Chapter 23Managing Critical State: Distributed Consensus for Reliability<br/>
+        Motivating the Use of Consensus: Distributed Systems Coordination Failure<br/>
+        How Distributed Consensus Works<br/>
+        System Architecture Patterns for Distributed Consensus<br/>
+        Distributed Consensus Performance<br/>
+        Deploying Distributed Consensus-Based Systems<br/>
+        Monitoring Distributed Consensus Systems<br/>
+        Conclusion<br/>
+        Chapter 24Distributed Periodic Scheduling with Cron<br/>
+        Cron<br/>
+        Cron Jobs and Idempotency<br/>
+        Cron at Large Scale<br/>
+        Building Cron at Google<br/>
+        Summary<br/>
+        Chapter 25Data Processing Pipelines<br/>
+        Origin of the Pipeline Design Pattern<br/>
+        Initial Effect of Big Data on the Simple Pipeline Pattern<br/>
+        Challenges with the Periodic Pipeline Pattern<br/>
+        Trouble Caused By Uneven Work Distribution<br/>
+        Drawbacks of Periodic Pipelines in Distributed Environments<br/>
+        Introduction to Google Workflow<br/>
+        Stages of Execution in Workflow<br/>
+        Ensuring Business Continuity<br/>
+        Summary and Concluding Remarks<br/>
+        Chapter 26Data Integrity: What You Read Is What You Wrote<br/>
+        Data Integrity’s Strict Requirements<br/>
+        Google SRE Objectives in Maintaining Data Integrity and Availability<br/>
+        How Google SRE Faces the Challenges of Data Integrity<br/>
+        Case Studies<br/>
+        General Principles of SRE as Applied to Data Integrity<br/>
+        Conclusion<br/>
+        Chapter 27Reliable Product Launches at Scale<br/>
+        Launch Coordination Engineering<br/>
+        Setting Up a Launch Process<br/>
+        Developing a Launch Checklist<br/>
+        Selected Techniques for Reliable Launches<br/>
+        Development of LCE<br/>
+        Conclusion<br/>
+        Management<br/>
+        Chapter 28Accelerating SREs to On-Call and Beyond<br/>
+        You’ve Hired Your Next SRE(s), Now What?<br/>
+        Initial Learning Experiences: The Case for Structure Over Chaos<br/>
+        Creating Stellar Reverse Engineers and Improvisational Thinkers<br/>
+        Five Practices for Aspiring On-Callers<br/>
+        On-Call and Beyond: Rites of Passage, and Practicing Continuing Education<br/>
+        Closing Thoughts<br/>
+        Chapter 29Dealing with Interrupts<br/>
+        Managing Operational Load<br/>
+        Factors in Determining How Interrupts Are Handled<br/>
+        Imperfect Machines<br/>
+        Chapter 30Embedding an SRE to Recover from Operational Overload<br/>
+        Phase 1: Learn the Service and Get Context<br/>
+        Phase 2: Sharing Context<br/>
+        Phase 3: Driving Change<br/>
+        Conclusion<br/>
+        Chapter 31Communication and Collaboration in SRE<br/>
+        Communications: Production Meetings<br/>
+        Collaboration within SRE<br/>
+        Case Study of Collaboration in SRE: Viceroy<br/>
+        Collaboration Outside SRE<br/>
+        Case Study: Migrating DFP to F1<br/>
+        Conclusion<br/>
+        Chapter 32The Evolving SRE Engagement Model<br/>
+        SRE Engagement: What, How, and Why<br/>
+        The PRR Model<br/>
+        The SRE Engagement Model<br/>
+        Production Readiness Reviews: Simple PRR Model<br/>
+        Evolving the Simple PRR Model: Early Engagement<br/>
+        Evolving Services Development: Frameworks and SRE Platform<br/>
+        Conclusion<br/>
+        Conclusions<br/>
+        Chapter 33Lessons Learned from Other Industries<br/>
+        Meet Our Industry Veterans<br/>
+        Preparedness and Disaster Testing<br/>
+        Postmortem Culture<br/>
+        Automating Away Repetitive Work and Operational Overhead<br/>
+        Structured and Rational Decision Making<br/>
+        Conclusions<br/>
+        Chapter 34Conclusion<br/>
+        Appendix Availability Table<br/>
+        Appendix A Collection of Best Practices for Production Services<br/>
+        Fail Sanely<br/>
+        Progressive Rollouts<br/>
+        Define SLOs Like a User<br/>
+        Error Budgets<br/>
+        Monitoring<br/>
+        Postmortems<br/>
+        Capacity Planning<br/>
+        Overloads and Failure<br/>
+        SRE Teams<br/>
+        Appendix Example Incident State Document<br/>
+        Appendix Example Postmortem<br/>
+        Lessons Learned<br/>
+        Timeline<br/>
+        Supporting information:<br/>
+        Appendix Launch Coordination Checklist<br/>
+        Appendix Example Production Meeting Minutes<br/>
+     · · · · · ·     (<a href="javascript:$('#dir_26675256_full').hide();$('#dir_26675256_short').show();void(0);">收起</a>)
+</div>
+
+
+
+  
+
+
+<link rel="stylesheet" href="https://img1.doubanio.com/f/verify/fada435abd10ae2583d995730a9e06e6e20a9a05/entry_creator/dist/author_subject/style.css">
+
+<div id="author_subject" class="author-wrapper">
+  <div class="loading"></div>
+</div>
+
+<script type="text/javascript">
+  var answerObj = {
+    TYPE: 'book',
+    SUBJECT_ID: '26675256',
+    ISALL: 'False' || false,
+    USER_ID: '82160871'
+  }
+</script>
+<script src="https://img1.doubanio.com/f/book/61252f2f9b35f08b37f69d17dfe48310dd295347/js/book/lib/react/bundle.js"></script>
+<script type="text/javascript" src="https://img1.doubanio.com/f/verify/82d2333c56fe1813ad6ee312f35a915941d906ae/entry_creator/dist/author_subject/index.js"></script> 
+  
+      
+
+
+
+
+
+
+
+
+<div class="ugc-mod blockquote-list-wrapper">
+  <div class="hd">
+    <h2>
+      原文摘录
+      &nbsp;&nbsp;· · · · · ·&nbsp;
+      <span class="pl">( <a href="blockquotes">全部</a> )</span>
+    </h2>
+
+    <ul class="blockquote-list">
+      
+        <li>
+          <figure>
+            Nothing here tells us how to solve problems universally, but that is the point. Stories like these are far more valuable than the code or designs they resulted in. Implementations are ephemeral, but the documented reasoning is priceless. Rarely do we have access to this kind of insights.  (<a href="https://book.douban.com/annotation/37656866/">查看原文</a>)
+
+            <div class="blockquote-extra">
+              <div class='blockquote-meta'>
+                <a href="https://www.douban.com/people/fleure/" class="author-avatar">
+                  <img width="20" height="20" src="https://img1.doubanio.com/icon/u9336092-27.jpg">
+                </a>
+                <a class="author-name" href="https://www.douban.com/people/fleure/">红色有角F叔</a>
+                <datetime>2016-04-26 22:29:05</datetime>
+              </div>
+
+              
+              <figcaption title="引自章节：Forewood">
+                —— 引自章节：Forewood
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+      
+        <li>
+          <figure>
+            In other words, given the relative insensitivity of the AdSense service to moderate changes in latency performance, we are able to consolidate serving into fewer geographical locations, reducing our operational overhead.
+  (<a href="https://book.douban.com/annotation/37747194/">查看原文</a>)
+
+            <div class="blockquote-extra">
+              <div class='blockquote-meta'>
+                <a href="https://www.douban.com/people/fleure/" class="author-avatar">
+                  <img width="20" height="20" src="https://img1.doubanio.com/icon/u9336092-27.jpg">
+                </a>
+                <a class="author-name" href="https://www.douban.com/people/fleure/">红色有角F叔</a>
+                <datetime>2016-05-10 21:38:42</datetime>
+              </div>
+
+              
+              <figcaption title="引自章节：Other service metrics">
+                —— 引自章节：Other service metrics
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+    </ul>
+
+      <p class="pl"> &gt; <a href="blockquotes">全部原文摘录</a> </p>
+  </div>
+</div>
+
+
+
+  
+      
+
+
+
+
+  
+
+
+
+
+<div id="db-rec-section" class="block5 subject_show knnlike">
+  
+  
+  
+
+  <h2>
+    <span>喜欢读&#34;Site Reliability Engineering&#34;的人也喜欢</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+  <div class="content clearfix">
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/30218049/" onclick="moreurl(this, {'total': 10, 'clicked': '30218049', 'pos': 0, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s29764182.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/30218049/" onclick="moreurl(this, {'total': 10, 'clicked': '30218049', 'pos': 0, 'identifier': 'book-rec-books'})" class="">
+            Distributed Algorithms: An Intuitive ...
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26197294/" onclick="moreurl(this, {'total': 10, 'clicked': '26197294', 'pos': 1, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s29419939.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26197294/" onclick="moreurl(this, {'total': 10, 'clicked': '26197294', 'pos': 1, 'identifier': 'book-rec-books'})" class="">
+            Designing Data-Intensive Applicati...
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/2065284/" onclick="moreurl(this, {'total': 10, 'clicked': '2065284', 'pos': 2, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s4280015.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/2065284/" onclick="moreurl(this, {'total': 10, 'clicked': '2065284', 'pos': 2, 'identifier': 'book-rec-books'})" class="">
+            Release It!
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26979326/" onclick="moreurl(this, {'total': 10, 'clicked': '26979326', 'pos': 3, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s29610250.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26979326/" onclick="moreurl(this, {'total': 10, 'clicked': '26979326', 'pos': 3, 'identifier': 'book-rec-books'})" class="">
+            Distributed Systems, 3rd Edition
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/34464806/" onclick="moreurl(this, {'total': 10, 'clicked': '34464806', 'pos': 4, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s33321778.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/34464806/" onclick="moreurl(this, {'total': 10, 'clicked': '34464806', 'pos': 4, 'identifier': 'book-rec-books'})" class="">
+            Fundamentals of Software Architec...
+          </a>
+        </dd>
+      </dl>
+        <dl class="clear"></dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26591700/" onclick="moreurl(this, {'total': 10, 'clicked': '26591700', 'pos': 5, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s28275779.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26591700/" onclick="moreurl(this, {'total': 10, 'clicked': '26591700', 'pos': 5, 'identifier': 'book-rec-books'})" class="">
+            Infrastructure as Code
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/10315526/" onclick="moreurl(this, {'total': 10, 'clicked': '10315526', 'pos': 6, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s8428756.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/10315526/" onclick="moreurl(this, {'total': 10, 'clicked': '10315526', 'pos': 6, 'identifier': 'book-rec-books'})" class="">
+            Introduction to Reliable and Secure...
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/34796016/" onclick="moreurl(this, {'total': 10, 'clicked': '34796016', 'pos': 7, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s33616891.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/34796016/" onclick="moreurl(this, {'total': 10, 'clicked': '34796016', 'pos': 7, 'identifier': 'book-rec-books'})" class="">
+            Building Secure and Reliable Syst...
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/33398015/" onclick="moreurl(this, {'total': 10, 'clicked': '33398015', 'pos': 8, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s32282497.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/33398015/" onclick="moreurl(this, {'total': 10, 'clicked': '33398015', 'pos': 8, 'identifier': 'book-rec-books'})" class="">
+            Linux Observability with BPF
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26915970/" onclick="moreurl(this, {'total': 10, 'clicked': '26915970', 'pos': 9, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s29550948.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26915970/" onclick="moreurl(this, {'total': 10, 'clicked': '26915970', 'pos': 9, 'identifier': 'book-rec-books'})" class="">
+            Clean Architecture
+          </a>
+        </dd>
+      </dl>
+        <dl class="clear"></dl>
+  </div>
+</div>
+
+  
+      
+
+
+
+
+<div id="comments-section">
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/book/d63a579a99fd372b4398731a279a1382e6eac71e/css/book/lib/subject-comments/comments-section.css"/>
+    <div class="mod-hd">
+        
+
+        <a class="redbutt j a_collect_btn rr" name="cbtn-26675256" href="javascript:;" rel="nofollow">
+            <span>我来说两句</span>
+        </a>
+
+            
+  
+
+  <h2>
+    <span>短评</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/subject/26675256/comments/">全部 32 条</a>
+        ) </span>
+
+  </h2>
+
+
+    </div>
+    <div class="nav-tab">
+        
+    <div class="tabs-wrapper  line">
+                <a class="short-comment-tabs on-tab"
+                    href="https://book.douban.com/subject/26675256/comments?sort=score" 
+                    data-tab="score">热门</a>
+                <span>/</span>
+                <a class="short-comment-tabs "
+                    href="https://book.douban.com/subject/26675256/comments?sort=time" 
+                    data-tab="time">最新</a>
+                <span>/</span>
+                <a class="short-comment-tabs "
+                    href="https://book.douban.com/subject/26675256/comments?sort=follows" 
+                    data-tab="follows">好友</a>
+    </div>
+
+    </div>
+    <div id="comment-list-wrapper" class="indent">
+        
+  
+  <div class="comment-list score show" id="score">
+      <ul>
+          
+  <li class="comment-item" data-cid="1652947738">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1652947738" class="vote-count">0</span>
+              <a id="btn-1652947738" href="" class="j vote-comment" data-cid="1652947738">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/kevinlee/">Kevin Lee</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/1652947738">2019-02-20 20:29:27</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">google可能创建并运维着这地球上最复杂的分布式系统，没有之一。那它是如何运维的呢？所有的秘密就在这本SRE中。SRE是google创造的概念，核心就是利用自家的工程师文化，确保SRE人员成本在系统规模不断扩大的情况下不线性增加，同时还能保证系统的可靠性。如最后一章所总结：飞机从1896年发明以来变得越来越复杂，但是驾驶飞机的飞行员还是不会超过2个人。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=1652947738"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1033700051">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1033700051" class="vote-count">0</span>
+              <a id="btn-1033700051" href="" class="j vote-comment" data-cid="1033700051">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/70310754/">ewon</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1033700051">2016-04-29 10:34:03</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">详细的描述了google SRE的方方面面，很有参考价值，尤其是对我们大规模的互联网应用来说。 稳定压倒一切</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=1033700051"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1044339916">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1044339916" class="vote-count">2</span>
+              <a id="btn-1044339916" href="" class="j vote-comment" data-cid="1044339916">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/JGuo/">放开那个西红柿</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/1044339916">2016-07-20 14:32:51</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">看前面几章觉得没什么大不了的，大家都这么做。等看到后面从数据推导、实践分析、配置测试和线上回归几个点，真的是大开眼界，已经不局限于运维界 doing 的一些事情，而是启发。从需求、设计、数学、算法到实践，真正的科学思想。不仅仅影响 SRE 团队，而是影响整个公司和业界。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=1044339916"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1027048581">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1027048581" class="vote-count">1</span>
+              <a id="btn-1027048581" href="" class="j vote-comment" data-cid="1027048581">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/au9ustine/">a锟斤拷</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/1027048581">2017-02-03 01:06:47</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">简直醍醐灌顶</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=1027048581"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1026732887">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1026732887" class="vote-count">0</span>
+              <a id="btn-1026732887" href="" class="j vote-comment" data-cid="1026732887">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/happyface1022/">秋秋</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/1026732887">2017-01-04 17:39:17</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">真的有很多判断；适合经常拿回来翻；</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=1026732887"></div>
+    </div>
+  </li>
+
+      </ul>
+  </div>
+
+        
+  
+  <div class="comment-list time noshow" id="time">
+      <ul>
+          
+  <li class="comment-item" data-cid="3300605788">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-3300605788" class="vote-count">0</span>
+              <a id="btn-3300605788" href="" class="j vote-comment" data-cid="3300605788">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/185807766/">Marine</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/3300605788">2022-04-03 22:03:19</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">Relabel the book in my booklist</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=3300605788"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="3087342941">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-3087342941" class="vote-count">0</span>
+              <a id="btn-3087342941" href="" class="j vote-comment" data-cid="3087342941">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/239371644/">豆友239371644</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/3087342941">2021-10-26 23:27:17</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">最近刚读完…内容感觉真的可以再精简一点……</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=3087342941"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1813538242">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1813538242" class="vote-count">0</span>
+              <a id="btn-1813538242" href="" class="j vote-comment" data-cid="1813538242">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/187536536/">huyan00</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/1813538242">2021-08-29 17:14:10</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">合理的流程，制度，一切让数量级下的各种事故变成应对范围之内</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=1813538242"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="2929026977">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2929026977" class="vote-count">0</span>
+              <a id="btn-2929026977" href="" class="j vote-comment" data-cid="2929026977">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/reisenreisen/">狂气之瞳改</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/2929026977">2021-06-25 21:53:21</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">5年前的书，部分已普及，部分仍显先进。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=2929026977"></div>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="2414662146">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2414662146" class="vote-count">0</span>
+              <a id="btn-2414662146" href="" class="j vote-comment" data-cid="2414662146">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/8093164/">LWARC</a>
+          <a class="comment-time" href="/comment/2414662146">2021-03-12 04:03:15</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">读了几章，感觉对底层码农作用不大。如何设立一些metrics来平衡perf与dev之类的对做管理工作的人可能更有用。</span>
+      </p>
+        <div class="report-comment" data-url="https://book.douban.com/subject/26675256/?comment_id=2414662146"></div>
+    </div>
+  </li>
+
+      </ul>
+  </div>
+
+            
+  
+  <div class="comment-list follows noshow" id="follows">
+      
+      <ul>
+        <li class="comment-item">
+          <p class="blank-tip">你关注的人还没有写短评呢</p>
+        </li>
+      </ul>
+  </div>
+
+        
+    <link rel="stylesheet" href="https://img1.doubanio.com/f/vendors/7d8c54c10ffd51769880282d4a41609dc465b796/reports.css" />
+    <style>
+      .report-comment { overflow: hidden; visibility: hidden; }
+      .btn-report { float: right; color: #bbb; cursor: pointer; font-size: 13px;}
+    </style>
+    <script src="https://img1.doubanio.com/f/vendors/bd6325a12f40c34cbf2668aafafb4ccd60deab7e/vendors.js"></script>
+    <script src="https://img1.doubanio.com/f/vendors/68e2c291c7d4971661f7e4c3e41e1e99e2c2df4b/reports.js"></script>
+    <script>
+      (function () {
+        const ADD_REPORT = function() {
+          var roots = document.querySelectorAll(".report-comment");
+          roots.forEach(function (root) {
+            var btn = document.createElement('span');
+            btn.className = 'btn-report';
+            btn.innerHTML = "投诉";
+            btn.addEventListener('click', function () {
+              if (window.DOUBAN_VENDORS && window.DOUBAN_VENDORS.openReportModal) {
+                window.DOUBAN_VENDORS.openReportModal({
+                  reportUrl: "" || root.getAttribute('data-url'),
+                  types: ["content"]
+                })
+              }
+            });
+            root.appendChild(btn);
+          })
+        }
+        ADD_REPORT();
+        $("body").delegate(".comment-item", 'mouseenter mouseleave', function (e) {
+          var $report = $(this).find(".report-comment")
+          switch (e.type) {
+            case "mouseenter":
+              $report.css('visibility', 'visible');
+              break;
+            case "mouseleave":
+              $report.css('visibility', 'hidden');
+              break;
+            }
+        });
+        window.ADD_REPORT = ADD_REPORT
+      })()
+    </script>
+
+    </div>
+        <p>&gt; <a href="https://book.douban.com/subject/26675256/comments/">更多短评 32 条</a></p>
+    <script src="https://img1.doubanio.com/f/book/6eba6f43fb7592ab783e390f654c0d6a96b1598e/js/book/lib/subject-comments/comments-section.js"></script>
+    <script>
+     (function () {
+            if (window.SUBJECT_COMMENTS_SECTION) {
+                // tab handler
+                SUBJECT_COMMENTS_SECTION.createTabHandler();
+                // expand handler
+                SUBJECT_COMMENTS_SECTION.createExpandHandler({
+                    root: document.getElementById('comment-list-wrapper'),
+                });
+                SUBJECT_COMMENTS_SECTION.createVoteHandler({
+                    api: '/j/comment/:id/vote',
+                    root: document.getElementById('comment-list-wrapper'),
+                    voteSelector: '.vote-comment',
+                    textSelector: '.vote-count',
+                    afterVote: function (elem) {
+                        var parentNode = elem.parentNode;
+                        var successElem = document.createElement('span');
+                        successElem.innerHTML = '已投票';
+                        parentNode.removeChild(elem);
+                        parentNode.appendChild(successElem);
+                    }
+                });
+            }
+        })()
+    </script>
+</div>
+
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://img1.doubanio.com/misc/mixed_static/6078555e83c38f2.css">
+
+    <section id="reviews-wrapper" class="reviews mod book-content">
+        <header>
+            
+                <a href="new_review" rel="nofollow" class="create-review redbutt rr "
+                    data-isverify="True"
+                    data-verify-url="https://www.douban.com/accounts/phone/verify?redir=https://book.douban.com/subject/26675256/new_review">
+                    <span>我要写书评</span>
+                </a>
+            <h2>
+                    Site Reliability Engineering的书评 · · · · · ·
+
+                    <span class="pl">( <a href="reviews">全部 15 条</a> )</span>
+            </h2>
+        </header>
+
+            <div class="review_filter">
+                            <a href="javascript:;;" class="cur" data-sort="">热门</a> &#047;
+                            <a href="javascript:;;" data-sort="time">最新</a> &#047;
+                            <a href="javascript:;;" data-sort="follow">好友</a>
+                        &#047;<a href="/subject/26675256/reviews?version=1" data-sort="version">只看本版本的评论</a>
+            </div>
+            <script>
+                var cur_sort = '';
+                $('#reviews-wrapper .review_filter a').on('click', function () {
+                    var sort = $(this).data('sort');
+                    if(sort === cur_sort) return;
+
+                    if(sort === 'follow' && false){
+                        window.location.href = '//www.douban.com/accounts/login?source=movie';
+                        return;
+                    }
+
+                    if($('#reviews-wrapper .review_filter').data('doing')) return;
+                    $('#reviews-wrapper .review_filter').data('doing', true);
+
+                    cur_sort = sort;
+
+                    $('#reviews-wrapper .review_filter a').removeClass('cur');
+                    $(this).addClass('cur');
+
+                    $.getJSON('reviews', { sort: sort }, function(res) {
+                        $('#reviews-wrapper .review-list').remove();
+                        $('#reviews-wrapper [href="reviews?sort=follow"]').parent().remove();
+                        $('#reviews-wrapper .review_filter').after(res.html);
+                        $('#reviews-wrapper .review_filter').data('doing', false);
+                        $('#reviews-wrapper .review_filter').removeData('doing');
+
+                        if (res.count === 0) {
+                            $('#reviews-wrapper .review-list').html('<span class="no-review">你关注的人还没写过长评</span>');
+                        }
+                    });
+                });
+            </script>
+
+
+            
+
+
+
+<div class="review-list  ">
+        
+    
+
+            
+    
+    <div data-cid="10226373">
+        <div class="main review-item" id="10226373">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/wohaobeia/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u3177791-4.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/wohaobeia/" class="name">子珂</a>
+
+            <span class="allstar40 main-title-rating" title="推荐"></span>
+
+        <span content="2019-06-07" class="main-meta">2019-06-07 08:42:18</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/10226373/">混乱的解药</a></h2>
+
+                <div id="review_10226373_short" class="review-short" data-rid="10226373">
+                    <div class="short-content">
+
+                        注: 我不是做SRE的，我甚至都不是工程师（我算PM）, 但这本书中有个时间分配的方法很有意思，所以写一下 一、 紧急事件、工单永远处理不完怎么办？ 理想很丰满，现实很骨感 在大型科技公司工作，你以为能调用各种资源，为百万级用户来带价值，但实际却发现，因为稳定性、legacy...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-10226373-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_10226373_full" class="hidden">
+                    <div id="review_10226373_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="10226373" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-10226373">
+                                61
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="10226373" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-10226373">
+                                1
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/10226373/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="8532683">
+        <div class="main review-item" id="8532683">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/masterplan/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/u34100630-53.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/masterplan/" class="name">masterplan</a>
+
+            <span class="allstar40 main-title-rating" title="推荐"></span>
+
+        <span content="2017-05-11" class="main-meta">2017-05-11 08:28:11</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/26875239/">电子工业出版社2016版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/8532683/">Notes: Site Reliability Engineering</a></h2>
+
+                <div id="review_8532683_short" class="review-short" data-rid="8532683">
+                    <div class="short-content">
+
+                        看这本书时做的笔记. 总结一下: 1. 有众多可以参考的地方, 例如 Cron 的设计, 监控的改进, 新工具的推广方法 2. 对手头的系统和工具要非常了解, 这样就可以玩出很多招数 1. 介绍 DevOps 在 Google 的实践 传统开发/运维分离的解决方案在规模扩大后沟通成本上升(“随时发布” vs...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-8532683-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_8532683_full" class="hidden">
+                    <div id="review_8532683_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="8532683" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-8532683">
+                                20
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="8532683" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-8532683">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/8532683/#comments" class="reply ">3回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="8110955">
+        <div class="main review-item" id="8110955">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/xindoo/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/u58775247-2.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/xindoo/" class="name">xindoo</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2016-10-02" class="main-meta">2016-10-02 10:57:41</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/26875239/">电子工业出版社2016版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/8110955/">《SRE》读后感</a></h2>
+
+                <div id="review_8110955_short" class="review-short" data-rid="8110955">
+                    <div class="short-content">
+
+                        原文来自：http://blog.csdn.net/xindoo/article/details/52723114 《SRE》这本书英文版已面世半年后，中文版终于面世。从4月、5月的时候，我就一直在尝试看英文版，由于自己英文水平有限，阅读进度和深度实在有限，看到中文版，对很多章节的内容才算是有了较深入的理解，一句...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-8110955-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_8110955_full" class="hidden">
+                    <div id="review_8110955_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="8110955" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-8110955">
+                                16
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="8110955" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-8110955">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/8110955/#comments" class="reply ">9回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="13062133">
+        <div class="main review-item" id="13062133">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/thehackercat/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u79039149-4.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/thehackercat/" class="name">小虚大魔王</a>
+
+            <span class="allstar40 main-title-rating" title="推荐"></span>
+
+        <span content="2020-12-17" class="main-meta">2020-12-17 14:02:14</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/26875239/">电子工业出版社2016版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/13062133/">重读 《SRE》笔记</a></h2>
+
+                <div id="review_13062133_short" class="review-short" data-rid="13062133">
+                    <div class="short-content">
+
+                        1、总体介绍 Google目前SRE的工程师规模：1000+人。 传统的研发团队和运维团队分歧的焦点主要在软件新版本、新配置变更的发布速度上。（目标本质上来说是互相矛盾的） 研发部门最关注的是如何能够更快速地构建和发布新功能。 运维部门更关注的是如何能在他们值班期间避免发生故...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-13062133-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_13062133_full" class="hidden">
+                    <div id="review_13062133_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="13062133" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-13062133">
+                                4
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="13062133" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-13062133">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/13062133/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="10080347">
+        <div class="main review-item" id="10080347">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/Laisky/" class="avator">
+            <img width="24" height="24" src="https://img1.doubanio.com/icon/u3068199-19.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/Laisky/" class="name">Laisky</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2019-03-31" class="main-meta">2019-03-31 17:09:38</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/26875239/">电子工业出版社2016版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/10080347/">《SRE：Google运维解密》读后感 &amp; 摘抄</a></h2>
+
+                <div id="review_10080347_short" class="review-short" data-rid="10080347">
+                    <div class="short-content">
+                            <p class="spoiler-tip">这篇书评可能有关键情节透露</p>
+
+                        一、概述 也发布在：[https://blog.laisky.com/p/srebook/] 描述了谷歌 SRE 这一岗位的工作职责和工作实践。 和传统的运维（OPS）不同，谷歌非常重视运维人员的开发能力， 希望运维人员能够在处理日常工作之余，尽可能的开发自动化工具减少人力需求， 所以提供了新的 SRE 的岗...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-10080347-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_10080347_full" class="hidden">
+                    <div id="review_10080347_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="10080347" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-10080347">
+                                3
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="10080347" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-10080347">
+                                1
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/10080347/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="9258103">
+        <div class="main review-item" id="9258103">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/153875395/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/u153875395-3.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/153875395/" class="name">moooofly</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2018-03-30" class="main-meta">2018-03-30 08:33:51</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/26875239/">电子工业出版社2016版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/9258103/">《SRE Google 运维解密》读书笔记</a></h2>
+
+                <div id="review_9258103_short" class="review-short" data-rid="9258103">
+                    <div class="short-content">
+                            <p class="spoiler-tip">这篇书评可能有关键情节透露</p>
+
+                        第12章，有效的故障排查手段 - 有效展开故障排查的两个条件 - 通用故障排查流程中的关注点 - 故障排查过程中的常见陷阱 - 金句：当所有的可能都存在的时候，我们应该优先考虑最简单的解释 - 金句：我们要记住，相关性不等于因果关系 第13章，紧急事件响应 第14章，紧急事故管理...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-9258103-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_9258103_full" class="hidden">
+                    <div id="review_9258103_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="9258103" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-9258103">
+                                1
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="9258103" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-9258103">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/9258103/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="8480011">
+        <div class="main review-item" id="8480011">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/vrloong/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u34816035-4.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/vrloong/" class="name">RexKang</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2017-04-15" class="main-meta">2017-04-15 20:57:54</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/26875239/">电子工业出版社2016版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/8480011/">满满干货，运维必读，五星推荐</a></h2>
+
+                <div id="review_8480011_short" class="review-short" data-rid="8480011">
+                    <div class="short-content">
+                            <p class="spoiler-tip">这篇书评可能有关键情节透露</p>
+
+                        应该有一种职业是专注于整个软件系统的生命周期管理。对于Google，就是SRE。  内容很不错，作为Google长期运维经验的总结，满满干货，运维必读，五星推荐。 从一个运维工程师的角度来看，书中的各种内容都是羡慕嫉妒恨。  花了两个月的时间，终于看到结语了，感觉自己终于松了...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-8480011-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_8480011_full" class="hidden">
+                    <div id="review_8480011_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="8480011" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-8480011">
+                                1
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="8480011" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-8480011">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/8480011/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="14763662">
+        <div class="main review-item" id="14763662">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/60945842/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u60945842-6.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/60945842/" class="name">or 1=1</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2022-11-12" class="main-meta">2022-11-12 17:09:59</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/26875239/">电子工业出版社2016版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/14763662/">工程师的必读书目</a></h2>
+
+                <div id="review_14763662_short" class="review-short" data-rid="14763662">
+                    <div class="short-content">
+                            <p class="spoiler-tip">这篇书评可能有关键情节透露</p>
+
+                        SRE的出发目的在于Dev/Ops分离的团队模型存在矛盾： 研发部门想，“随时随地发布新功能，没有任何阻拦” 运维部门则想，“一旦一个东西在生产环境中正常工作了，就不要再进行任何改动” SRE就是让软件工程师来设计一个新型运维团队的结果，要兼顾研发效率与线上服务的稳定性。 ...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-14763662-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_14763662_full" class="hidden">
+                    <div id="review_14763662_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="14763662" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-14763662">
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="14763662" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-14763662">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/14763662/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+    
+    <div data-cid="10108123">
+        <div class="main review-item" id="10108123">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/esmadt/" class="avator">
+            <img width="24" height="24" src="https://img9.doubanio.com/icon/u57956478-56.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/esmadt/" class="name">发型不乱</a>
+
+            <span class="allstar40 main-title-rating" title="推荐"></span>
+
+        <span content="2019-04-12" class="main-meta">2019-04-12 13:33:32</span>
+
+
+            <span class="publisher right">
+                <a class="publisher" target="_blank" href="https://book.douban.com/subject/26875239/">电子工业出版社2016版</a>
+            </span>
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/10108123/">SRE 平台支撑研发必读</a></h2>
+
+                <div id="review_10108123_short" class="review-short" data-rid="10108123">
+                    <div class="short-content">
+
+                        之前没有看过，不过想法一致。也算不同现实经历总结得出大同小异经验。 1 dev ops 严格分离在某些场景下并不合理 2 Keep It Simple Stupid / Dont Repeat Youself 老生常谈但无处不在，而经验不足的工程师可能无法领悟，要经历许多不必要或本来可以避免的故障灾难才明白 3 以前...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-10108123-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_10108123_full" class="hidden">
+                    <div id="review_10108123_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="10108123" title="有用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-10108123">
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="10108123" title="没用">
+                        <img src="https://img1.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-10108123">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/10108123/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+    
+
+    <script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/5a2ccc4318d75e65.js"></script>
+    <!-- COLLECTED CSS -->
+</div>
+
+
+
+
+
+
+
+
+                <p class="pl">
+                    &gt;
+                        <a href="reviews">
+                            更多书评
+                                15篇
+                        </a>
+                </p>
+    </section>
+<!-- COLLECTED JS -->
+
+
+
+  
+<div class="annotation">
+</div>
+
+<script>
+  $('document').ready(function () {
+    $.get(`/subject/26675256/annotation_html`, function (r) {
+      $('.annotation').html(r.html);
+    });
+  });
+</script>
+
+  
+    
+
+
+
+
+
+<div id="db-discussion-section" class="indent ugc-mod">
+
+
+    
+  
+
+  <h2>
+    <span>论坛</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+        
+    
+    <a class="redbutt  rr " href="https://book.douban.com/subject/26675256/discussion/create" rel="nofollow"><span>在这本书的论坛里发言</span></a>
+
+
+
+</div>
+
+
+
+</div>
+<script type="text/javascript">
+$(function(){if($.browser.msie && $.browser.version == 6.0){
+    var maxWidth = parseInt($('#info').css('max-width'));
+    if($('#info').width() > maxWidth)
+        $('#info').width(maxWidth)
+}});
+</script>
+</div>
+      <div class="aside">
+        
+  
+  
+
+
+
+
+
+
+  <div id="dale_book_subject_top_right"></div>
+
+  
+
+
+
+
+
+
+<style type="text/css" media="screen">
+  .add2cartContainer{overflow:hidden;vertical-align:bottom;line-height:1;padding:10px 0}.add2cartContainer .add2cart{margin-right:0;display:inline-block}.buyinfo .bs{margin:0}.buyinfo .current-version-list{margin-bottom:27px}.buyinfo .secondhand-books-list{margin-top:-10px}.buyinfo .secondhand-books-list li{display:block}.buyinfo .secondhand-books-list .flex-wrap{display:flex}.buyinfo .secondhand-books-list .flex-wrap .vendor-name{flex:0 0 33%}.buyinfo .secondhand-books-list .flex-wrap .cell:last-child{width:70px;flex:initial;text-align:right}.buyinfo li{display:flex;flex-direction:column;padding:12px 0;position:relative;line-height:1;border-bottom:1px solid rgba(0,0,0,0.08)}.buyinfo li .cell{flex:1}.buyinfo li .cell:first-child a{line-height:20px}.buyinfo li .vendor-name.cell,.buyinfo li .vendor-name{flex:0 0 33%;align-self:normal;line-height:20px}.buyinfo li .price-btn-wrapper{display:flex}.buyinfo li .price-btn-wrapper>.cell{display:flex;margin-bottom:5px}.buyinfo li .price-btn-wrapper>.cell:last-child{margin-bottom:0}.buyinfo li .price-btn-wrapper>.cell .cell:last-child{padding-right:1px;width:70px;flex:initial;text-align:right}.buyinfo li .buylink-price{line-height:20px}.buyinfo li .buylink-price.promotion{color:#c34}.buyinfo li s{padding-left:2px;line-height:20px;font-family:Helvetica;font-size:11px;color:rgba(0,0,0,0.25);letter-spacing:0;vertical-align:top}.buyinfo li .publisher{color:rgba(0,0,0,0.25)}.buyinfo li .buy-book-btn{display:inline-block;height:20px;line-height:20px;width:70px;text-align:center;background:#fff;border-radius:3px;font-size:12px;box-shadow:0 0 1px 0 rgba(0,0,0,0.07)}.buyinfo li .buy-book-btn:hover{opacity:.8}.buyinfo li .secondhand-book-btn,.buyinfo li .paper-book-btn{color:#EB9108}.buyinfo li .secondhand-book-btn:hover,.buyinfo li .paper-book-btn:hover{background:#EB9108;color:#fff}.buyinfo li .e-book-btn{color:#32A998}.buyinfo li .e-book-btn:hover{background:#32A998;color:#fff}.buyinfo li .go-shopping{display:inline-block;line-height:20px;width:70px;text-align:center}.buyinfo .more-info{color:rgba(0,0,0,0.5);font-size:12px}.buyinfo .more-info.not-onsale{color:rgba(0,0,0,0.5)}.buyinfo .cell.not-onsale .more-info{line-height:20px}.buyinfo-printed{margin-bottom:15px}.buyinfo-printed.no-border{border-bottom:0}.buyinfo-printed .presale-indicator{margin:0;width:auto;text-indent:0;background:none;color:rgba(0,0,0,0.5)}.gray_ad{padding:18px 16px;background:#F6F6F2}.gray_ad h2{margin-bottom:10px;font-size:15px;color:#0B7C2A}.gray_ad .ebook-tag{margin-top:5px;color:#999;font-size:12px}
+
+  .presale-indicator {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 24px;
+  height: 15px;
+  line-height: 15px;
+  background: url(https://img1.doubanio.com/f/book/1679c65572eac1371f9872807199dea6e55a7f06/pics/book/cart/presale_text.gif) no-repeat;
+  text-indent: -9999px;
+  vertical-align: middle;
+  *vertical-align: 0px;
+  _vertical-align: 2px;
+  margin-left: 0.5em;
+}
+
+</style>
+
+  <div class="gray_ad buyinfo" id="buyinfo">
+      
+  <div class="add2cartContainer no-border">
+    
+  <span class="add2cartWidget ll">
+        
+        <a href="javascript:;" class="j  a_add2cart add2cart"
+          name="26675256">
+          <span>+ 加入购书单</span></a>
+        <span class="color_gary book-in-cart hidden"
+          >
+            已在购书单&nbsp;
+            <a href="https://book.douban.com/cart">查看</a>
+          <a class="delete-cart-item" rel="26675256" href="https://book.douban.com/cart">删除</a>
+        </span>
+  </span>
+  
+
+  </div>
+
+  </div>
+
+<script>
+  $(document).ready(function() {
+    $('.impression_track_mod_buyinfo').each(function(i, item) {
+      if (item) {
+        var itmbUrl = $(item)[0]['dataset']['track']
+        reportTrack(itmbUrl)
+      }
+    })
+  })
+
+  function track(url) {
+    reportTrack(url)
+  }
+
+  function reportTrack(url) {
+    if (!url) { return false }
+    $.ajax({ url: url, dataType: 'text/html' })
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+  
+
+<style type="text/css" media="screen">
+  .version_works h2{margin-bottom:20px}.version_works li.mb8{display:flex;flex-direction:column;padding-bottom:10px}.version_works li.mb8:last-child{padding-bottom:0;margin-bottom:0}.version_works .meta-wrapper{justify-content:space-between;display:flex}.version_works .meta-wrapper .count span{padding-right:10px}.version_works .buyinfo{display:flex;flex-direction:column;margin-top:10px;background:rgba(255,255,255,0.7)}.version_works .buyinfo li{padding:10px}.version_works .current-version-list{margin-bottom:0}.version_works .secondhand-books-list{margin:0}
+
+</style>
+
+
+<div class="gray_ad version_works">
+  
+  
+
+  <h2>
+    <span>这本书的其他版本</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/works/1096565">全部4</a>
+        ) </span>
+
+  </h2>
+
+
+  <ul>
+      
+      <li class="mb8 pl">
+        <div class="meta-wrapper">
+          <div class="meta">
+            <a href="https://book.douban.com/subject/26875239/">电子工业出版社 （2016）</a>
+            <div class="count">
+              <span>8.8分</span> 520人读过
+            </div>
+          </div>
+
+            <div class="fold-btn">
+               <a href="javascript:void(0);"><span>展开</span>有售 (5)</a>
+            </div>
+        </div>
+
+        <ul class="buyinfo" style="display: none;">
+          
+  <ul class="bs current-version-list">
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://read.douban.com/ebook/134919621/?dcs=subject-buylink&amp;dcm=douban&amp;dct=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=douban_read&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>豆瓣阅读</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26675256&amp;isbn=149192912X&amp;source=douban_read&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://read.douban.com/ebook/134919621/?dcs=subject-buylink&amp;dcm=douban&amp;dct=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=douban_read&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+    27.00元
+
+                        
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://read.douban.com/ebook/134919621/?dcs=subject-buylink&amp;dcm=douban&amp;dct=26675256" class="buy-book-btn e-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=douban_read&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买电子书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://www.dedao.cn/eBook/L5BbmPyQPrjybo2eO1GvAmNJnlYxV0REGZw8XDBK9qZpgkRELd75z4Ma6oDRrqjY?source=douban" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>得到</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26675256&amp;isbn=149192912X&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://www.dedao.cn/eBook/L5BbmPyQPrjybo2eO1GvAmNJnlYxV0REGZw8XDBK9qZpgkRELd75z4Ma6oDRrqjY?source=douban" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        27.00元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://www.dedao.cn/eBook/L5BbmPyQPrjybo2eO1GvAmNJnlYxV0REGZw8XDBK9qZpgkRELd75z4Ma6oDRrqjY?source=douban" class="buy-book-btn e-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dedao&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买电子书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6400&amp;pos=3&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DJF8AAL0DIgZlGmsVABEFVRhcFjJWWA1FBCVbV0IUWVALHEpCAUdETlcNVQtHRRUAEQVVGFwWHUtCCUZrVQdpByVrXUZnb1MNGlhwRW5kU0ZTQw4eN1IeXBMFGwRSK1sRAxYDZStbFDJEaVUaWhQDEwJVHlglAyIHUhhZFgsaAVAfWREGIgddH2vMgqXR94mCi4jHj8IrayUBIjdlG2sWMkxpVEhbEAMWVQF1AVRCG0USWxJ7BBcOUBpfEAciBVQaWRc&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>京东商城</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26675256&amp;isbn=149192912X&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6400&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DJF8AAL0DIgZlGmsVABEFVRhcFjJWWA1FBCVbV0IUWVALHEpCAUdETlcNVQtHRRUAEQVVGFwWHUtCCUZrVQdpByVrXUZnb1MNGlhwRW5kU0ZTQw4eN1IeXBMFGwRSK1sRAxYDZStbFDJEaVUaWhQDEwJVHlglAyIHUhhZFgsaAVAfWREGIgddH2vMgqXR94mCi4jHj8IrayUBIjdlG2sWMkxpVEhbEAMWVQF1AVRCG0USWxJ7BBcOUBpfEAciBVQaWRc&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        64.00元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6400&amp;pos=1&amp;url=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DJF8AAL0DIgZlGmsVABEFVRhcFjJWWA1FBCVbV0IUWVALHEpCAUdETlcNVQtHRRUAEQVVGFwWHUtCCUZrVQdpByVrXUZnb1MNGlhwRW5kU0ZTQw4eN1IeXBMFGwRSK1sRAxYDZStbFDJEaVUaWhQDEwJVHlglAyIHUhhZFgsaAVAfWREGIgddH2vMgqXR94mCi4jHj8IrayUBIjdlG2sWMkxpVEhbEAMWVQF1AVRCG0USWxJ7BBcOUBpfEAciBVQaWRc&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=dangdang&amp;srcpage=subject&amp;price=9600&amp;pos=4&amp;url=http%3A%2F%2Funion.dangdang.com%2Ftransfer.php%3Ffrom%3DP-306226-82160871-s26675256%26backurl%3Dhttp%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D29240348&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dangdang&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>当当网</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26675256&amp;isbn=149192912X&amp;source=dangdang&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=dangdang&amp;srcpage=subject&amp;price=9600&amp;pos=1&amp;url=http%3A%2F%2Funion.dangdang.com%2Ftransfer.php%3Ffrom%3DP-306226-82160871-s26675256%26backurl%3Dhttp%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D29240348&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dangdang&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        96.00元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=dangdang&amp;srcpage=subject&amp;price=9600&amp;pos=1&amp;url=http%3A%2F%2Funion.dangdang.com%2Ftransfer.php%3Ffrom%3DP-306226-82160871-s26675256%26backurl%3Dhttp%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D29240348&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dangdang&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=7559&amp;pos=5&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7296000.htm&amp;link2key=ad9766ff17&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>中图网</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26675256&amp;isbn=149192912X&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=7559&amp;pos=1&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7296000.htm&amp;link2key=ad9766ff17&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        75.60元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=7559&amp;pos=1&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7296000.htm&amp;link2key=ad9766ff17&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+  </ul>
+
+
+          
+  <ul class="secondhand-books-list bs">
+</ul>
+
+        </ul>
+      </li>
+      
+      <li class="mb8 pl">
+        <div class="meta-wrapper">
+          <div class="meta">
+            <a href="https://book.douban.com/subject/30332703/">东南大学出版社 （2008）</a>
+            <div class="count">
+              <span>暂无评分</span> 
+            </div>
+          </div>
+
+            <div class="fold-btn">
+               <a href="javascript:void(0);"><span>展开</span>有售 (3)</a>
+            </div>
+        </div>
+
+        <ul class="buyinfo" style="display: none;">
+          
+  <ul class="bs current-version-list">
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=9960&amp;pos=1&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgRWHFkQARY3EUQDS10iXhBeGh4cDF8QTwcKWUcYB0UHCwIRBFIZXhYGDV4QRwYlA1lRLxkYQ3FyQx1SWWoDW34GYj1xch4LOxhaFQsOBl0HWBATEwdeGF8eAxs3Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sRABQBVhlfFAsUDlArXCXbkrCDucnMnJjS3YxrJTIiN2UbaxYyTUMIRg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsWARUFUBhfCltXWwg%253D&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>京东商城</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26675256&amp;isbn=149192912X&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=9960&amp;pos=1&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgRWHFkQARY3EUQDS10iXhBeGh4cDF8QTwcKWUcYB0UHCwIRBFIZXhYGDV4QRwYlA1lRLxkYQ3FyQx1SWWoDW34GYj1xch4LOxhaFQsOBl0HWBATEwdeGF8eAxs3Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sRABQBVhlfFAsUDlArXCXbkrCDucnMnJjS3YxrJTIiN2UbaxYyTUMIRg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsWARUFUBhfCltXWwg%253D&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        99.60元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=9960&amp;pos=1&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIHZRtYFAcXBFIZWR0yEgRWHFkQARY3EUQDS10iXhBeGh4cDF8QTwcKWUcYB0UHCwIRBFIZXhYGDV4QRwYlA1lRLxkYQ3FyQx1SWWoDW34GYj1xch4LOxhaFQsOBl0HWBATEwdeGF8eAxs3Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sRABQBVhlfFAsUDlArXCXbkrCDucnMnJjS3YxrJTIiN2UbaxYyTUMIRg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsWARUFUBhfCltXWwg%253D&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=jingdong&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=dangdang&amp;srcpage=subject&amp;price=9320&amp;pos=2&amp;url=http%3A%2F%2Funion.dangdang.com%2Ftransfer.php%3Ffrom%3DP-306226-82160871-s26675256%26backurl%3Dhttp%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D25207413&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dangdang&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>当当网</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26675256&amp;isbn=149192912X&amp;source=dangdang&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=dangdang&amp;srcpage=subject&amp;price=9320&amp;pos=1&amp;url=http%3A%2F%2Funion.dangdang.com%2Ftransfer.php%3Ffrom%3DP-306226-82160871-s26675256%26backurl%3Dhttp%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D25207413&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dangdang&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price promotion">
+                        
+                        93.20元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=dangdang&amp;srcpage=subject&amp;price=9320&amp;pos=1&amp;url=http%3A%2F%2Funion.dangdang.com%2Ftransfer.php%3Ffrom%3DP-306226-82160871-s26675256%26backurl%3Dhttp%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D25207413&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=dangdang&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+    <div class="more-info">
+        <span class="buyinfo-promotion">
+          限时抢
+        </span>
+
+    </div>
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=8850&amp;pos=3&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7674641.htm&amp;link2key=ad9766ff17&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>中图网</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_manually" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26675256&amp;isbn=149192912X&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=8850&amp;pos=1&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7674641.htm&amp;link2key=ad9766ff17&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        88.50元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=8850&amp;pos=1&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7674641.htm&amp;link2key=ad9766ff17&amp;srcsubj=26675256&amp;type=bkbuy&amp;subject=26675256" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26675256&amp;isbn=149192912X&amp;source=bookschina&amp;user_id=82160871&amp;bid=tTZKimEHBGs&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+  </ul>
+
+
+          
+  <ul class="secondhand-books-list bs">
+</ul>
+
+        </ul>
+      </li>
+      
+      <li class="mb8 pl">
+        <div class="meta-wrapper">
+          <div class="meta">
+            <a href="https://book.douban.com/subject/30422891/">歐萊禮 （2017）</a>
+            <div class="count">
+              <span>暂无评分</span> 2人读过
+            </div>
+          </div>
+
+        </div>
+
+        <ul class="buyinfo" style="display: none;">
+          
+  <ul class="bs current-version-list">
+  </ul>
+
+
+          
+  <ul class="secondhand-books-list bs">
+</ul>
+
+        </ul>
+      </li>
+  </ul>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('.fold-btn a').click(function() {
+      var $btn = $(this).find('span');
+      var $target = $(this).parents('.meta-wrapper').eq(0).next('.buyinfo');
+      if ($target.is(':visible')) {
+        $target.css('display', 'none');
+        $btn.text('展开');
+      } else {
+        $target.css('display', 'flex');
+        $btn.text('收起');
+
+        // track
+        if (!($target.attr('data-exposed'))) {
+          $target.find('.impression_track_manually').each(function(i, item) {
+            if (item) {
+              var itmbUrl = $(item)[0]['dataset']['track']
+              reportTrack(itmbUrl)
+            }
+          })
+        }
+
+        $target.attr('data-exposed', true);
+      }
+    })
+  })
+</script>
+
+
+  <div id="dale_book_subject_top_middle"></div>
+  
+
+
+
+
+
+
+  
+    
+
+
+
+  
+  
+
+  <h2>
+    <span>以下书单推荐</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/subject/26675256/doulists">全部</a>
+        ) </span>
+
+  </h2>
+
+
+  <div id="db-doulist-section" class="indent">
+    <ul class="bs">
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/26393/" target="_blank">The Humble Programmer Books</a>
+                <span class="pl">(男爵)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/49202772/" target="_blank">大厂方法论</a>
+                <span class="pl">(豆友4104547)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/44302546/" target="_blank">2016年下半年争取</a>
+                <span class="pl">(邻家的の柠檬叔)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/44288475/" target="_blank">网站设计和运维</a>
+                <span class="pl">(compactset)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/43171264/" target="_blank">2016</a>
+                <span class="pl">(邻家的の柠檬叔)</span>
+            </li>
+    </ul>
+  </div>
+
+  <div id="dale_book_subject_middle_mini"></div>
+  
+    
+
+
+
+
+
+  
+  
+
+  <h2>
+    <span>谁读这本书?</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+<div id="collector">
+  
+
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/mewcatcher/"><img src="https://img2.doubanio.com/icon/u82160871-12.jpg" alt="MewX" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/mewcatcher/">MewX</a><br/>
+      <div class="pl ll">          2019年3月28日          在读      </div>
+
+        <span class="allstar50" title="力荐"></span>
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/181756830/"><img src="https://img2.doubanio.com/icon/u181756830-1.jpg" alt="lianyz" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/181756830/">lianyz</a><br/>
+      <div class="pl ll">          12月24日          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/172489226/"><img src="https://img2.doubanio.com/icon/u172489226-1.jpg" alt="A0 Peter Ma" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/172489226/">A0 Peter Ma</a><br/>
+      <div class="pl ll">          12月16日          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/duanbingnan/"><img src="https://img9.doubanio.com/icon/u1378018-4.jpg" alt="楠" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/duanbingnan/">楠</a><br/>
+      <div class="pl ll">          12月12日          在读      </div>
+
+        <span class="allstar30" title="还行"></span>
+      <br/>
+
+      <span class="pl">tags:计算机</span><br />
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+
+
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26675256/comments?status=N">77人在读</a></p>
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26675256/comments?status=P">158人读过</a></p>
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26675256/comments?status=F">728人想读</a></p>
+
+</div>
+
+
+
+
+
+  
+<!-- douban ad begin -->
+<div id="dale_book_subject_middle_right"></div>
+<script type="text/javascript">
+    (function (global) {
+        if(!document.getElementsByClassName) {
+            document.getElementsByClassName = function(className) {
+                return this.querySelectorAll("." + className);
+            };
+            Element.prototype.getElementsByClassName = document.getElementsByClassName;
+
+        }
+        var articles = global.document.getElementsByClassName('article'),
+            asides = global.document.getElementsByClassName('aside');
+
+        if (articles.length > 0 && asides.length > 0 && articles[0].offsetHeight >= asides[0].offsetHeight) {
+            (global.DoubanAdSlots = global.DoubanAdSlots || []).push('dale_book_subject_middle_right');
+        }
+    })(this);
+</script>
+<!-- douban ad end -->
+
+  
+    
+
+
+
+
+
+
+<h2>
+  
+  
+
+  <h2>
+    <span>二手市场</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+</h2>
+<div class="indent">
+  <ul class="bs">
+  <li class="">
+      <a class=" " href="https://book.douban.com/subject/26675256/offers">1本二手书欲转让</a>
+        <span class="">
+          (100.00
+            元)
+        </span>
+    </li>
+    <li>
+        <a href='https://book.douban.com/subject/26675256/new_offer' class="rr">在豆瓣转让</a>
+
+      有728人想读,手里有一本闲着?
+    </li>
+    <li>
+      <div class="rr">
+        <a href="https://shoushu.kongfz.com/?utm_source=douban&utm_medium=new_offer">孔网上门收书</a>
+      </div>
+      转让给其他二手平台？
+    </li>
+  </ul>
+</div>
+
+  
+<p class="pl">订阅关于Site Reliability Engineering的评论: <br/><span class="feed">
+    <a href="https://book.douban.com/feed/subject/26675256/reviews"> feed: rss 2.0</a></span></p>
+
+
+      </div>
+      <div class="extra">
+        
+  
+<!-- douban ad begin -->
+<div id="dale_book_subject_bottom_super_banner"></div>
+<script type="text/javascript">
+    (function (global) {
+        var body = global.document.body,
+            html = global.document.documentElement;
+
+        var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        if (height >= 2000) {
+            (global.DoubanAdSlots = global.DoubanAdSlots || []).push('dale_book_subject_bottom_super_banner');
+        }
+    })(this);
+</script>
+<!-- douban ad end -->
+
+
+      </div>
+    </div>
+  </div>
+
+        
+<div id="footer">
+
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2022 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about/legal">法律声明</a>
+    
+    · <a href="https://help.douban.com/?app=book" target="_blank">帮助中心</a>
+    · <a href="https://book.douban.com/library_invitation">图书馆合作</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+</div>
+
+    </div>
+      
+
+    <script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/77fcd61a77ae3d96.js"></script>
+    <!-- mako -->
+    
+  
+
+
+
+
+
+
+
+
+    
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = '//erebor.douban.com/',
+            userId = '82160871',
+            browserId = 'tTZKimEHBGs',
+            criteria = '7:运维|7:SRE|7:google|7:计算机|7:服务器|7:分布式|7:架构|7:管理|7:技术|7:监控|3:/subject/26675256/',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_book_subject_top_icon', 'dale_book_subject_top_right', 'dale_book_subject_top_middle', 'dale_book_subject_middle_mini'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', '//img1.doubanio.com/MnJwNGlleS9mL2FkanMvY2M1OGQyNTQ2N2I2YmQzOTlmNTliMGJiMjI4MWRhZTlkNTNjYTFkZC9hZC5yZWxlYXNlLmpz');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; 
+    g.type='text/javascript';
+    g.defer=true; 
+    g.async=true; 
+    g.src=p+'://s.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-16', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id])
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '1', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- dae-web-book--default-58c9d57876-mtsvv-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
